@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Payanam - Explore India</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo"><span class="logo-icon">🧭</span> <span class="logo-text">Payanam</span></div>
+      <ul class="nav-links">
+        <li><a href="#home" class="active" data-section="home">Home</a></li>
+        <li><a href="#explore" data-section="explore">Explore</a></li>
+        <li><a href="#favorites" data-section="favorites">❤️ Saved</a></li>
+        <li><a href="#tools" data-section="tools">🛠️ Tools</a></li>
+        <li><a href="#about" data-section="about">About</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Home Section -->
+    <section id="home" class="section active">
+      <div class="hero">
+        <h1>Plan Your Ride. <span>Explore India.</span></h1>
+        <p>Choose your ride style and discover amazing destinations across India — spots, hotels, stays and more.</p>
+        <div class="ride-options">
+          <button class="ride-card" data-ride="solo" aria-label="Select solo ride">
+            <span class="ride-icon">🚶</span>
+            <h3>Solo Ride</h3>
+            <p>Travel at your own pace</p>
+          </button>
+          <button class="ride-card" data-ride="bike" aria-label="Select bike ride">
+            <span class="ride-icon">🏍️</span>
+            <h3>Bike Ride</h3>
+            <p>Feel the wind on two wheels</p>
+          </button>
+          <button class="ride-card" data-ride="car" aria-label="Select car ride">
+            <span class="ride-icon">🚗</span>
+            <h3>Car Ride</h3>
+            <p>Comfort meets adventure</p>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Explore Section -->
+    <section id="explore" class="section">
+      <div class="explore-header">
+        <h2>Explore Destinations</h2>
+        <div class="search-box">
+          <input type="text" id="search-input" placeholder="🔍 Search destinations..." aria-label="Search destinations">
+        </div>
+        <div class="filter-row">
+          <div class="state-filter" role="group" aria-label="Filter by state">
+            <button class="state-btn active" data-state="all">All States</button>
+            <!-- Populated by JS -->
+          </div>
+          <div class="category-filter" role="group" aria-label="Filter by category">
+            <button class="cat-btn active" data-category="all">🗺️ All Types</button>
+            <!-- Populated by JS -->
+          </div>
+          <div class="ride-filter" role="group" aria-label="Filter by ride type">
+            <button class="filter-btn active" data-filter="all">All Rides</button>
+            <button class="filter-btn" data-filter="solo">� Solo</button>
+            <button class="filter-btn" data-filter="bike">🏍️ Bike</button>
+            <button class="filter-btn" data-filter="car">🚗 Car</button>
+          </div>
+        </div>
+      </div>
+      <div id="trek-info-banner" class="trek-info-banner">
+        <span>⚠️ All forest treks must be booked at <a href="https://trektamilnadu.com" target="_blank" rel="noopener">trektamilnadu.com</a></span>
+        <span>👥 Mandatory guide (1:5 ratio)</span>
+        <span>💰 ₹649 – ₹2,999</span>
+        <span>🔥 Closed mid-Feb to mid-Apr (fire season)</span>
+      </div>
+      <div id="epass-banner" class="epass-banner">
+        <span>🚗 E-Pass MANDATORY for all vehicles entering Ooty & Kodaikanal in 2026</span>
+        <span>📲 Apply free at <a href="https://epass.tnega.org" target="_blank" rel="noopener">epass.tnega.org</a></span>
+        <span>⚠️ No pass = turned back at checkpost</span>
+      </div>
+      <div id="destinations-container">
+        <!-- Populated by JS — state-wise groups -->
+      </div>
+    </section>
+
+    <!-- Destination Detail Modal -->
+    <div class="modal-overlay" id="modal-overlay" role="dialog" aria-modal="true" aria-label="Destination details">
+      <div class="modal">
+        <button class="modal-close" aria-label="Close details">&times;</button>
+        <div class="modal-content" id="modal-content"></div>
+      </div>
+    </div>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+      <div class="about-content">
+        <h2>About Payanam</h2>
+        <p>Payanam helps you plan your next adventure across India. Whether you're a solo traveller, a biker, or prefer the comfort of a car — we've got the best spots, hotels, and stays curated just for you.</p>
+        <div class="features">
+          <div class="feature">
+            <span>📍</span>
+            <h4>Discover Spots</h4>
+            <p>Find hidden gems and popular attractions</p>
+          </div>
+          <div class="feature">
+            <span>🏨</span>
+            <h4>Hotels & Stays</h4>
+            <p>Budget to luxury accommodations</p>
+          </div>
+          <div class="feature">
+            <span>🗺️</span>
+            <h4>Plan Routes</h4>
+            <p>Pick your ride and hit the road</p>
+          </div>
+        </div>
+
+        <!-- Official Resources for Tamil Nadu -->
+        <div class="official-resources">
+          <h3>🏛️ Official Tamil Nadu Travel Resources (2026)</h3>
+          <p class="resources-subtitle">Verify all information from these government-authorized sources only. Look for the <strong>.gov.in</strong> domain and the Srivilliputhur Temple tower emblem.</p>
+
+          <div class="resource-cards">
+            <div class="resource-card">
+              <div class="resource-icon">🥾</div>
+              <h4>Official Trekking (35+ Trails)</h4>
+              <p>Joint venture of TN Forest Dept & TNWEC. All forest treks must be booked here. Includes trained tribal guides (1:5 ratio), insurance & welcome kit.</p>
+              <div class="resource-meta">
+                <span class="resource-tag">40 Trails · 14 Districts</span>
+                <span class="resource-tag">₹649 – ₹2,999</span>
+                <span class="resource-tag">Closed mid-Feb to mid-Apr</span>
+              </div>
+              <div class="resource-rules">
+                <span>✅ Min group size: 5 persons</span>
+                <span>✅ Age 9+ (Easy treks with guardian)</span>
+                <span>✅ Insurance included in fee</span>
+                <span>🚫 No solo treks in forest areas</span>
+                <span>🚫 No pets, speakers, fire, alcohol</span>
+              </div>
+              <a href="https://trektamilnadu.com" target="_blank" rel="noopener" class="resource-link">trektamilnadu.com →</a>
+              <span class="resource-contact">📞 +91-74189 94333 · 📧 [email protected]</span>
+            </div>
+
+            <div class="resource-card epass-card">
+              <div class="resource-icon">🚗</div>
+              <h4>Hill Station E-Pass (Mandatory 2026)</h4>
+              <p>Managed by TN e-Governance Agency (TNeGA). Mandatory QR-coded pass for ALL tourist vehicles entering Ooty (Nilgiris) & Kodaikanal. Without this, you will be turned back at checkposts.</p>
+              <div class="resource-meta">
+                <span class="resource-tag">FREE · Instant approval</span>
+                <span class="resource-tag">Nilgiris: 6,000 weekday / 8,000 weekend</span>
+                <span class="resource-tag">Kodaikanal: 4,000 weekday / 6,000 weekend</span>
+              </div>
+              <div class="resource-rules">
+                <span>✅ Apply via Mobile OTP login</span>
+                <span>✅ Digital QR on phone accepted</span>
+                <span>✅ Covers Coonoor, Kotagiri, Gudalur too</span>
+                <span>⚠️ Checkposts: Kallar, Burliyar, Kakkanallah</span>
+                <span>💡 Tip: Apply late night or before 8 AM to avoid server load</span>
+              </div>
+              <a href="https://epass.tnega.org" target="_blank" rel="noopener" class="resource-link">epass.tnega.org →</a>
+            </div>
+
+            <div class="resource-card">
+              <div class="resource-icon">🛕</div>
+              <h4>Temple Timings & Rituals</h4>
+              <p>Thirukoil Portal by HR&CE Department, Govt of Tamil Nadu. Official source for temple hours, Annadhanam (free meal) timings, and online Abishekam/special entry tickets. Avoid scams — book only here.</p>
+              <div class="resource-rules">
+                <span>✅ Temple Search for exact timings</span>
+                <span>✅ Online Abishekam booking</span>
+                <span>✅ Annadhanam schedule</span>
+                <span>⚠️ Only official portal for paid rituals</span>
+              </div>
+              <a href="https://hrce.tn.gov.in" target="_blank" rel="noopener" class="resource-link">hrce.tn.gov.in →</a>
+            </div>
+
+            <div class="resource-card">
+              <div class="resource-icon">🏕️</div>
+              <h4>Eco-Huts & Forest Stays</h4>
+              <p>Official Forest Department portal for sustainable tourism. Government-authorized eco-huts, guest houses, boating, safari & nature trails inside tiger reserves (Mudumalai, Anamalai, KMTR).</p>
+              <div class="resource-meta">
+                <span class="resource-tag">Eco-Huts</span>
+                <span class="resource-tag">Guest Houses</span>
+                <span class="resource-tag">Safari</span>
+                <span class="resource-tag">Boating</span>
+                <span class="resource-tag">Dark Sky Park (Kolli Hills)</span>
+              </div>
+              <a href="https://tnfdsutrula.com" target="_blank" rel="noopener" class="resource-link">tnfdsutrula.com →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Favorites Section -->
+    <section id="favorites" class="section">
+      <div class="favorites-page">
+        <h2>❤️ Saved Destinations</h2>
+        <p class="fav-subtitle">Your travel wishlist — click the heart on any destination to save it here</p>
+        <div id="fav-container" class="destinations-grid"></div>
+        <p id="fav-empty" class="fav-empty">No saved destinations yet. Explore and tap ❤️ to add.</p>
+      </div>
+    </section>
+
+    <!-- Tools Section -->
+    <section id="tools" class="section">
+      <div class="tools-page">
+        <h2>🛠️ Travel Tools</h2>
+        <div class="tools-tabs">
+          <button class="tool-tab active" data-tool="fuel">⛽ Fuel</button>
+          <button class="tool-tab" data-tool="distance">📏 Distance</button>
+          <button class="tool-tab" data-tool="toll">🛣️ Toll</button>
+          <button class="tool-tab" data-tool="weather">🌤️ Weather</button>
+          <button class="tool-tab" data-tool="compare">⚖️ Compare</button>
+          <button class="tool-tab" data-tool="packing">🎒 Packing</button>
+          <button class="tool-tab" data-tool="emergency">🚨 Emergency</button>
+        </div>
+
+        <!-- Fuel Calculator -->
+        <div id="tool-fuel" class="tool-panel active">
+          <div class="fuel-calculator">
+            <div class="fuel-form">
+              <div class="fuel-row">
+                <div class="fuel-field">
+                  <label for="fuel-type">Fuel Type</label>
+                  <select id="fuel-type">
+                    <option value="petrol">⛽ Petrol</option>
+                    <option value="diesel">�️ Diesel</option>
+                  </select>
+                </div>
+                <div class="fuel-field">
+                  <label for="fuel-price">Price per Litre (₹)</label>
+                  <input type="number" id="fuel-price" placeholder="e.g. 102.50" step="0.01" min="0">
+                </div>
+              </div>
+              <div class="fuel-row">
+                <div class="fuel-field">
+                  <label for="vehicle-type">Vehicle</label>
+                  <select id="vehicle-type">
+                    <option value="bike">🏍️ Bike</option>
+                    <option value="car">🚗 Car</option>
+                  </select>
+                </div>
+                <div class="fuel-field">
+                  <label for="mileage">Mileage (km/litre)</label>
+                  <input type="number" id="mileage" placeholder="e.g. 40" step="0.1" min="0">
+                </div>
+              </div>
+              <div class="fuel-row">
+                <div class="fuel-field full">
+                  <label for="distance">Total Distance (km)</label>
+                  <input type="number" id="distance" placeholder="e.g. 350" step="0.1" min="0">
+                </div>
+              </div>
+              <button id="calc-fuel-btn" class="fuel-btn">🧮 Calculate Fuel Cost</button>
+            </div>
+            <div id="fuel-result" class="fuel-result" style="display:none;">
+              <div class="fuel-result-grid">
+                <div class="fuel-stat"><span class="fuel-stat-icon">⛽</span><span class="fuel-stat-label">Fuel Needed</span><span class="fuel-stat-value" id="res-litres">—</span></div>
+                <div class="fuel-stat"><span class="fuel-stat-icon">💰</span><span class="fuel-stat-label">Total Cost</span><span class="fuel-stat-value" id="res-cost">—</span></div>
+                <div class="fuel-stat"><span class="fuel-stat-icon">📏</span><span class="fuel-stat-label">Cost per km</span><span class="fuel-stat-value" id="res-perkm">—</span></div>
+                <div class="fuel-stat"><span class="fuel-stat-icon">🔄</span><span class="fuel-stat-label">Round Trip Cost</span><span class="fuel-stat-value" id="res-round">—</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Distance Calculator -->
+        <div id="tool-distance" class="tool-panel">
+          <div class="distance-calculator">
+            <p class="tool-subtitle">Calculate distance between any two places across India</p>
+            <div class="dist-form">
+              <div class="dist-section">
+                <label for="dist-from-state">📍 From</label>
+                <div class="dist-row">
+                  <select id="dist-from-state" class="dist-select"><option value="">Select State</option></select>
+                  <select id="dist-from-city" class="dist-select"><option value="">Select City/District</option></select>
+                </div>
+              </div>
+              <div class="dist-swap-row"><button id="dist-swap" class="dist-swap-btn" aria-label="Swap locations">⇅</button></div>
+              <div class="dist-section">
+                <label for="dist-to-state">📍 To</label>
+                <div class="dist-row">
+                  <select id="dist-to-state" class="dist-select"><option value="">Select State</option></select>
+                  <select id="dist-to-city" class="dist-select"><option value="">Select City/District</option></select>
+                </div>
+              </div>
+              <button id="calc-dist-btn" class="fuel-btn">� Calculate Distance</button>
+            </div>
+            <div id="dist-result" class="fuel-result" style="display:none;">
+              <div class="fuel-result-grid">
+                <div class="fuel-stat"><span class="fuel-stat-icon">�</span><span class="fuel-stat-label">Straight-line Distance</span><span class="fuel-stat-value" id="res-dist">—</span></div>
+                <div class="fuel-stat"><span class="fuel-stat-icon">🛣️</span><span class="fuel-stat-label">Est. Road Distance</span><span class="fuel-stat-value" id="res-road">—</span></div>
+                <div class="fuel-stat"><span class="fuel-stat-icon">🏍️</span><span class="fuel-stat-label">Bike Time (~50 km/h)</span><span class="fuel-stat-value" id="res-bike-time">—</span></div>
+                <div class="fuel-stat"><span class="fuel-stat-icon">🚗</span><span class="fuel-stat-label">Car Time (~60 km/h)</span><span class="fuel-stat-value" id="res-car-time">—</span></div>
+              </div>
+              <div id="dist-map" class="dist-map-container"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Toll Estimator -->
+        <div id="tool-toll" class="tool-panel">
+          <div class="distance-calculator">
+            <p class="tool-subtitle">Estimate toll gate costs between any two points in India</p>
+            <div class="dist-form">
+              <div class="dist-section">
+                <label for="toll-from-state">📍 From</label>
+                <div class="dist-row">
+                  <select id="toll-from-state" class="dist-select"><option value="">Select State</option></select>
+                  <select id="toll-from-city" class="dist-select"><option value="">Select City/District</option></select>
+                </div>
+              </div>
+              <div class="dist-section">
+                <label for="toll-to-state">📍 To</label>
+                <div class="dist-row">
+                  <select id="toll-to-state" class="dist-select"><option value="">Select State</option></select>
+                  <select id="toll-to-city" class="dist-select"><option value="">Select City/District</option></select>
+                </div>
+              </div>
+              <div class="dist-section">
+                <label>🚗 Vehicle Type</label>
+                <div class="toll-vehicle-row">
+                  <button class="toll-vtype active" data-vtype="car">🚗 Car/Jeep</button>
+                  <button class="toll-vtype" data-vtype="lcv">🚐 LCV</button>
+                  <button class="toll-vtype" data-vtype="bus">🚌 Bus/Truck</button>
+                  <button class="toll-vtype" data-vtype="mav">🚛 Multi-Axle</button>
+                </div>
+              </div>
+              <button id="calc-toll-btn" class="fuel-btn">🛣️ Estimate Toll Cost</button>
+            </div>
+            <div id="toll-result" style="display:none;">
+              <div class="toll-summary">
+                <div class="fuel-result-grid">
+                  <div class="fuel-stat"><span class="fuel-stat-icon">🛣️</span><span class="fuel-stat-label">Toll Gates</span><span class="fuel-stat-value" id="toll-count">—</span></div>
+                  <div class="fuel-stat"><span class="fuel-stat-icon">💰</span><span class="fuel-stat-label">One-way Cost</span><span class="fuel-stat-value" id="toll-cost">—</span></div>
+                  <div class="fuel-stat"><span class="fuel-stat-icon">🔄</span><span class="fuel-stat-label">Round Trip</span><span class="fuel-stat-value" id="toll-round">—</span></div>
+                  <div class="fuel-stat"><span class="fuel-stat-icon">📏</span><span class="fuel-stat-label">Route Distance</span><span class="fuel-stat-value" id="toll-dist">—</span></div>
+                </div>
+              </div>
+              <div id="toll-list" class="toll-list"></div>
+              <div id="toll-map" class="dist-map-container"></div>
+              <p class="toll-disclaimer">⚠️ Estimates based on NHAI 2025-26 rates. Actual costs may vary. Verify at <a href="https://tis.nhai.gov.in/TollInformation" target="_blank" rel="noopener">NHAI Toll Info</a></p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Weather Info -->
+        <div id="tool-weather" class="tool-panel">
+          <div class="distance-calculator">
+            <p class="tool-subtitle">Check real-time weather for any destination before you travel</p>
+            <div class="dist-form">
+              <div class="dist-section">
+                <label for="weather-dest">📍 Select Destination</label>
+                <select id="weather-dest" class="dist-select" style="max-width:100%"><option value="">Choose a destination...</option></select>
+              </div>
+              <button id="check-weather-btn" class="fuel-btn">🌤️ Check Weather</button>
+            </div>
+            <div id="weather-result" style="display:none;">
+              <div class="weather-card-main">
+                <div class="weather-hero">
+                  <div class="weather-icon-big" id="w-icon">☀️</div>
+                  <div class="weather-temp-big">
+                    <span id="w-temp">--</span>°C
+                  </div>
+                  <div class="weather-desc" id="w-desc">--</div>
+                  <div class="weather-location" id="w-location">--</div>
+                </div>
+                <div class="weather-details-grid">
+                  <div class="weather-detail"><span class="wd-icon">💧</span><span class="wd-label">Humidity</span><span class="wd-value" id="w-humidity">--</span></div>
+                  <div class="weather-detail"><span class="wd-icon">💨</span><span class="wd-label">Wind</span><span class="wd-value" id="w-wind">--</span></div>
+                  <div class="weather-detail"><span class="wd-icon">🌡️</span><span class="wd-label">Feels Like</span><span class="wd-value" id="w-feels">--</span></div>
+                  <div class="weather-detail"><span class="wd-icon">🌧️</span><span class="wd-label">Rain Chance</span><span class="wd-value" id="w-rain">--</span></div>
+                  <div class="weather-detail"><span class="wd-icon">🌅</span><span class="wd-label">Sunrise</span><span class="wd-value" id="w-sunrise">--</span></div>
+                  <div class="weather-detail"><span class="wd-icon">🌇</span><span class="wd-label">Sunset</span><span class="wd-value" id="w-sunset">--</span></div>
+                </div>
+              </div>
+              <div class="weather-forecast" id="w-forecast"></div>
+              <p class="weather-tip" id="w-tip"></p>
+              <p class="toll-disclaimer">Data from <a href="https://open-meteo.com/" target="_blank" rel="noopener">Open-Meteo API</a> — free, no API key needed</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Compare Destinations -->
+        <div id="tool-compare" class="tool-panel">
+          <div class="compare-container">
+            <p class="tool-subtitle">Compare two destinations side by side</p>
+            <div class="compare-selectors">
+              <div class="compare-pick">
+                <label>📍 Destination A</label>
+                <select id="compare-a" class="dist-select"><option value="">Choose...</option></select>
+              </div>
+              <div class="compare-vs">VS</div>
+              <div class="compare-pick">
+                <label>📍 Destination B</label>
+                <select id="compare-b" class="dist-select"><option value="">Choose...</option></select>
+              </div>
+            </div>
+            <button id="compare-btn" class="fuel-btn">⚖️ Compare Now</button>
+            <div id="compare-result" style="display:none;"></div>
+          </div>
+        </div>
+
+        <!-- Packing Checklist -->
+        <div id="tool-packing" class="tool-panel">
+          <div class="packing-container">
+            <p class="tool-subtitle">Auto-generated packing list based on your trip type</p>
+            <div class="packing-selectors">
+              <div class="packing-pick">
+                <label>🗂️ Trip Type</label>
+                <div class="packing-types">
+                  <button class="packing-type active" data-pack="devotional">🙏 Temple Visit</button>
+                  <button class="packing-type" data-pack="trekking">🥾 Trekking</button>
+                  <button class="packing-type" data-pack="hill-station">🏔️ Hill Station</button>
+                  <button class="packing-type" data-pack="beach">🏖️ Beach</button>
+                </div>
+              </div>
+              <div class="packing-pick">
+                <label>📅 Duration</label>
+                <div class="packing-types">
+                  <button class="dur-type active" data-dur="day">Day Trip</button>
+                  <button class="dur-type" data-dur="weekend">Weekend</button>
+                  <button class="dur-type" data-dur="week">1 Week</button>
+                </div>
+              </div>
+            </div>
+            <div id="packing-list" class="packing-list"></div>
+            <div class="packing-actions">
+              <span class="packing-progress" id="pack-progress">0 / 0 packed</span>
+              <button id="pack-reset" class="pack-action-btn">🔄 Reset</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Emergency Contacts -->
+        <div id="tool-emergency" class="tool-panel">
+          <div class="emergency-grid">
+            <div class="emergency-card"><span class="emergency-icon">🚔</span><h4>Police</h4><p class="emergency-num">100</p><p>All India Emergency</p></div>
+            <div class="emergency-card"><span class="emergency-icon">🚑</span><h4>Ambulance</h4><p class="emergency-num">108</p><p>Free Emergency Medical</p></div>
+            <div class="emergency-card"><span class="emergency-icon">🔥</span><h4>Fire</h4><p class="emergency-num">101</p><p>Fire & Rescue</p></div>
+            <div class="emergency-card"><span class="emergency-icon">🆘</span><h4>National Emergency</h4><p class="emergency-num">112</p><p>Single number for all</p></div>
+            <div class="emergency-card"><span class="emergency-icon">🛣️</span><h4>Highway Patrol</h4><p class="emergency-num">1033</p><p>Road accidents & help</p></div>
+            <div class="emergency-card"><span class="emergency-icon">👩</span><h4>Women Helpline</h4><p class="emergency-num">1091 / 181</p><p>24/7 Women Safety</p></div>
+            <div class="emergency-card"><span class="emergency-icon">🏥</span><h4>AIIMS</h4><p class="emergency-num">1800-599-0019</p><p>Toll-free health helpline</p></div>
+            <div class="emergency-card"><span class="emergency-icon">🌲</span><h4>Forest Emergency (TN)</h4><p class="emergency-num">1800-425-1364</p><p>Wildlife & forest rescue</p></div>
+            <div class="emergency-card state-card"><span class="emergency-icon">🏛️</span><h4>Tamil Nadu Tourism</h4><p class="emergency-num">1800-425-4747</p><p>Toll-free tourist helpline</p></div>
+            <div class="emergency-card state-card"><span class="emergency-icon">🏛️</span><h4>Kerala Tourism</h4><p class="emergency-num">1800-425-4747</p><p>Toll-free tourist helpline</p></div>
+            <div class="emergency-card state-card"><span class="emergency-icon">🏛️</span><h4>Karnataka Tourism</h4><p class="emergency-num">080-22352828</p><p>Tourist info & help</p></div>
+            <div class="emergency-card state-card"><span class="emergency-icon">🏛️</span><h4>Maharashtra Tourism</h4><p class="emergency-num">1800-229-930</p><p>Toll-free tourist helpline</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Payanam. Explore India with ❤️</p>
+    <p class="attribution">📷 Images from <a href="https://commons.wikimedia.org" target="_blank" rel="noopener">Wikimedia Commons</a> contributors, licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC BY-SA 4.0</a></p>
+  </footer>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
