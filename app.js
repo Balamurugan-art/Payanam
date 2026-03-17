@@ -6,14 +6,14 @@ document.querySelectorAll('.nav-links a').forEach(link => {
   });
 });
 
-function showSection(id) {
+function showSection(id, skipReset) {
   document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
   document.querySelectorAll('.nav-links a').forEach(a => a.classList.remove('active'));
   document.getElementById(id).classList.add('active');
   const navLink = document.querySelector(`[data-section="${id}"]`);
   if (navLink) navLink.classList.add('active');
   if (id === 'favorites') renderFavorites();
-  if (id === 'explore') {
+  if (id === 'explore' && !skipReset) {
     currentRide = 'all';
     currentState = 'all';
     currentCategory = 'all';
@@ -45,14 +45,18 @@ let searchQuery = '';
 
 document.querySelectorAll('.ride-card').forEach(card => {
   card.addEventListener('click', () => {
+    document.querySelectorAll('.ride-card').forEach(c => c.classList.remove('selected'));
+    card.classList.add('selected');
     currentRide = card.dataset.ride;
     currentState = 'all';
     currentCategory = 'all';
     searchQuery = '';
     document.getElementById('search-input').value = '';
-    showSection('explore');
-    updateFilters();
-    renderAll();
+    setTimeout(() => {
+      showSection('explore', true);
+      updateFilters();
+      renderAll();
+    }, 400);
   });
 });
 
