@@ -2198,6 +2198,14 @@ const bestTimeToVisit = {
   "beach": "Oct – Feb (calm seas, cool breeze)"
 };
 
+// Seasonal months — which months each category is best [1=Jan..12=Dec]
+const seasonalMonths = {
+  "devotional": [10, 11, 12, 1, 2, 3],
+  "trekking": [6, 7, 8, 9, 10, 11, 12, 1],
+  "hill-station": [4, 5, 6, 9, 10, 11],
+  "beach": [10, 11, 12, 1, 2]
+};
+
 // Coordinates for map display [lat, lng]
 const destinationCoords = {
   // TN Devotional
@@ -2912,6 +2920,43 @@ const distanceLocations = {
     "New Delhi": [28.6139, 77.2090], "Old Delhi": [28.6562, 77.2410], "Dwarka (Delhi)": [28.5921, 77.0460],
     "Noida": [28.5355, 77.3910], "Gurugram": [28.4595, 77.0266]
   }
+};
+
+// Food specialties by destination
+const foodSpecialties = {
+  "Madurai": ["Jigarthanda", "Kari Dosa", "Paruthi Paal", "Meen Kulambu"],
+  "Thanjavur": ["Thanjavur Idli", "Degree Coffee", "Athirasam"],
+  "Rameswaram": ["Appam & Stew", "Fresh Seafood", "Kothu Parotta"],
+  "Kanyakumari": ["Fish Curry", "Banana Chips", "Puttu & Kadala"],
+  "Tiruvannamalai": ["Temple Annadhanam", "Pongal", "Filter Coffee"],
+  "Chidambaram": ["Chettinad Chicken", "Kavuni Arisi", "Jaggery Pongal"],
+  "Srirangam (Trichy)": ["Srirangam Puliyodarai", "Trichy Sambar", "Manapparai Murukku"],
+  "Kanchipuram": ["Kanchipuram Idli", "Silk Saree Biryani", "Temple Prasadam"],
+  "Palani": ["Panchamirtham (Prasadam)", "Hill Banana", "Palani Patti"],
+  "Chennai (Mylapore)": ["Filter Coffee", "Idli-Sambar", "Mylapore Sundal"],
+  "Kumbakonam": ["Kumbakonam Degree Coffee", "Paal Payasam", "Adai Avial"],
+  "Ooty": ["Ooty Chocolate", "Varkey Biscuit", "Nilgiri Tea"],
+  "Kodaikanal": ["Kodai Cheese", "Eucalyptus Oil", "Homemade Chocolate"],
+  "Coonoor": ["Nilgiri Tea", "Baker's Bread", "Coonoor Honey"],
+  "Yercaud": ["Yercaud Coffee", "Jackfruit Chips", "Orange Marmalade"],
+  "Valparai": ["Fresh Tea", "Bamboo Chicken", "Tribal Honey"],
+  "Kolli Hills": ["Hill Banana", "Tribal Honey", "Pepper Chicken"],
+  "Pondicherry": ["French Crepes", "Prawn Curry", "Pondicherry Filter Coffee"],
+  "Mahabalipuram": ["Grilled Seafood", "Fish Fry", "Coconut Water"],
+  "Marina & Covelong": ["Sundal", "Bajji", "Rose Milk"],
+  "Munnar": ["Munnar Tea", "Kerala Parotta", "Fish Molee"],
+  "Alleppey": ["Karimeen Pollichathu", "Appam & Stew", "Toddy Shop Fish Fry"],
+  "Wayanad": ["Wayanad Honey", "Bamboo Rice", "Kerala Sadya"],
+  "Kovalam": ["Prawn Curry", "Puttu & Kadala", "Fresh Toddy"],
+  "Coorg": ["Coorg Pandi Curry", "Akki Roti", "Coorg Honey"],
+  "Hampi": ["Jolada Roti", "Bisi Bele Bath", "Mango Lassi"],
+  "Mysore": ["Mysore Pak", "Mysore Masala Dosa", "Mysore Bonda"],
+  "Gokarna": ["Fish Thali", "Sol Kadhi", "Rava Fried Fish"],
+  "Lonavala": ["Chikki", "Fudge", "Vada Pav"],
+  "Mahabaleshwar": ["Strawberry Cream", "Corn on Cob", "Mapro Sandwich"],
+  "Alibaug": ["Bombil Fry", "Sol Kadhi", "Modak"],
+  "Ajanta & Ellora": ["Naan Qalia", "Sheer Khurma", "Aurangabad Biryani"],
+  "Shirdi": ["Prasadam Laddu", "Puran Poli", "Sabudana Vada"]
 };
 
 // Major Toll Plazas across India — [lat, lng, name, highway, rates: {car, lcv, bus, mav}]

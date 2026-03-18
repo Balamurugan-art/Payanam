@@ -213,6 +213,8 @@
           <button class="tool-tab" data-tool="toll">🛣️ Toll</button>
           <button class="tool-tab" data-tool="weather">🌤️ Weather</button>
           <button class="tool-tab" data-tool="compare">⚖️ Compare</button>
+          <button class="tool-tab" data-tool="budget">💰 Budget</button>
+          <button class="tool-tab" data-tool="weekend">🚗 Weekend</button>
           <button class="tool-tab" data-tool="packing">🎒 Packing</button>
           <button class="tool-tab" data-tool="emergency">🚨 Emergency</button>
         </div>
@@ -380,6 +382,10 @@
         <div id="tool-compare" class="tool-panel">
           <div class="compare-container">
             <p class="tool-subtitle">Compare two destinations side by side</p>
+            <div class="compare-start-point">
+              <label>🚩 Your Starting Point</label>
+              <select id="compare-start" class="dist-select"><option value="">Select starting point...</option></select>
+            </div>
             <div class="compare-selectors">
               <div class="compare-pick">
                 <label>📍 Destination A</label>
@@ -391,8 +397,89 @@
                 <select id="compare-b" class="dist-select"><option value="">Choose...</option></select>
               </div>
             </div>
+            <div class="compare-vehicle-row">
+              <label>🚗 Vehicle Type</label>
+              <div class="compare-vtypes">
+                <button class="compare-vtype active" data-cvtype="car">🚗 Car</button>
+                <button class="compare-vtype" data-cvtype="bike">🏍️ Bike</button>
+                <button class="compare-vtype" data-cvtype="bus">🚌 Bus</button>
+              </div>
+              <div class="compare-fuel-inputs">
+                <div class="compare-fuel-field">
+                  <label for="compare-mileage">📏 Mileage (km/L)</label>
+                  <input type="number" id="compare-mileage" placeholder="e.g. 15" step="0.1" min="1" value="15">
+                </div>
+                <div class="compare-fuel-field">
+                  <label for="compare-fuel-price">⛽ Fuel Price (₹/L)</label>
+                  <input type="number" id="compare-fuel-price" placeholder="e.g. 102" step="0.01" min="1" value="102">
+                </div>
+              </div>
+            </div>
             <button id="compare-btn" class="fuel-btn">⚖️ Compare Now</button>
             <div id="compare-result" style="display:none;"></div>
+          </div>
+        </div>
+
+        <!-- Budget Trip Planner -->
+        <div id="tool-budget" class="tool-panel">
+          <div class="budget-container">
+            <p class="tool-subtitle">Enter your budget — we'll find destinations that fit</p>
+            <div class="budget-form">
+              <div class="budget-row">
+                <div class="budget-field">
+                  <label for="budget-amount">💰 Total Budget (₹)</label>
+                  <input type="number" id="budget-amount" placeholder="e.g. 5000" min="500" step="500">
+                </div>
+                <div class="budget-field">
+                  <label for="budget-start">🚩 Starting From</label>
+                  <select id="budget-start" class="dist-select"><option value="">Select location...</option></select>
+                </div>
+              </div>
+              <div class="budget-row">
+                <div class="budget-field">
+                  <label>🚗 Vehicle</label>
+                  <div class="smart-vtypes">
+                    <button class="smart-vtype active" data-bvtype="car">🚗 Car</button>
+                    <button class="smart-vtype" data-bvtype="bike">🏍️ Bike</button>
+                  </div>
+                </div>
+                <div class="budget-field">
+                  <label for="budget-nights">🌙 Nights</label>
+                  <select id="budget-nights" class="dist-select">
+                    <option value="0">Day trip</option>
+                    <option value="1" selected>1 night</option>
+                    <option value="2">2 nights</option>
+                    <option value="3">3 nights</option>
+                  </select>
+                </div>
+              </div>
+              <button id="budget-find-btn" class="fuel-btn">💰 Find Destinations</button>
+            </div>
+            <div id="budget-results" style="display:none;"></div>
+          </div>
+        </div>
+
+        <!-- Weekend Trip Suggest -->
+        <div id="tool-weekend" class="tool-panel">
+          <div class="weekend-container">
+            <p class="tool-subtitle">Top weekend getaways reachable within 4–5 hours from your location</p>
+            <div class="weekend-form">
+              <div class="budget-row">
+                <div class="budget-field">
+                  <label for="weekend-start">🚩 Your Location</label>
+                  <select id="weekend-start" class="dist-select"><option value="">Select location...</option></select>
+                </div>
+                <div class="budget-field">
+                  <label>🚗 Vehicle</label>
+                  <div class="smart-vtypes">
+                    <button class="smart-vtype active" data-wvtype="car">🚗 Car</button>
+                    <button class="smart-vtype" data-wvtype="bike">🏍️ Bike</button>
+                  </div>
+                </div>
+              </div>
+              <button id="weekend-find-btn" class="fuel-btn">🚗 Find Weekend Trips</button>
+            </div>
+            <div id="weekend-results" style="display:none;"></div>
           </div>
         </div>
 
@@ -452,6 +539,8 @@
   <footer>
     <p>&copy; 2026 Payanam. Explore India with ❤️</p>
   </footer>
+
+  <button id="back-to-top" class="back-to-top" aria-label="Back to top">↑</button>
 
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
   <script src="data.js"></script>

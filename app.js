@@ -148,12 +148,19 @@ function getDifficultyTag(desc) {
 }
 
 // ===== Render destination card HTML =====
+function isSeasonalNow(category) {
+  const month = new Date().getMonth() + 1;
+  return typeof seasonalMonths !== 'undefined' && seasonalMonths[category] && seasonalMonths[category].includes(month);
+}
+
 function destCardHTML(dest) {
+  const bestNow = isSeasonalNow(dest.category);
   return `
     <div class="dest-card" tabindex="0" role="button" aria-label="View details for ${dest.name}" data-id="${dest.id}">
       <div class="dest-img">
         <img src="${getImageUrl(dest)}" alt="${dest.name}" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
         <span class="dest-img-fallback">${dest.emoji}</span>
+        ${bestNow ? '<span class="best-now-badge">🔥 Best Now</span>' : ''}
         <button class="fav-btn ${isFav(dest.id) ? 'active' : ''}" data-fav="${dest.id}" aria-label="Save ${dest.name}">
           ${isFav(dest.id) ? '❤️' : '🤍'}
         </button>
@@ -283,6 +290,14 @@ function openModal(id) {
 
     <h4>🏡 Stays</h4>
     <ul>${dest.stays.map(s => `<li><strong>${s.name}</strong><span>${s.detail}</span></li>`).join('')}</ul>
+
+    ${(typeof foodSpecialties !== 'undefined' && foodSpecialties[dest.name]) ? `
+    <h4>🍽️ Must-Try Food</h4>
+    <div class="food-tags">${foodSpecialties[dest.name].map(f => `<span class="food-tag">${f}</span>`).join('')}</div>
+    ` : ''}
+
+    <h4>📍 Nearby Destinations</h4>
+    <div class="nearby-grid" id="nearby-grid"></div>
   `;
 
   // Modal fav button
@@ -291,6 +306,33 @@ function openModal(id) {
     e.target.textContent = isFav(id) ? '❤️' : '🤍';
     e.target.classList.toggle('active', isFav(id));
   });
+
+  // Nearby destinations
+  const nearbyGrid = document.getElementById('nearby-grid');
+  if (coords && nearbyGrid) {
+    const nearby = destinations
+      .filter(d => d.id !== dest.id && destinationCoords[d.name])
+      .map(d => ({ dest: d, dist: haversine(coords, destinationCoords[d.name]) * 1.35 }))
+      .filter(n => n.dist < 150)
+      .sort((a, b) => a.dist - b.dist)
+      .slice(0, 4);
+    if (nearby.length > 0) {
+      nearbyGrid.innerHTML = nearby.map(n => `
+        <div class="nearby-card" data-id="${n.dest.id}">
+          <img src="${getImageUrl(n.dest)}" alt="${n.dest.name}" loading="lazy" onerror="this.style.display='none'">
+          <div class="nearby-info">
+            <strong>${n.dest.emoji} ${n.dest.name}</strong>
+            <span>${n.dist.toFixed(0)} km away · ${categoryLabels[n.dest.category]}</span>
+          </div>
+        </div>
+      `).join('');
+      nearbyGrid.querySelectorAll('.nearby-card').forEach(card => {
+        card.addEventListener('click', () => openModal(Number(card.dataset.id)));
+      });
+    } else {
+      nearbyGrid.innerHTML = '<p style="color:var(--gray);font-size:0.9rem;">No destinations within 150 km</p>';
+    }
+  }
 
   document.getElementById('modal-overlay').classList.add('open');
 
@@ -685,15 +727,29 @@ document.getElementById('check-weather-btn').addEventListener('click', async () 
 // ===== Compare Destinations =====
 function buildCompareDropdowns() {
   const names = destinations.map(d => d.name).sort();
-  ['compare-a', 'compare-b'].forEach(id => {
+  ['compare-start', 'compare-a', 'compare-b'].forEach(id => {
     const sel = document.getElementById(id);
-    sel.innerHTML = '<option value="">Choose...</option>' + names.map(n => `<option value="${n}">${n}</option>`).join('');
+    const placeholder = id === 'compare-start' ? 'Select starting point...' : 'Choose...';
+    sel.innerHTML = `<option value="">${placeholder}</option>` + names.map(n => `<option value="${n}">${n}</option>`).join('');
   });
 }
 
+let compareVehicle = 'car';
+const defaultMileage = { car: 15, bike: 45, bus: 5 };
+document.querySelectorAll('.compare-vtype').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.compare-vtype').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    compareVehicle = btn.dataset.cvtype;
+    document.getElementById('compare-mileage').value = defaultMileage[compareVehicle];
+  });
+});
+
 document.getElementById('compare-btn').addEventListener('click', () => {
+  const startName = document.getElementById('compare-start').value;
   const aName = document.getElementById('compare-a').value;
   const bName = document.getElementById('compare-b').value;
+  if (!startName) { alert('Select a starting point'); return; }
   if (!aName || !bName) { alert('Select both destinations'); return; }
   if (aName === bName) { alert('Pick two different destinations'); return; }
 
@@ -701,9 +757,41 @@ document.getElementById('compare-btn').addEventListener('click', () => {
   const b = destinations.find(d => d.name === bName);
   if (!a || !b) return;
 
+  const coordsStart = destinationCoords[startName];
   const coordsA = destinationCoords[a.name];
   const coordsB = destinationCoords[b.name];
-  const dist = (coordsA && coordsB) ? (haversine(coordsA, coordsB) * 1.35).toFixed(0) + ' km' : 'N/A';
+  const roadDistA = (coordsStart && coordsA) ? (haversine(coordsStart, coordsA) * 1.35) : 0;
+  const roadDistB = (coordsStart && coordsB) ? (haversine(coordsStart, coordsB) * 1.35) : 0;
+  const distA = roadDistA ? roadDistA.toFixed(0) + ' km' : 'N/A';
+  const distB = roadDistB ? roadDistB.toFixed(0) + ' km' : 'N/A';
+
+  // Travel time estimation
+  const avgSpeed = { car: 60, bike: 50, bus: 45 };
+  const speed = avgSpeed[compareVehicle] || 60;
+  const fmtTime = (km) => { if (!km) return 'N/A'; const h = Math.floor(km / speed); const m = Math.round((km / speed - h) * 60); return h + 'h ' + m + 'm'; };
+  const timeA = fmtTime(roadDistA);
+  const timeB = fmtTime(roadDistB);
+
+  // Toll estimation
+  const tollKey = compareVehicle === 'bike' ? null : (compareVehicle === 'bus' ? 'bus' : 'car');
+  const tollsA = (coordsStart && coordsA && tollKey) ? findTollsInCorridor(coordsStart, coordsA) : [];
+  const tollsB = (coordsStart && coordsB && tollKey) ? findTollsInCorridor(coordsStart, coordsB) : [];
+  const tollCostA = tollsA.reduce((sum, t) => sum + (t.rates[tollKey] || 0), 0);
+  const tollCostB = tollsB.reduce((sum, t) => sum + (t.rates[tollKey] || 0), 0);
+
+  // Fuel cost estimation (user inputs)
+  const mileage = parseFloat(document.getElementById('compare-mileage').value) || defaultMileage[compareVehicle];
+  const fuelPrice = parseFloat(document.getElementById('compare-fuel-price').value) || 102;
+  const fuelCostA = roadDistA ? Math.round((roadDistA / mileage) * fuelPrice) : 0;
+  const fuelCostB = roadDistB ? Math.round((roadDistB / mileage) * fuelPrice) : 0;
+
+  // Total trip cost (fuel + toll one-way)
+  const totalA = fuelCostA + tollCostA;
+  const totalB = fuelCostB + tollCostB;
+
+  // Food specialties
+  const foodA = (typeof foodSpecialties !== 'undefined' && foodSpecialties[a.name]) ? foodSpecialties[a.name].slice(0, 3).join(', ') : '—';
+  const foodB = (typeof foodSpecialties !== 'undefined' && foodSpecialties[b.name]) ? foodSpecialties[b.name].slice(0, 3).join(', ') : '—';
 
   const bestA = bestTimeToVisit[a.category] || 'Year-round';
   const bestB = bestTimeToVisit[b.category] || 'Year-round';
@@ -735,6 +823,8 @@ document.getElementById('compare-btn').addEventListener('click', () => {
     </div>`;
   }
 
+  const vLabel = compareVehicle === 'car' ? 'Car' : compareVehicle === 'bike' ? 'Bike' : 'Bus';
+
   document.getElementById('compare-result').innerHTML = `
     <div class="compare-header">
       <div class="compare-col-head">
@@ -756,7 +846,14 @@ document.getElementById('compare-btn').addEventListener('click', () => {
       ${compareRow('Min Hotel ₹/night', '₹' + priceA, '₹' + priceB, 'lower')}
       ${compareRow('Ride Types', a.rideTypes.join(', '), b.rideTypes.join(', '))}
       ${compareRow('Best Time', bestA, bestB)}
-      ${compareRow('Distance Apart', dist, dist)}
+      ${compareRow('🍽️ Must Try', foodA, foodB)}
+      <div class="compare-section-label">🚗 Route from ${startName} (${vLabel})</div>
+      ${compareRow('Distance', distA, distB, 'lower')}
+      ${compareRow('Travel Time', timeA, timeB, 'lower')}
+      ${compareRow('⛽ Fuel Cost', '₹' + fuelCostA, '₹' + fuelCostB, 'lower')}
+      ${tollKey ? compareRow('🛣️ Toll Gates', tollsA.length, tollsB.length, 'lower') : ''}
+      ${tollKey ? compareRow('🛣️ Toll One-way', '₹' + tollCostA, '₹' + tollCostB, 'lower') : ''}
+      ${tollKey ? compareRow('🛣️ Toll Round Trip', '₹' + (tollCostA * 2), '₹' + (tollCostB * 2), 'lower') : ''}
     </div>
     <div class="compare-spots">
       <div class="compare-spot-col">
@@ -768,6 +865,7 @@ document.getElementById('compare-btn').addEventListener('click', () => {
         ${b.spots.slice(0, 5).map(s => `<div class="cs-item"><strong>${s.name}</strong><span>${s.detail}</span></div>`).join('')}
       </div>
     </div>
+    <p class="toll-disclaimer">⛽ Fuel: ₹${fuelPrice}/L · Mileage: ${mileage} km/L · Tolls: Bikes exempt</p>
   `;
   document.getElementById('compare-result').style.display = 'block';
 });
@@ -882,6 +980,164 @@ function updatePackProgress(done, total) {
   document.getElementById('pack-progress').innerHTML = `${done} / ${total} packed <span class="pack-pct">(${pct}%)</span>`;
 }
 
+// ===== Budget Trip Planner =====
+let budgetVehicle = 'car';
+document.querySelectorAll('[data-bvtype]').forEach(btn => {
+  btn.addEventListener('click', () => {
+    btn.closest('.smart-vtypes').querySelectorAll('.smart-vtype').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    budgetVehicle = btn.dataset.bvtype;
+  });
+});
+
+function buildBudgetDropdown() {
+  const names = destinations.map(d => d.name).sort();
+  const sel = document.getElementById('budget-start');
+  sel.innerHTML = '<option value="">Select location...</option>' + names.map(n => `<option value="${n}">${n}</option>`).join('');
+}
+
+document.getElementById('budget-find-btn').addEventListener('click', () => {
+  const budget = parseFloat(document.getElementById('budget-amount').value);
+  const startName = document.getElementById('budget-start').value;
+  const nights = parseInt(document.getElementById('budget-nights').value);
+  if (!budget || budget < 500) { alert('Enter a budget of at least ₹500'); return; }
+  if (!startName) { alert('Select your starting location'); return; }
+
+  const startCoords = destinationCoords[startName];
+  if (!startCoords) { alert('Location coordinates not found'); return; }
+
+  const mileage = budgetVehicle === 'bike' ? 45 : 15;
+  const fuelPrice = 102;
+  const tollKey = budgetVehicle === 'bike' ? null : 'car';
+
+  const results = destinations
+    .filter(d => d.name !== startName && destinationCoords[d.name])
+    .map(d => {
+      const coords = destinationCoords[d.name];
+      const dist = haversine(startCoords, coords) * 1.35;
+      const fuelCost = Math.round((dist / mileage) * fuelPrice) * 2; // round trip
+      const tolls = tollKey ? findTollsInCorridor(startCoords, coords) : [];
+      const tollCost = tolls.reduce((sum, t) => sum + (t.rates[tollKey] || 0), 0) * 2;
+      const minHotel = d.hotels.reduce((min, h) => {
+        const m = h.detail.match(/₹([\d,]+)/);
+        const p = m ? parseInt(m[1].replace(',', '')) : 99999;
+        return p < min ? p : min;
+      }, 99999);
+      const hotelCost = minHotel * nights;
+      const totalCost = fuelCost + tollCost + hotelCost;
+      return { dest: d, dist, fuelCost, tollCost, hotelCost, totalCost, bestNow: isSeasonalNow(d.category) };
+    })
+    .filter(r => r.totalCost <= budget)
+    .sort((a, b) => a.totalCost - b.totalCost);
+
+  const container = document.getElementById('budget-results');
+  if (results.length === 0) {
+    container.innerHTML = '<p class="budget-empty">😔 No destinations fit this budget. Try increasing it or reducing nights.</p>';
+  } else {
+    container.innerHTML = `
+      <p class="budget-count">🎉 ${results.length} destination${results.length > 1 ? 's' : ''} within ₹${budget} budget</p>
+      <div class="budget-cards">
+        ${results.slice(0, 12).map(r => `
+          <div class="budget-card" data-id="${r.dest.id}">
+            <img src="${getImageUrl(r.dest)}" alt="${r.dest.name}" loading="lazy" onerror="this.style.display='none'">
+            ${r.bestNow ? '<span class="best-now-badge">🔥 Best Now</span>' : ''}
+            <div class="budget-card-info">
+              <strong>${r.dest.emoji} ${r.dest.name}</strong>
+              <span class="budget-state">${r.dest.state} · ${categoryLabels[r.dest.category]}</span>
+              <div class="budget-breakdown">
+                <span>⛽ ₹${r.fuelCost}</span>
+                <span>🛣️ ₹${r.tollCost}</span>
+                <span>🏨 ₹${r.hotelCost}</span>
+              </div>
+              <div class="budget-total">💰 Total: ₹${r.totalCost} <span class="budget-dist">(${r.dist.toFixed(0)} km)</span></div>
+            </div>
+          </div>
+        `).join('')}
+      </div>
+    `;
+    container.querySelectorAll('.budget-card').forEach(card => {
+      card.addEventListener('click', () => openModal(Number(card.dataset.id)));
+    });
+  }
+  container.style.display = 'block';
+});
+
+// ===== Weekend Trip Suggest =====
+let weekendVehicle = 'car';
+document.querySelectorAll('[data-wvtype]').forEach(btn => {
+  btn.addEventListener('click', () => {
+    btn.closest('.smart-vtypes').querySelectorAll('.smart-vtype').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    weekendVehicle = btn.dataset.wvtype;
+  });
+});
+
+function buildWeekendDropdown() {
+  const names = destinations.map(d => d.name).sort();
+  const sel = document.getElementById('weekend-start');
+  sel.innerHTML = '<option value="">Select location...</option>' + names.map(n => `<option value="${n}">${n}</option>`).join('');
+}
+
+document.getElementById('weekend-find-btn').addEventListener('click', () => {
+  const startName = document.getElementById('weekend-start').value;
+  if (!startName) { alert('Select your location'); return; }
+
+  const startCoords = destinationCoords[startName];
+  if (!startCoords) { alert('Location coordinates not found'); return; }
+
+  const speed = weekendVehicle === 'bike' ? 50 : 60;
+  const maxHours = 5;
+  const maxDist = speed * maxHours;
+
+  const results = destinations
+    .filter(d => d.name !== startName && destinationCoords[d.name])
+    .map(d => {
+      const coords = destinationCoords[d.name];
+      const dist = haversine(startCoords, coords) * 1.35;
+      const hours = dist / speed;
+      return { dest: d, dist, hours, bestNow: isSeasonalNow(d.category) };
+    })
+    .filter(r => r.dist <= maxDist)
+    .sort((a, b) => {
+      // Prioritize "best now" destinations, then by distance
+      if (a.bestNow && !b.bestNow) return -1;
+      if (!a.bestNow && b.bestNow) return 1;
+      return a.dist - b.dist;
+    });
+
+  const container = document.getElementById('weekend-results');
+  if (results.length === 0) {
+    container.innerHTML = '<p class="budget-empty">😔 No destinations within 5 hours. Try a different location.</p>';
+  } else {
+    container.innerHTML = `
+      <p class="budget-count">🚗 ${results.length} weekend getaway${results.length > 1 ? 's' : ''} within ${maxHours} hours</p>
+      <div class="budget-cards">
+        ${results.slice(0, 12).map(r => {
+          const h = Math.floor(r.hours);
+          const m = Math.round((r.hours - h) * 60);
+          return `
+          <div class="budget-card weekend-card" data-id="${r.dest.id}">
+            <img src="${getImageUrl(r.dest)}" alt="${r.dest.name}" loading="lazy" onerror="this.style.display='none'">
+            ${r.bestNow ? '<span class="best-now-badge">🔥 Best Now</span>' : ''}
+            <div class="budget-card-info">
+              <strong>${r.dest.emoji} ${r.dest.name}</strong>
+              <span class="budget-state">${r.dest.state} · ${categoryLabels[r.dest.category]}</span>
+              <div class="budget-breakdown">
+                <span>📏 ${r.dist.toFixed(0)} km</span>
+                <span>⏱️ ${h}h ${m}m</span>
+              </div>
+            </div>
+          </div>
+        `}).join('')}
+      </div>
+    `;
+    container.querySelectorAll('.budget-card').forEach(card => {
+      card.addEventListener('click', () => openModal(Number(card.dataset.id)));
+    });
+  }
+  container.style.display = 'block';
+});
+
 // ===== Init =====
 buildStateButtons();
 buildCategoryButtons();
@@ -889,5 +1145,16 @@ buildDistDropdowns();
 buildTollDropdowns();
 buildWeatherDropdown();
 buildCompareDropdowns();
+buildBudgetDropdown();
+buildWeekendDropdown();
 renderPacking();
 renderAll();
+
+// ===== Back to Top Button =====
+const backToTop = document.getElementById('back-to-top');
+window.addEventListener('scroll', () => {
+  backToTop.classList.toggle('visible', window.scrollY > 400);
+});
+backToTop.addEventListener('click', () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});
