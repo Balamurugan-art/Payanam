@@ -154,13 +154,11 @@ function isSeasonalNow(category) {
 }
 
 function destCardHTML(dest) {
-  const bestNow = isSeasonalNow(dest.category);
   return `
     <div class="dest-card" tabindex="0" role="button" aria-label="View details for ${dest.name}" data-id="${dest.id}">
       <div class="dest-img">
         <img src="${getImageUrl(dest)}" alt="${dest.name}" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
         <span class="dest-img-fallback">${dest.emoji}</span>
-        ${bestNow ? '<span class="best-now-badge">🔥 Best Now</span>' : ''}
         <button class="fav-btn ${isFav(dest.id) ? 'active' : ''}" data-fav="${dest.id}" aria-label="Save ${dest.name}">
           ${isFav(dest.id) ? '❤️' : '🤍'}
         </button>
@@ -1040,7 +1038,6 @@ document.getElementById('budget-find-btn').addEventListener('click', () => {
         ${results.slice(0, 12).map(r => `
           <div class="budget-card" data-id="${r.dest.id}">
             <img src="${getImageUrl(r.dest)}" alt="${r.dest.name}" loading="lazy" onerror="this.style.display='none'">
-            ${r.bestNow ? '<span class="best-now-badge">🔥 Best Now</span>' : ''}
             <div class="budget-card-info">
               <strong>${r.dest.emoji} ${r.dest.name}</strong>
               <span class="budget-state">${r.dest.state} · ${categoryLabels[r.dest.category]}</span>
@@ -1118,7 +1115,6 @@ document.getElementById('weekend-find-btn').addEventListener('click', () => {
           return `
           <div class="budget-card weekend-card" data-id="${r.dest.id}">
             <img src="${getImageUrl(r.dest)}" alt="${r.dest.name}" loading="lazy" onerror="this.style.display='none'">
-            ${r.bestNow ? '<span class="best-now-badge">🔥 Best Now</span>' : ''}
             <div class="budget-card-info">
               <strong>${r.dest.emoji} ${r.dest.name}</strong>
               <span class="budget-state">${r.dest.state} · ${categoryLabels[r.dest.category]}</span>
