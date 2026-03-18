@@ -18,7 +18,9 @@ const destinations = [
       { name: "Meenakshi Amman Temple", detail: "14 gopurams, Hall of 1,000 Pillars — cultural icon of Tamil Nadu" },
       { name: "Thirumalai Nayakkar Palace", detail: "17th century Indo-Saracenic palace with grand courtyard" },
       { name: "Alagar Kovil", detail: "Vishnu temple in the Alagar Hills, 21 km from Madurai" },
-      { name: "Gandhi Memorial Museum", detail: "Exhibits on India's freedom struggle" }
+      { name: "Gandhi Memorial Museum", detail: "Exhibits on India's freedom struggle" },
+      { name: "Vandiyur Mariamman Teppakulam", detail: "Huge temple tank — famous for the annual float festival" },
+      { name: "Koodal Azhagar Temple", detail: "Rare Vishnu temple where deity faces all four directions — one of 108 Divya Desams" }
     ],
     hotels: [
       { name: "Heritage Madurai", detail: "Luxury heritage — ₹7,000/night" },
@@ -93,7 +95,8 @@ const destinations = [
       { name: "Pamban Bridge", detail: "India's first sea bridge connecting the island to mainland" },
       { name: "Dhanushkodi", detail: "Ghost town at the tip where Bay of Bengal meets Indian Ocean" },
       { name: "Gandhamadhana Parvatham", detail: "Hillock with Ram's footprint imprint" },
-      { name: "Agni Theertham", detail: "Sacred beach for ritual holy dip" }
+      { name: "Agni Theertham", detail: "Sacred beach for ritual holy dip" },
+      { name: "Uthirakosamangai Temple", detail: "Ancient Shiva temple with emerald lingam — 30 km from Rameswaram" }
     ],
     hotels: [
       { name: "Hyatt Place", detail: "Premium comfort — ₹5,000/night" },
@@ -118,7 +121,8 @@ const destinations = [
       { name: "Vivekananda Rock Memorial", detail: "Iconic memorial on a rock island reached by ferry" },
       { name: "Thiruvalluvar Statue", detail: "133-ft statue of the Tamil poet-saint" },
       { name: "Suchindram Thanumalayan Temple", detail: "Unique Trinity lingam (Shiva+Vishnu+Brahma) with musical pillars" },
-      { name: "Padmanabhapuram Palace", detail: "Largest wooden palace of Travancore kings" }
+      { name: "Padmanabhapuram Palace", detail: "Largest wooden palace of Travancore kings" },
+      { name: "Nagaraja Temple (Nagercoil)", detail: "Ancient serpent deity temple — unique Jain-Hindu heritage" }
     ],
     hotels: [
       { name: "Sparsa Resort", detail: "Sea-facing luxury — ₹5,000/night" },
@@ -192,7 +196,8 @@ const destinations = [
       { name: "Nataraja Temple", detail: "Space element — gold-roofed sanctum with the Chidambaram Secret" },
       { name: "Thillai Kali Amman Temple", detail: "Powerful Kali temple on the outskirts" },
       { name: "Pichavaram Mangrove Forest", detail: "Second largest mangrove — boat rides through 1,100 hectares" },
-      { name: "Annamalai University", detail: "Historic campus with beautiful architecture" }
+      { name: "Annamalai University", detail: "Historic campus with beautiful architecture" },
+      { name: "Veerattaneswarar Temple (Panruti)", detail: "One of the Ashta Veerattanam — Shiva as the slayer of Andhaka" }
     ],
     hotels: [
       { name: "Hotel Saradharam", detail: "Near temple — ₹2,000/night" },
@@ -267,7 +272,8 @@ const destinations = [
       { name: "Dhandayuthapani Temple", detail: "Arupadai Veedu — hilltop Murugan temple via 693 steps or cable car" },
       { name: "Idumban Temple", detail: "Temple of Murugan's devotee at the hill base" },
       { name: "Palani Hills", detail: "Scenic hills surrounding the temple town" },
-      { name: "Thaipusam Festival", detail: "Massive annual festival with kavadi processions" }
+      { name: "Thaipusam Festival", detail: "Massive annual festival with kavadi processions" },
+      { name: "Lakshmi Narasimhar Temple", detail: "Ancient Vishnu temple at Narasingapuram near Palani hills" }
     ],
     hotels: [
       { name: "Hotel Subam", detail: "Near temple — ₹1,500/night" },
@@ -316,7 +322,8 @@ const destinations = [
       { name: "Sarangapani Temple", detail: "Largest Vishnu temple in Kumbakonam with towering gopuram" },
       { name: "Navagraha Temples", detail: "Nine temples for the nine planetary deities — unique circuit" },
       { name: "Mahamaham Tank", detail: "Sacred tank for the 12-year Mahamaham festival" },
-      { name: "Airavatesvara Temple (Darasuram)", detail: "UNESCO Chola temple nearby with stone chariot" }
+      { name: "Airavatesvara Temple (Darasuram)", detail: "UNESCO Chola temple nearby with stone chariot" },
+      { name: "Nageswaran Temple", detail: "Ancient Chola-era Shiva temple — one of the oldest in Kumbakonam" }
     ],
     hotels: [
       { name: "Sara Regency", detail: "Best in town — ₹3,000/night" },
@@ -364,7 +371,8 @@ const destinations = [
       { name: "Nellaiappar Temple", detail: "Famous Musical Pillars producing different notes when tapped" },
       { name: "Krishnapuram Palace", detail: "18th century Nayak palace with largest single mural in India" },
       { name: "Courtallam Falls", detail: "Spa of South India — medicinal waterfalls 60 km away" },
-      { name: "Sikkal Singaravelan Temple", detail: "Murugan idol said to perspire during Soorasamharam festival" }
+      { name: "Sikkal Singaravelan Temple", detail: "Murugan idol said to perspire during Soorasamharam festival" },
+      { name: "Papanasanathar Temple", detail: "Ancient Shiva temple on the banks of Thamiraparani river — sins washed away" }
     ],
     hotels: [
       { name: "Hotel Aryaas", detail: "Best in town — ₹2,000/night" },
@@ -374,6 +382,150 @@ const destinations = [
     stays: [
       { name: "Courtallam Homestay", detail: "Near the famous spa falls" },
       { name: "Heritage Home", detail: "Traditional Tirunelveli home" }
+    ]
+  },
+  {
+    id: 78,
+    name: "Velankanni",
+    state: "Tamil Nadu",
+    emoji: "⛪",
+    category: "devotional",
+    rideTypes: ["solo", "car"],
+    description: "Basilica of Our Lady of Good Health — one of India's most visited Christian pilgrimage sites, known as the 'Lourdes of the East' on the Coromandel coast.",
+    spots: [
+      { name: "Velankanni Basilica", detail: "16th-century shrine — major Catholic pilgrimage with annual Novena festival" },
+      { name: "Our Lady of Health Church", detail: "Gothic-style church with beautiful stained glass" },
+      { name: "Velankanni Beach", detail: "Serene beach adjacent to the basilica" },
+      { name: "Nagapattinam Kayarohanaswami Temple", detail: "Ancient Shiva temple in nearby Nagapattinam" }
+    ],
+    hotels: [
+      { name: "Hotel Tamil Nadu (TTDC)", detail: "Government stay — ₹1,000/night" },
+      { name: "Pilgrim Guest Houses", detail: "Church-run accommodation — ₹500/night" },
+      { name: "Hotel Sea Shore", detail: "Budget near beach — ₹800/night" }
+    ],
+    stays: [
+      { name: "Coastal Homestay", detail: "Simple home near the basilica" },
+      { name: "Fisherman Village Stay", detail: "Local coastal life experience" }
+    ]
+  },
+  {
+    id: 79,
+    name: "Bannari (Erode)",
+    state: "Tamil Nadu",
+    emoji: "🔱",
+    category: "devotional",
+    rideTypes: ["solo", "car"],
+    description: "Bannari Amman Temple — a renowned Shakti temple at the foothills of the Western Ghats near Sathyamangalam, surrounded by lush forests.",
+    spots: [
+      { name: "Bannari Amman Temple", detail: "Powerful Shakti temple at the Western Ghats foothills" },
+      { name: "Sathyamangalam Tiger Reserve", detail: "Nearby wildlife reserve with elephants and tigers" },
+      { name: "Bhavanisagar Dam", detail: "One of the largest earthen dams in India" },
+      { name: "Kodiveri Falls", detail: "Scenic check dam and waterfall near Gobichettipalayam" }
+    ],
+    hotels: [
+      { name: "Erode Hotels", detail: "Nearby city options — ₹1,500/night" },
+      { name: "Local Lodge", detail: "Basic stay near temple — ₹600/night" },
+      { name: "Forest Rest House", detail: "Government forest stay — ₹800/night" }
+    ],
+    stays: [
+      { name: "Village Homestay", detail: "Rural life near the Western Ghats" },
+      { name: "Farm Stay Gobichettipalayam", detail: "Agricultural experience" }
+    ]
+  },
+  {
+    id: 80,
+    name: "Nagore",
+    state: "Tamil Nadu",
+    emoji: "🕌",
+    category: "devotional",
+    rideTypes: ["solo", "car"],
+    description: "Nagore Dargah — a prominent 16th-century Sufi shrine dedicated to Hazrat Syed Shahul Hameed, attracting devotees of all faiths from across South India.",
+    spots: [
+      { name: "Nagore Dargah", detail: "16th-century Sufi shrine with five minarets — annual Kandoori festival" },
+      { name: "Nagore Beach", detail: "Quiet beach near the dargah" },
+      { name: "Nagapattinam Temples", detail: "Nearby ancient port town with Hindu and Buddhist heritage" },
+      { name: "Sikkal Singaravelan Temple", detail: "Murugan temple 10 km away with unique sweating idol" }
+    ],
+    hotels: [
+      { name: "Dargah Guest House", detail: "Pilgrim accommodation — ₹400/night" },
+      { name: "Nagapattinam Hotels", detail: "Nearby town options — ₹1,200/night" },
+      { name: "Hotel Tamil Nadu (TTDC)", detail: "Budget — ₹800/night" }
+    ],
+    stays: [
+      { name: "Coastal Homestay", detail: "Simple home near the dargah" },
+      { name: "Heritage Stay Nagapattinam", detail: "Colonial-era town experience" }
+    ]
+  },
+  {
+    id: 81,
+    name: "Tiruvarur",
+    state: "Tamil Nadu",
+    emoji: "🎶",
+    category: "devotional",
+    rideTypes: ["solo", "car"],
+    description: "Birthplace of the Carnatic music trinity — Thyagaraja Temple houses one of the largest temple chariots in Asia and the sacred Kamalalayam tank.",
+    spots: [
+      { name: "Thyagaraja Temple", detail: "Massive Shiva temple — one of the largest temple cars in Asia" },
+      { name: "Rajagopalaswamy Temple (Mannargudi)", detail: "Largest Krishna temple in South India — 23 km from Tiruvarur" },
+      { name: "Kamalalayam Tank", detail: "Sacred temple tank — one of the largest in Tamil Nadu" },
+      { name: "Tyagaraja Aradhana", detail: "Annual Carnatic music festival honouring the saint-composer" }
+    ],
+    hotels: [
+      { name: "Hotel Gnanam", detail: "Best in town — ₹1,500/night" },
+      { name: "Local Lodge", detail: "Budget near temple — ₹600/night" },
+      { name: "Nagapattinam Hotels", detail: "Nearby options — ₹1,200/night" }
+    ],
+    stays: [
+      { name: "Temple Town Homestay", detail: "Traditional home near the temple" },
+      { name: "Delta Village Stay", detail: "Kaveri delta rural experience" }
+    ]
+  },
+  {
+    id: 82,
+    name: "Vellore",
+    state: "Tamil Nadu",
+    emoji: "✨",
+    category: "devotional",
+    rideTypes: ["solo", "bike", "car"],
+    description: "Home to the Sripuram Golden Temple — 1,500 kg of gold covering the temple, and the historic Jalakandeswarar Temple inside Vellore Fort.",
+    spots: [
+      { name: "Sripuram Golden Temple", detail: "1,500 kg gold-plated temple — stunning star-shaped walkway" },
+      { name: "Jalakandeswarar Temple", detail: "16th-century Vijayanagara temple inside Vellore Fort" },
+      { name: "Vellore Fort", detail: "16th-century fort with moat, church, and mosque within" },
+      { name: "Science Park", detail: "Interactive science exhibits for families" }
+    ],
+    hotels: [
+      { name: "Hotel Darling Residency", detail: "Best in town — ₹3,000/night" },
+      { name: "GRT Regency", detail: "Mid-range — ₹2,000/night" },
+      { name: "Hotel Rivers", detail: "Budget — ₹1,000/night" }
+    ],
+    stays: [
+      { name: "Fort Area Homestay", detail: "Near the historic fort" },
+      { name: "CMC Campus Guest House", detail: "Quiet stay near the medical campus" }
+    ]
+  },
+  {
+    id: 83,
+    name: "Kodumudi (Erode)",
+    state: "Tamil Nadu",
+    emoji: "🛕",
+    category: "devotional",
+    rideTypes: ["solo", "car"],
+    description: "Magudeeswarar Temple — ancient Shiva temple on the banks of river Kaveri, one of the Saptha Vidanga Sthalams with a unique dancing Shiva form.",
+    spots: [
+      { name: "Magudeeswarar Temple", detail: "Saptha Vidanga Sthalam — unique dancing Shiva on the Kaveri banks" },
+      { name: "Kaveri River Ghat", detail: "Sacred bathing ghat with scenic river views" },
+      { name: "Bhavani Sangameshwarar Temple", detail: "Confluence of three rivers — 25 km away" },
+      { name: "Erode Market", detail: "Famous turmeric and textile market" }
+    ],
+    hotels: [
+      { name: "Erode Hotels", detail: "Nearby city options — ₹1,500/night" },
+      { name: "Local Lodge", detail: "Basic stay near temple — ₹500/night" },
+      { name: "Gobichettipalayam Hotels", detail: "Nearby town — ₹800/night" }
+    ],
+    stays: [
+      { name: "Riverside Homestay", detail: "Simple home on the Kaveri banks" },
+      { name: "Village Stay", detail: "Rural Erode district experience" }
     ]
   },
   // =============================================
@@ -393,7 +545,8 @@ const destinations = [
       { name: "Doddabetta Peak", detail: "Highest point in the Nilgiris at 2,637m" },
       { name: "Nilgiri Mountain Railway", detail: "UNESCO heritage toy train from Mettupalayam" },
       { name: "Ooty Lake", detail: "Boating surrounded by eucalyptus groves" },
-      { name: "Tea Museum", detail: "Nilgiri tea processing and heritage" }
+      { name: "Tea Museum", detail: "Nilgiri tea processing and heritage" },
+      { name: "Kalhatty Ghats", detail: "36 hairpin bends — one of the steepest routes to Ooty, restricted for heavy vehicles" }
     ],
     hotels: [
       { name: "Savoy Hotel - IHCL", detail: "Heritage luxury since 1829 — ₹8,000/night" },
@@ -462,7 +615,7 @@ const destinations = [
     emoji: "☕",
     category: "hill-station",
     rideTypes: ["bike", "car"],
-    description: "Jewel of the South in the Shevaroy Hills — coffee plantations, a serene lake, and pleasant climate year-round.",
+    description: "Jewel of the South in the Shevaroy Hills — 20 famous hairpin bends with named turns, coffee plantations, a serene lake, and pleasant climate year-round.",
     spots: [
       { name: "Yercaud Lake", detail: "Scenic lake with boating and surrounding gardens" },
       { name: "Shevaroy Temple", detail: "Hilltop temple at the highest point" },
@@ -487,7 +640,7 @@ const destinations = [
     emoji: "🌫️",
     category: "hill-station",
     rideTypes: ["bike", "car"],
-    description: "Hidden gem in the Anamalai Hills — 40 hairpin bends, tea and coffee estates, and rich wildlife in the Western Ghats.",
+    description: "Hidden gem in the Anamalai Hills — 40+ hairpin bends through dense tea estates, one of Tamil Nadu's top bike routes. Scenic Athirapally–Valparai ghat road.",
     spots: [
       { name: "Sholayar Dam", detail: "Massive dam surrounded by dense forests" },
       { name: "Monkey Falls", detail: "Refreshing waterfall on the Pollachi-Valparai road" },
@@ -598,6 +751,31 @@ const destinations = [
     stays: [
       { name: "Tea Estate Cottage", detail: "Amidst the cloud forest tea gardens" },
       { name: "Courtallam Homestay", detail: "Near the famous spa waterfalls" }
+    ]
+  },
+  {
+    id: 84,
+    name: "Kolli Hills",
+    state: "Tamil Nadu",
+    emoji: "🏍️",
+    category: "hill-station",
+    rideTypes: ["bike", "car"],
+    description: "Mountain of Death — 70 consecutive hairpin bends on MDR181, Tamil Nadu's most thrilling bike route. Climbs rapidly to 1,300m in Namakkal district with dense forests and waterfalls.",
+    spots: [
+      { name: "70 Hairpin Bends", detail: "Legendary 70 consecutive turns on MDR181 — starts near Kalappanaickenpatti" },
+      { name: "Agaya Gangai Waterfalls", detail: "300-step descent to a stunning waterfall in the forest" },
+      { name: "Arapaleeswarar Temple", detail: "Ancient Shiva temple at the hilltop surrounded by forests" },
+      { name: "Siddhar Caves", detail: "Ancient caves where sages meditated — scenic forest setting" },
+      { name: "Botanical Garden", detail: "Medicinal plants garden maintained by the forest department" }
+    ],
+    hotels: [
+      { name: "Tamil Nadu Forest Rest House", detail: "Government stay — ₹800/night" },
+      { name: "Kolli Hills Resort", detail: "Mid-range — ₹2,000/night" },
+      { name: "Local Guest House", detail: "Budget — ₹500/night" }
+    ],
+    stays: [
+      { name: "Tribal Village Homestay", detail: "Stay with Malayali tribal families" },
+      { name: "Hilltop Farmstay", detail: "Pepper and coffee plantation experience" }
     ]
   },
   // =============================================
@@ -1171,6 +1349,78 @@ const destinations = [
       { name: "ECR Beach House", detail: "Rental house on East Coast Road" }
     ]
   },
+  {
+    id: 85,
+    name: "Silver Beach (Cuddalore)",
+    state: "Tamil Nadu",
+    emoji: "🏖️",
+    category: "beach",
+    rideTypes: ["solo", "bike", "car"],
+    description: "Long, expansive beach in Cuddalore — popular for boat rides, water sports, and a peaceful coastal escape near Chidambaram.",
+    spots: [
+      { name: "Silver Beach", detail: "Wide sandy beach with boat rides and water sports" },
+      { name: "Pichavaram Mangroves", detail: "Second largest mangrove forest — 30 min away" },
+      { name: "Fort St. David", detail: "Historic British-era fort ruins near the beach" },
+      { name: "Devanampattinam Beach", detail: "Fishing village beach with local culture" }
+    ],
+    hotels: [
+      { name: "Hotel Atithi", detail: "Best in town — ₹1,500/night" },
+      { name: "Hotel Tamil Nadu (TTDC)", detail: "Budget — ₹800/night" },
+      { name: "Beach Guest House", detail: "Simple stay — ₹600/night" }
+    ],
+    stays: [
+      { name: "Coastal Homestay", detail: "Simple home near the beach" },
+      { name: "Pichavaram Eco Stay", detail: "Near the mangrove backwaters" }
+    ]
+  },
+  {
+    id: 86,
+    name: "Kodikkarai (Point Calimere)",
+    state: "Tamil Nadu",
+    emoji: "🦩",
+    category: "beach",
+    rideTypes: ["solo", "car"],
+    description: "Where the Palk Strait meets the Bay of Bengal — a paradise for birdwatchers with thousands of migratory flamingos, and a pristine wildlife sanctuary.",
+    spots: [
+      { name: "Point Calimere Wildlife Sanctuary", detail: "Wetland sanctuary — flamingos, pelicans, and 250+ bird species" },
+      { name: "Kodikkarai Beach", detail: "Serene, unspoiled beach at the tip of the Cauvery delta" },
+      { name: "Flamingo Point", detail: "Best spot to see thousands of migratory flamingos (Nov–Feb)" },
+      { name: "Kodikkarai Lighthouse", detail: "Historic lighthouse with coastal views" }
+    ],
+    hotels: [
+      { name: "Forest Rest House", detail: "Government stay inside sanctuary — ₹600/night" },
+      { name: "Vedaranyam Hotels", detail: "Nearby town options — ₹800/night" },
+      { name: "Nagapattinam Hotels", detail: "Base town — ₹1,200/night" }
+    ],
+    stays: [
+      { name: "Birdwatcher's Cottage", detail: "Simple stay near the sanctuary" },
+      { name: "Delta Village Stay", detail: "Cauvery delta rural experience" }
+    ]
+  },
+  {
+    id: 87,
+    name: "Muttom Beach",
+    state: "Tamil Nadu",
+    emoji: "🌅",
+    category: "beach",
+    rideTypes: ["solo", "bike", "car"],
+    description: "Hidden gem near Kanyakumari — dramatic rocky coastline with a lighthouse, stunning sunrise views, and one of Tamil Nadu's most scenic beaches.",
+    spots: [
+      { name: "Muttom Beach", detail: "Rocky beach with dramatic waves and lighthouse views" },
+      { name: "Muttom Lighthouse", detail: "Scenic lighthouse on the rocky headland" },
+      { name: "Sanguthurai Beach", detail: "Secluded, quiet beach 10 km away — perfect for solitude" },
+      { name: "Thengapattinam Beach", detail: "Calm fishing village beach with traditional boats" }
+    ],
+    hotels: [
+      { name: "Kanyakumari Hotels", detail: "Nearby options — ₹1,500/night" },
+      { name: "Local Guest House", detail: "Basic stay — ₹500/night" },
+      { name: "Nagercoil Hotels", detail: "Base town — ₹1,000/night" }
+    ],
+    stays: [
+      { name: "Coastal Homestay", detail: "Simple home near the beach" },
+      { name: "Fishing Village Stay", detail: "Experience local coastal life" }
+    ]
+  },
 
   // =============================================
   // KERALA
@@ -1647,12 +1897,70 @@ const spotTimings = {
   "Sikkal Singaravelan Temple": "6:00 AM – 12:00 PM, 4:00 PM – 8:00 PM",
   "Triveni Sangamam": "Open 24 hours",
 
+  // Velankanni
+  "Velankanni Basilica": "5:30 AM – 9:00 PM",
+  "Our Lady of Health Church": "6:00 AM – 8:00 PM",
+  "Velankanni Beach": "Open 24 hours",
+  "Nagapattinam Kayarohanaswami Temple": "6:00 AM – 12:00 PM, 4:00 PM – 8:00 PM",
+
+  // Bannari
+  "Bannari Amman Temple": "6:00 AM – 12:30 PM, 4:00 PM – 8:30 PM",
+  "Sathyamangalam Tiger Reserve": "6:00 AM – 6:00 PM (Permit required)",
+  "Bhavanisagar Dam": "Open all day",
+  "Kodiveri Falls": "8:00 AM – 5:30 PM",
+
+  // Nagore
+  "Nagore Dargah": "5:00 AM – 10:00 PM",
+  "Nagore Beach": "Open 24 hours",
+  "Nagapattinam Temples": "6:00 AM – 12:00 PM, 4:00 PM – 8:00 PM",
+
+  // Madurai addition
+  "Vandiyur Mariamman Teppakulam": "6:00 AM – 8:00 PM",
+  "Koodal Azhagar Temple": "6:00 AM – 12:30 PM, 4:00 PM – 8:30 PM",
+
+  // Rameswaram addition
+  "Uthirakosamangai Temple": "6:00 AM – 12:00 PM, 4:00 PM – 8:00 PM",
+
+  // Kanyakumari addition
+  "Nagaraja Temple (Nagercoil)": "5:30 AM – 12:00 PM, 4:30 PM – 8:30 PM",
+
+  // Palani addition
+  "Lakshmi Narasimhar Temple": "6:00 AM – 12:00 PM, 4:00 PM – 8:00 PM",
+
+  // Chidambaram addition
+  "Veerattaneswarar Temple (Panruti)": "6:00 AM – 12:00 PM, 4:00 PM – 8:00 PM",
+
+  // Kumbakonam addition
+  "Nageswaran Temple": "6:00 AM – 12:00 PM, 4:00 PM – 8:00 PM",
+
+  // Tirunelveli addition
+  "Papanasanathar Temple": "6:00 AM – 12:00 PM, 4:00 PM – 8:00 PM",
+
+  // Tiruvarur
+  "Thyagaraja Temple": "6:00 AM – 12:30 PM, 4:00 PM – 9:00 PM",
+  "Rajagopalaswamy Temple (Mannargudi)": "6:00 AM – 12:00 PM, 4:00 PM – 8:30 PM",
+  "Kamalalayam Tank": "Open all day",
+  "Tyagaraja Aradhana": "Jan annually",
+
+  // Vellore
+  "Sripuram Golden Temple": "8:00 AM – 8:00 PM",
+  "Jalakandeswarar Temple": "6:00 AM – 12:00 PM, 4:00 PM – 8:00 PM",
+  "Vellore Fort": "9:00 AM – 6:00 PM",
+  "Science Park": "10:00 AM – 5:30 PM",
+
+  // Kodumudi
+  "Magudeeswarar Temple": "6:00 AM – 12:00 PM, 4:00 PM – 8:00 PM",
+  "Kaveri River Ghat": "Open all day",
+  "Bhavani Sangameshwarar Temple": "6:00 AM – 12:00 PM, 4:00 PM – 8:00 PM",
+  "Erode Market": "8:00 AM – 9:00 PM",
+
   // TN Hill Stations
   "Botanical Garden": "7:00 AM – 6:30 PM",
   "Doddabetta Peak": "7:00 AM – 6:00 PM",
   "Nilgiri Mountain Railway": "First train 7:10 AM (Check schedule)",
   "Ooty Lake": "8:00 AM – 6:00 PM",
   "Tea Museum": "9:00 AM – 4:00 PM (Closed Mon)",
+  "Kalhatty Ghats": "Open 24 hours (Caution: steep, restricted for heavy vehicles)",
   "Kodai Lake": "6:00 AM – 5:30 PM (Boating 8 AM–5 PM)",
   "Coaker's Walk": "7:00 AM – 7:00 PM",
   "Pillar Rocks": "9:00 AM – 4:00 PM",
@@ -1687,6 +1995,12 @@ const spotTimings = {
   "Upper Kodaiyar Dam": "9:00 AM – 5:00 PM",
   "KMTR Forest Trails": "6:00 AM – 5:00 PM (Permit required)",
   "Manimuthar Falls": "8:00 AM – 5:30 PM",
+
+  // Kolli Hills
+  "70 Hairpin Bends": "Open 24 hours (Best: early morning)",
+  "Agaya Gangai Waterfalls": "7:00 AM – 5:00 PM",
+  "Arapaleeswarar Temple": "6:00 AM – 12:00 PM, 4:00 PM – 8:00 PM",
+  "Siddhar Caves": "Open all day",
   "Balaji Temple": "6:00 AM – 7:00 PM",
 
   // TN Trekking
@@ -1780,6 +2094,23 @@ const spotTimings = {
   "Covelong Point Surf School": "6:00 AM – 6:00 PM",
   "Elliot's Beach": "Open 24 hours",
   "Dakshinachitra": "10:00 AM – 6:00 PM (Closed Tue)",
+
+  // Silver Beach (Cuddalore)
+  "Silver Beach": "Open 24 hours",
+  "Fort St. David": "Open all day (ruins)",
+  "Devanampattinam Beach": "Open 24 hours",
+
+  // Kodikkarai (Point Calimere)
+  "Point Calimere Wildlife Sanctuary": "6:00 AM – 6:00 PM",
+  "Kodikkarai Beach": "Open 24 hours",
+  "Flamingo Point": "6:00 AM – 6:00 PM (Best: Nov–Feb dawn)",
+  "Kodikkarai Lighthouse": "3:00 PM – 5:00 PM",
+
+  // Muttom Beach
+  "Muttom Beach": "Open 24 hours",
+  "Muttom Lighthouse": "3:00 PM – 5:00 PM",
+  "Sanguthurai Beach": "Open 24 hours",
+  "Thengapattinam Beach": "Open 24 hours",
 
   // Kerala
   "Eravikulam National Park": "7:30 AM – 4:00 PM (Closed Feb–Mar)",
@@ -1885,6 +2216,12 @@ const destinationCoords = {
   "Kumbakonam": [10.9617, 79.3881],
   "Srivilliputhur": [9.5120, 77.6340],
   "Tirunelveli": [8.7139, 77.7567],
+  "Velankanni": [10.6832, 79.8449],
+  "Bannari (Erode)": [11.6020, 77.0050],
+  "Nagore": [10.8240, 79.8430],
+  "Tiruvarur": [10.7725, 79.6345],
+  "Vellore": [12.9165, 79.1325],
+  "Kodumudi (Erode)": [11.0770, 77.8870],
 
   // TN Hill Stations
   "Ooty": [11.4102, 76.6950],
@@ -1896,6 +2233,7 @@ const destinationCoords = {
   "Sirumalai": [10.2170, 77.9830],
   "Javadi Hills": [12.3500, 78.8500],
   "Manjolai": [8.7500, 77.3500],
+  "Kolli Hills": [11.2500, 78.3500],
   "Swamimalai (Yelagiri)": [12.5820, 78.6360],
 
   // TN Trekking
@@ -1923,6 +2261,9 @@ const destinationCoords = {
   "Pondicherry": [11.9416, 79.8083],
   "Mahabalipuram": [12.6172, 80.1927],
   "Marina & Covelong": [12.9500, 80.2707],
+  "Silver Beach (Cuddalore)": [11.7480, 79.7680],
+  "Kodikkarai (Point Calimere)": [10.2930, 79.8580],
+  "Muttom Beach": [8.1350, 77.3280],
 
   // Kerala
   "Munnar": [10.0889, 77.0595],
@@ -1952,6 +2293,10 @@ const spotCoords = {
   "Abbey Falls": [12.456, 75.718],
   "Adi Kumbeswarar Temple": [10.9697, 79.3904],
   "Agaya Gangai Falls": [10.207, 77.9866],
+  "Agaya Gangai Waterfalls": [11.2700, 78.3300],
+  "70 Hairpin Bends": [11.2500, 78.3500],
+  "Arapaleeswarar Temple": [11.2550, 78.3450],
+  "Siddhar Caves": [11.2600, 78.3400],
   "Agni Theertham": [9.288, 79.318],
   "Airavatesvara Temple": [10.948, 79.353],
   "Airavatesvara Temple (Darasuram)": [10.9666, 79.3782],
@@ -1977,6 +2322,9 @@ const spotCoords = {
   "Baraliyar River Trail (4 km)": [10.4586, 76.8523],
   "Beemanmadavu Falls": [12.3505, 78.8618],
   "Bhushi Dam": [18.75, 73.4],
+  "Bannari Amman Temple": [11.6020, 77.0050],
+  "Bhavanisagar Dam": [11.5070, 77.0680],
+  "Bhavani Sangameshwarar Temple": [11.4430, 77.6840],
   "Bibi Ka Maqbara": [20.5435, 75.7072],
   "Birdwatching Trail (3 km)": [11.4305, 76.8702],
   "Botanical Garden": [11.414, 76.696],
@@ -2022,6 +2370,7 @@ const spotCoords = {
   "Gandhi Memorial Museum": [9.917, 78.116],
   "Gangaikonda Cholapuram": [11.206, 79.449],
   "Gene Pool Conservation Park": [11.5116, 76.5027],
+  "Erode Market": [11.3410, 77.7172],
   "Girivalam Path": [12.23, 79.07],
   "Grass Hills": [10.3217, 76.9486],
   "Grassland Plateau": [11.002, 76.8233],
@@ -2042,12 +2391,16 @@ const spotCoords = {
   "Isha Yoga Center": [11.0025, 76.812],
   "Jalagamparai Waterfall": [12.4815, 78.5722],
   "Jambukeswarar Temple": [10.856, 78.704],
+  "Jalakandeswarar Temple": [12.9165, 79.1325],
   "Jeep Trail": [10.0609, 77.2535],
   "KMTR Forest Trails": [8.7403, 77.3531],
   "KMTR Wildlife": [8.6938, 77.2925],
   "Kailasanathar Temple": [12.85, 79.698],
   "Kallanai Dam": [10.8689, 78.6787],
   "Kamakshi Amman Temple": [12.842, 79.705],
+  "Kamalalayam Tank": [10.7725, 79.6345],
+  "Kalhatty Ghats": [11.4500, 76.7200],
+  "Kaveri River Ghat": [11.0770, 77.8870],
   "Kapaleeshwarar Temple": [13.0339, 80.2707],
   "Karikayur Trail (8 km)": [11.4206, 76.7917],
   "Karla Caves": [18.7435, 73.4098],
@@ -2061,6 +2414,8 @@ const spotCoords = {
   "Kodai Lake": [10.235, 77.489],
   "Kodaikanal Connection": [10.2146, 77.4508],
   "Kodanad Viewpoint": [11.4215, 76.8641],
+  "Kodiveri Falls": [11.5500, 77.1600],
+  "Koodal Azhagar Temple": [9.9200, 78.1190],
   "Kolaribetta Peak (18 km)": [11.3705, 76.6103],
   "Kolukkumalai Tea Estate": [10.0808, 77.2523],
   "Konkan Kada": [19.39, 73.77],
@@ -2075,6 +2430,7 @@ const spotCoords = {
   "Lady's Seat": [11.7641, 78.2085],
   "Lakya Dam": [13.1687, 75.2469],
   "Lamb's Rock": [11.3444, 76.7992],
+  "Lakshmi Narasimhar Temple": [10.4500, 77.5100],
   "Lighthouse Beach": [8.4075, 76.9804],
   "Longwood Shola": [11.4143, 76.8644],
   "Longwood Shola Forest": [11.4407, 76.8622],
@@ -2083,6 +2439,7 @@ const spotCoords = {
   "Mahamaham Tank": [10.9557, 79.3812],
   "Malabar Giant Squirrel": [10.479, 76.8337],
   "Manapad": [8.4843, 78.1226],
+  "Magudeeswarar Temple": [11.0770, 77.8870],
   "Manimuthar Falls": [8.743, 77.3421],
   "Manjolai Tea Estates": [8.7613, 77.353],
   "Mapro Garden": [17.9196, 73.6508],
@@ -2104,6 +2461,12 @@ const spotCoords = {
   "Nataraja Temple": [11.3992, 79.6946],
   "Nature Education Trail (8 km)": [11.5005, 76.5101],
   "Navagraha Temples": [10.9519, 79.3915],
+  "Nagore Dargah": [10.8240, 79.8430],
+  "Nagore Beach": [10.8260, 79.8500],
+  "Nagapattinam Temples": [10.7672, 79.8449],
+  "Nagapattinam Kayarohanaswami Temple": [10.7672, 79.8449],
+  "Nagaraja Temple (Nagercoil)": [8.1833, 77.4119],
+  "Nageswaran Temple": [10.9610, 79.3890],
   "Needle Rock Summit": [11.5186, 76.5125],
   "Nellaiappar Temple": [8.7139, 77.7567],
   "Nilgiri Biosphere Views": [11.3694, 76.7331],
@@ -2111,11 +2474,13 @@ const spotCoords = {
   "Observation Tower": [10.2174, 77.9939],
   "Om Beach": [14.53, 74.31],
   "Ooty Lake": [11.406, 76.689],
+  "Our Lady of Health Church": [10.6835, 79.8445],
   "Padmanabhapuram Palace": [8.246, 77.326],
   "Pagoda Point": [11.7806, 78.1974],
   "Palani Hills": [10.4284, 77.5242],
   "Pamba River": [9.4366, 77.0928],
   "Pamban Bridge": [9.279, 79.211],
+  "Papanasanathar Temple": [8.6500, 77.3700],
   "Pancha Rathas": [12.615, 80.192],
   "Pandaravarai Trail": [10.4986, 76.8328],
   "Panoramic Nilgiri Views": [11.4147, 76.7721],
@@ -2134,6 +2499,7 @@ const spotCoords = {
   "Raja's Seat": [12.3379, 75.8178],
   "Rajmachi Fort": [18.7472, 73.3996],
   "Ramanathaswamy Temple": [9.288, 79.317],
+  "Rajagopalaswamy Temple (Mannargudi)": [10.6630, 79.4500],
   "Ranganathaswamy Temple": [10.8627, 78.6874],
   "Rangaswamy Peak": [11.4309, 76.7824],
   "River Crossings": [8.7005, 77.3119],
@@ -2147,6 +2513,7 @@ const spotCoords = {
   "Santhome Beach": [13.0283, 80.2636],
   "Saptatirtha Pushkarni": [19.384, 73.7636],
   "Sarangapani Temple": [10.9621, 79.3972],
+  "Sathyamangalam Tiger Reserve": [11.5200, 77.0200],
   "Saraswathi Mahal Library": [10.7855, 79.1335],
   "Schwartz Church": [10.7804, 79.1315],
   "Serenity Beach": [11.9473, 79.8007],
@@ -2164,6 +2531,7 @@ const spotCoords = {
   "Sim's Park": [11.353, 76.7959],
   "Sirumalai Lake": [10.2285, 77.986],
   "Sri Ramana Ashram": [12.228, 79.064],
+  "Sripuram Golden Temple": [12.8950, 79.1450],
   "Srivilliputhur Megamalai Tiger Reserve": [9.5039, 77.6379],
   "St. Philomena's Church": [12.2902, 76.6306],
   "Steep Forest Ascent": [11.5106, 76.5192],
@@ -2178,6 +2546,8 @@ const spotCoords = {
   "Thaipusam Festival": [10.4318, 77.5124],
   "Thanjavur Royal Palace": [10.786, 79.134],
   "Thillai Kali Amman Temple": [11.3997, 79.7032],
+  "Thyagaraja Temple": [10.7725, 79.6345],
+  "Tyagaraja Aradhana": [10.7725, 79.6345],
   "Thiruchendur Beach": [8.4946, 78.1278],
   "Thirumalai Nayakkar Palace": [9.921, 78.121],
   "Thiruvalluvar Statue": [8.078, 77.553],
@@ -2189,8 +2559,14 @@ const spotCoords = {
   "Tribal Sacred Site": [11.412, 76.783],
   "Ucchi Pillayar Temple": [10.8574, 78.6809],
   "Upper Kodaiyar Dam": [8.7505, 77.3605],
+  "Uthirakosamangai Temple": [9.3500, 78.9000],
   "Vainu Bappu Observatory": [12.3582, 78.8525],
   "Varadharaja Perumal Temple": [12.8271, 79.6951],
+  "Vandiyur Mariamman Teppakulam": [9.9150, 78.1350],
+  "Velankanni Basilica": [10.6832, 79.8449],
+  "Velankanni Beach": [10.6850, 79.8500],
+  "Veerattaneswarar Temple (Panruti)": [11.7450, 79.5670],
+  "Vellore Fort": [12.9165, 79.1325],
   "Vellagavi Village": [10.2204, 77.4703],
   "Vellayani Lake": [8.3898, 76.982],
   "Venna Lake": [17.93, 73.65],
@@ -2202,7 +2578,21 @@ const spotCoords = {
   "Wild Stream Crossings": [11.3817, 76.543],
   "Wildlife Sightings": [11.3737, 76.7231],
   "Yelagiri Lake": [12.5745, 78.6402],
-  "Yercaud Lake": [11.775, 78.205]
+  "Yercaud Lake": [11.775, 78.205],
+
+  // Beach spots — Silver Beach, Kodikkarai, Muttom
+  "Silver Beach": [11.7480, 79.7680],
+  "Pichavaram Mangroves": [11.4170, 79.7770],
+  "Fort St. David": [11.7350, 79.7620],
+  "Devanampattinam Beach": [11.7550, 79.7750],
+  "Point Calimere Wildlife Sanctuary": [10.2930, 79.8580],
+  "Kodikkarai Beach": [10.2900, 79.8600],
+  "Flamingo Point": [10.2950, 79.8550],
+  "Kodikkarai Lighthouse": [10.2920, 79.8590],
+  "Muttom Beach": [8.1350, 77.3280],
+  "Muttom Lighthouse": [8.1340, 77.3260],
+  "Sanguthurai Beach": [8.1800, 77.2500],
+  "Thengapattinam Beach": [8.1600, 77.2100]
 };
 
 // Verified Wikimedia Commons images (CC licensed)
@@ -2224,6 +2614,12 @@ const destinationImages = {
   "Kumbakonam": "https://upload.wikimedia.org/wikipedia/commons/3/3c/Kumbakonam_Mahamaham_Tank.jpg",
   "Srivilliputhur": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Srivilliputhur_Andal_temple_%2832%29.jpg/600px-Srivilliputhur_Andal_temple_%2832%29.jpg",
   "Tirunelveli": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Nellaiappar_Temple_%2848410%29.jpg/600px-Nellaiappar_Temple_%2848410%29.jpg",
+  "Velankanni": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Velankanni_Church-1.jpg/600px-Velankanni_Church-1.jpg",
+  "Bannari (Erode)": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Bannari_Amman_Temple.JPG/600px-Bannari_Amman_Temple.JPG",
+  "Nagore": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Nagore_Dargah3.JPG/600px-Nagore_Dargah3.JPG",
+  "Tiruvarur": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Thear_2.jpg/600px-Thear_2.jpg",
+  "Vellore": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Sripuram_Temple_Full_View.jpg/600px-Sripuram_Temple_Full_View.jpg",
+  "Kodumudi (Erode)": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Kodumudi_%2812%29.jpg/600px-Kodumudi_%2812%29.jpg",
 
   // TN Hill Stations
   "Ooty": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/Fields_Hazy_Mountains_Marlimund_Ooty_Nilgiris_Aug25_A7CR_07258.jpg/600px-Fields_Hazy_Mountains_Marlimund_Ooty_Nilgiris_Aug25_A7CR_07258.jpg",
@@ -2235,6 +2631,7 @@ const destinationImages = {
   "Sirumalai": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Sirumalai_Hills.jpg/600px-Sirumalai_Hills.jpg",
   "Javadi Hills": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Javadi_Hills.jpg/600px-Javadi_Hills.jpg",
   "Manjolai": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Manjolai_Tea_estate.jpg/600px-Manjolai_Tea_estate.jpg",
+  "Kolli Hills": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/KolliHills_Valley.JPG/600px-KolliHills_Valley.JPG",
   "Swamimalai (Yelagiri)": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Yelagiri_Hills.jpg/600px-Yelagiri_Hills.jpg",
 
   // TN Trekking — Easy
@@ -2266,6 +2663,9 @@ const destinationImages = {
   "Pondicherry": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Pondicherry-French_Quarter-WUS02277.jpg/600px-Pondicherry-French_Quarter-WUS02277.jpg",
   "Mahabalipuram": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Mamallapuram%2C_Shore_Temple%2C_India.jpg/600px-Mamallapuram%2C_Shore_Temple%2C_India.jpg",
   "Marina & Covelong": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Marina_Beach_in_Chennai.jpg/600px-Marina_Beach_in_Chennai.jpg",
+  "Silver Beach (Cuddalore)": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Silver_beach_at_Cuddalore.jpg/600px-Silver_beach_at_Cuddalore.jpg",
+  "Kodikkarai (Point Calimere)": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Point_Calimere_Wildlife_and_Bird_Sanctuary_IMG_1757.jpg/600px-Point_Calimere_Wildlife_and_Bird_Sanctuary_IMG_1757.jpg",
+  "Muttom Beach": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Muttom_Tamil_Nadu.JPG/600px-Muttom_Tamil_Nadu.JPG",
 
   // Kerala
   "Munnar": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Tea_estate_from_munnar.jpg/600px-Tea_estate_from_munnar.jpg",

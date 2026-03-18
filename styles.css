@@ -395,8 +395,10 @@ nav {
 }
 
 .cat-tag {
-  background: var(--dark-card);
-  color: var(--white) !important;
+  background: var(--primary) !important;
+  color: #ffffff !important;
+  border-color: var(--primary) !important;
+  font-weight: 700;
 }
 
 /* Trek difficulty badges */
