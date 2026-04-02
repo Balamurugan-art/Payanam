@@ -1545,6 +1545,1262 @@ const destinations = [
       { name: "Forest Edge Cottage", detail: "Stay at the edge of the reserve" }
     ]
   },
+  {
+    id: 88,
+    name: "Sree Padmanabhaswamy Temple",
+    state: "Kerala",
+    emoji: "🙏",
+    category: "devotional",
+    rideTypes: ["solo", "car"],
+    description: "Monumental Hindu shrine to Lord Vishnu in Thiruvananthapuram, one of the richest temples in the world.",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Sree_Padmanabhaswamy_Temple.jpg/400px-Sree_Padmanabhaswamy_Temple.jpg",
+    destinationCoords: [8.4826, 76.9437],
+    spots: [
+      { name: "Main Sanctum", detail: "Lord Vishnu in Anantha Shayanam posture", coords: [8.4826, 76.9437] },
+      { name: "Ottakkal Mandapam", detail: "Single stone mandapam with intricate carvings", coords: [8.4828, 76.9435] },
+      { name: "Temple Tank (Padma Theertham)", detail: "Sacred temple pond", coords: [8.4830, 76.9440] }
+    ],
+    spotTimings: { "Main Sanctum": "3:30 AM–12:00 PM, 5:00–8:15 PM", "Ottakkal Mandapam": "3:30 AM–8:15 PM" },
+    hotels: [
+      { name: "Hilton Garden Inn", detail: "Premium — ₹6,000/night" },
+      { name: "Hotel Residency Tower", detail: "Mid-range — ₹2,500/night" }
+    ],
+    stays: [
+      { name: "Temple Trust Accommodation", detail: "Basic pilgrim rooms" }
+    ]
+  },
+  {
+    id: 89,
+    name: "Attukal Bhagavathy Temple",
+    state: "Kerala",
+    emoji: "🙏",
+    category: "devotional",
+    rideTypes: ["solo", "car"],
+    description: "Hindu goddess shrine famous for the Attukal Pongala festival — the largest gathering of women in the world.",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Attukal_temple.jpg/400px-Attukal_temple.jpg",
+    destinationCoords: [8.4780, 76.9520],
+    spots: [
+      { name: "Main Temple", detail: "Goddess Bhadrakali shrine", coords: [8.4780, 76.9520] },
+      { name: "Pongala Ground", detail: "Massive festival area for Attukal Pongala", coords: [8.4775, 76.9525] }
+    ],
+    spotTimings: { "Main Temple": "4:30 AM–12:00 PM, 5:00–8:30 PM" },
+    hotels: [
+      { name: "Hotel Chaithram", detail: "KTDC — ₹2,000/night" },
+      { name: "Ariya Nivaas", detail: "Budget — ₹1,200/night" }
+    ],
+    stays: [
+      { name: "Pilgrim Guest House", detail: "Near temple premises" }
+    ]
+  },
+  {
+    id: 90,
+    name: "Thrikkakkara Vamana Moorthy Temple",
+    state: "Kerala",
+    emoji: "🙏",
+    category: "devotional",
+    rideTypes: ["solo", "car"],
+    description: "Ancient temple dedicated to Vamana (Vishnu avatar) in Kochi — the origin of Onam festival.",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Thrikkakara_Temple.jpg/400px-Thrikkakara_Temple.jpg",
+    destinationCoords: [10.0261, 76.3125],
+    spots: [
+      { name: "Main Shrine", detail: "Vamana Moorthy sanctum", coords: [10.0261, 76.3125] },
+      { name: "Onam Celebrations Area", detail: "Grand Onam festival venue", coords: [10.0265, 76.3128] }
+    ],
+    spotTimings: { "Main Shrine": "4:30 AM–11:30 AM, 5:00–8:00 PM" },
+    hotels: [
+      { name: "Grand Hyatt Kochi", detail: "Luxury — ₹8,000/night" },
+      { name: "Zostel Kochi", detail: "Budget — ₹600/night" }
+    ],
+    stays: [
+      { name: "Kochi Homestay", detail: "Traditional Kerala home" }
+    ]
+  },
+  {
+    id: 91,
+    name: "Sree Poornathrayeesa Temple",
+    state: "Kerala",
+    emoji: "🙏",
+    category: "devotional",
+    rideTypes: ["solo", "car"],
+    description: "Landmark temple in Tripunithura with annual Vrishchikolsavam celebrations and elephant processions.",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Sree_Poornathrayeesa_Temple.jpg/400px-Sree_Poornathrayeesa_Temple.jpg",
+    destinationCoords: [9.9508, 76.3485],
+    spots: [
+      { name: "Main Sanctum", detail: "Lord Vishnu as Santhanagopala Moorthy", coords: [9.9508, 76.3485] },
+      { name: "Koothambalam", detail: "Traditional temple theatre", coords: [9.9510, 76.3488] }
+    ],
+    spotTimings: { "Main Sanctum": "3:00 AM–11:30 AM, 5:00–8:30 PM" },
+    hotels: [
+      { name: "Marriott Kochi", detail: "Premium — ₹7,000/night" },
+      { name: "Hotel Aiswarya", detail: "Budget — ₹1,500/night" }
+    ],
+    stays: [
+      { name: "Tripunithura Homestay", detail: "Heritage area stay" }
+    ]
+  },
+  {
+    id: 92,
+    name: "Mannarasala Sree Nagaraja Temple",
+    state: "Kerala",
+    emoji: "🙏",
+    category: "devotional",
+    rideTypes: ["solo", "car"],
+    description: "Famous ancient temple for serpent gods near Haripad — unique for its priestess tradition.",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Mannarasala_Temple.jpg/400px-Mannarasala_Temple.jpg",
+    destinationCoords: [9.2833, 76.4667],
+    spots: [
+      { name: "Main Shrine", detail: "Nagaraja (Serpent King) sanctum", coords: [9.2833, 76.4667] },
+      { name: "Sacred Grove", detail: "Thousands of serpent idols in the grove", coords: [9.2830, 76.4670] }
+    ],
+    spotTimings: { "Main Shrine": "5:00 AM–12:00 PM, 5:00–7:30 PM" },
+    hotels: [
+      { name: "Hotel Aida", detail: "Alappuzha — ₹2,000/night" },
+      { name: "Haripad Lodge", detail: "Budget — ₹800/night" }
+    ],
+    stays: [
+      { name: "Backwater Homestay", detail: "Near Haripad canals" }
+    ]
+  },
+  {
+    id: 93,
+    name: "Aranmula Parthasarathy Temple",
+    state: "Kerala",
+    emoji: "🙏",
+    category: "devotional",
+    rideTypes: ["solo", "car"],
+    description: "Sacred Hindu shrine dedicated to Lord Krishna (Parthasarathy) — famous for Aranmula boat race.",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Aranmula_Parthasarathy_Temple.jpg/400px-Aranmula_Parthasarathy_Temple.jpg",
+    destinationCoords: [9.3167, 76.6833],
+    spots: [
+      { name: "Main Temple", detail: "Lord Krishna as Parthasarathy", coords: [9.3167, 76.6833] },
+      { name: "Aranmula Boat Race Venue", detail: "Famous Vallam Kali snake boat race", coords: [9.3170, 76.6840] }
+    ],
+    spotTimings: { "Main Temple": "4:00 AM–12:00 PM, 5:00–8:00 PM" },
+    hotels: [
+      { name: "Aranmula Heritage", detail: "Traditional — ₹2,500/night" },
+      { name: "Pilgrim Rest", detail: "Budget — ₹700/night" }
+    ],
+    stays: [
+      { name: "Riverside Homestay", detail: "By the Pampa river" }
+    ]
+  },
+  {
+    id: 94,
+    name: "Guruvayur Sree Krishna Temple",
+    state: "Kerala",
+    emoji: "🙏",
+    category: "devotional",
+    rideTypes: ["solo", "car"],
+    description: "One of the most important Krishna temples in India — ancient complex in Guruvayur, Thrissur.",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Guruvayoor_Temple_1.jpg/400px-Guruvayoor_Temple_1.jpg",
+    destinationCoords: [10.5942, 76.0410],
+    spots: [
+      { name: "Main Sanctum", detail: "Guruvayurappan — four-armed Vishnu", coords: [10.5942, 76.0410] },
+      { name: "Punnathurkotta", detail: "Elephant sanctuary of the temple", coords: [10.5920, 76.0430] },
+      { name: "Mammiyur Mahadeva Temple", detail: "Shiva temple opposite Guruvayur", coords: [10.5945, 76.0415] }
+    ],
+    spotTimings: { "Main Sanctum": "3:00 AM–12:30 PM, 4:30–9:15 PM" },
+    hotels: [
+      { name: "Hotel Vanamala", detail: "Near temple — ₹2,500/night" },
+      { name: "Krishna Inn", detail: "Budget — ₹1,000/night" }
+    ],
+    stays: [
+      { name: "Temple Guest House", detail: "Devaswom accommodation" }
+    ]
+  },
+  {
+    id: 95,
+    name: "Sri Kadampuzha Bhagavathy Temple",
+    state: "Kerala",
+    emoji: "🙏",
+    category: "devotional",
+    rideTypes: ["solo", "car"],
+    description: "Sacred Hindu site dedicated to Goddess Parvathi in Malappuram — believed to grant marriage wishes.",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Kadampuzha_temple.jpg/400px-Kadampuzha_temple.jpg",
+    destinationCoords: [10.8833, 76.0667],
+    spots: [
+      { name: "Main Shrine", detail: "Goddess Parvathi sanctum", coords: [10.8833, 76.0667] },
+      { name: "Temple Pond", detail: "Sacred pond for rituals", coords: [10.8835, 76.0670] }
+    ],
+    spotTimings: { "Main Shrine": "4:30 AM–12:00 PM, 5:00–8:00 PM" },
+    hotels: [
+      { name: "Hotel Nesto", detail: "Malappuram — ₹2,000/night" },
+      { name: "Budget Lodge", detail: "Near temple — ₹800/night" }
+    ],
+    stays: [
+      { name: "Village Homestay", detail: "Rural Kerala experience" }
+    ]
+  },
+  {
+    id: 96,
+    name: "Sree Vallabha Temple",
+    state: "Kerala",
+    emoji: "🙏",
+    category: "devotional",
+    rideTypes: ["solo", "car"],
+    description: "Sprawling, colorful Hindu temple complex in Thiruvalla dedicated to Lord Vishnu.",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Sree_Vallabha_Temple_Thiruvalla.jpg/400px-Sree_Vallabha_Temple_Thiruvalla.jpg",
+    destinationCoords: [9.3833, 76.5750],
+    spots: [
+      { name: "Main Sanctum", detail: "Lord Vishnu shrine", coords: [9.3833, 76.5750] },
+      { name: "Temple Festival Ground", detail: "Annual Arattu festival venue", coords: [9.3835, 76.5755] }
+    ],
+    spotTimings: { "Main Sanctum": "4:00 AM–11:30 AM, 5:00–8:00 PM" },
+    hotels: [
+      { name: "Hotel Nandanam", detail: "Thiruvalla — ₹1,800/night" },
+      { name: "Pilgrim Lodge", detail: "Budget — ₹600/night" }
+    ],
+    stays: [
+      { name: "Thiruvalla Homestay", detail: "Quiet riverside stay" }
+    ]
+  },
+  {
+    id: 97,
+    name: "Thirunelli Sree Maha Vishnu Temple",
+    state: "Kerala",
+    emoji: "🙏",
+    category: "devotional",
+    rideTypes: ["car", "bike"],
+    description: "Ancient Hindu temple with stone pillars in the Brahmagiri hills of Wayanad — the Kashi of the South.",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Thirunelli_Temple.jpg/400px-Thirunelli_Temple.jpg",
+    destinationCoords: [11.9100, 75.9983],
+    spots: [
+      { name: "Main Temple", detail: "Maha Vishnu shrine with ancient pillars", coords: [11.9100, 75.9983] },
+      { name: "Papanashini River", detail: "Sacred river for ancestral rites", coords: [11.9105, 75.9990] },
+      { name: "Pakshipathalam", detail: "Trekking spot near the temple", coords: [11.9200, 76.0100] }
+    ],
+    spotTimings: { "Main Temple": "5:30 AM–12:00 PM, 5:00–7:30 PM" },
+    hotels: [
+      { name: "Vythiri Resort", detail: "Wayanad luxury — ₹12,000/night" },
+      { name: "Forest Rest House", detail: "Basic — ₹800/night" }
+    ],
+    stays: [
+      { name: "Tribal Homestay", detail: "Wayanad forest edge" }
+    ]
+  },
+  {
+    id: 98,
+    name: "Vaikom Mahadeva Temple",
+    state: "Kerala",
+    emoji: "🙏",
+    category: "devotional",
+    rideTypes: ["solo", "car"],
+    description: "Famous Hindu temple dedicated to Lord Shiva in Vaikom — historic site of the Vaikom Satyagraha.",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Vaikom_Mahadeva_Temple.jpg/400px-Vaikom_Mahadeva_Temple.jpg",
+    destinationCoords: [9.7500, 76.3917],
+    spots: [
+      { name: "Main Sanctum", detail: "Lord Shiva (Mahadeva) shrine", coords: [9.7500, 76.3917] },
+      { name: "Vaikom Ashtami Festival", detail: "12-day annual temple festival", coords: [9.7505, 76.3920] }
+    ],
+    spotTimings: { "Main Sanctum": "4:00 AM–11:30 AM, 5:00–8:00 PM" },
+    hotels: [
+      { name: "Lake Palace Resort", detail: "Kumarakom — ₹5,000/night" },
+      { name: "Vaikom Lodge", detail: "Budget — ₹900/night" }
+    ],
+    stays: [
+      { name: "Lakeside Homestay", detail: "Near Vembanad Lake" }
+    ]
+  },
+  {
+    id: 99,
+    name: "Panniyoor Varaha Moorthy Temple",
+    state: "Kerala",
+    emoji: "🙏",
+    category: "devotional",
+    rideTypes: ["solo", "car"],
+    description: "Beautiful temple with a serene waterbody and village atmosphere in Kumbidi, Palakkad.",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Guruvayoor_Temple_1.jpg/400px-Guruvayoor_Temple_1.jpg",
+    destinationCoords: [10.7833, 76.2167],
+    spots: [
+      { name: "Main Shrine", detail: "Lord Varaha Moorthy sanctum", coords: [10.7833, 76.2167] },
+      { name: "Temple Pond", detail: "Beautiful waterbody with village views", coords: [10.7835, 76.2170] }
+    ],
+    spotTimings: { "Main Shrine": "5:00 AM–12:00 PM, 5:00–7:30 PM" },
+    hotels: [
+      { name: "Hotel Indraprastha", detail: "Palakkad — ₹2,000/night" },
+      { name: "Budget Stay", detail: "Near temple — ₹700/night" }
+    ],
+    stays: [
+      { name: "Village Homestay", detail: "Authentic rural Kerala" }
+    ]
+  },
+  {
+    id: 100,
+    name: "Kodungallur Sree Kurumba Bhagavathi Temple",
+    state: "Kerala",
+    emoji: "🙏",
+    category: "devotional",
+    rideTypes: ["solo", "car"],
+    description: "Hindu temple dedicated to Goddess Bhadrakali in Kodungallur — famous for the Bharani festival.",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Kodungallur_Temple.jpg/400px-Kodungallur_Temple.jpg",
+    destinationCoords: [10.2260, 76.1940],
+    spots: [
+      { name: "Main Shrine", detail: "Goddess Bhadrakali sanctum", coords: [10.2260, 76.1940] },
+      { name: "Bharani Festival Ground", detail: "Annual Meena Bharani celebrations", coords: [10.2265, 76.1945] }
+    ],
+    spotTimings: { "Main Shrine": "4:30 AM–12:00 PM, 5:00–8:00 PM" },
+    hotels: [
+      { name: "Hotel Presidency", detail: "Thrissur — ₹2,500/night" },
+      { name: "Kodungallur Lodge", detail: "Budget — ₹800/night" }
+    ],
+    stays: [
+      { name: "Heritage Homestay", detail: "Historic Kodungallur town" }
+    ]
+  },
+  {
+    id: 101,
+    name: "Chengannur Mahadevar Temple",
+    state: "Kerala",
+    emoji: "🙏",
+    category: "devotional",
+    rideTypes: ["solo", "car"],
+    description: "Hindu temple devoted to Lord Shiva and Goddess Parvati in Chengannur — unique menstruation ritual.",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Chengannur_Mahadeva_Temple.jpg/400px-Chengannur_Mahadeva_Temple.jpg",
+    destinationCoords: [9.3167, 76.6167],
+    spots: [
+      { name: "Main Sanctum", detail: "Shiva and Parvati shrine", coords: [9.3167, 76.6167] },
+      { name: "Temple Festival", detail: "Annual Thiruvarattu festival", coords: [9.3170, 76.6170] }
+    ],
+    spotTimings: { "Main Sanctum": "4:00 AM–11:30 AM, 5:00–8:00 PM" },
+    hotels: [
+      { name: "Hotel Aishwarya", detail: "Chengannur — ₹1,500/night" },
+      { name: "Pilgrim Rest", detail: "Budget — ₹600/night" }
+    ],
+    stays: [
+      { name: "Chengannur Homestay", detail: "Quiet town stay" }
+    ]
+  },
+  {
+    id: 102,
+    name: "Sree Parthasarathi Temple, Guruvayur",
+    state: "Kerala",
+    emoji: "🙏",
+    category: "devotional",
+    rideTypes: ["solo", "car"],
+    description: "Hindu temple near Guruvayur known for its elephant procession and traditional rituals.",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Guruvayoor_Temple_1.jpg/400px-Guruvayoor_Temple_1.jpg",
+    destinationCoords: [10.5900, 76.0450],
+    spots: [
+      { name: "Main Shrine", detail: "Lord Parthasarathi sanctum", coords: [10.5900, 76.0450] },
+      { name: "Elephant Procession Route", detail: "Famous Aanayottam route", coords: [10.5905, 76.0455] }
+    ],
+    spotTimings: { "Main Shrine": "4:00 AM–12:00 PM, 5:00–8:00 PM" },
+    hotels: [
+      { name: "Hotel Vanamala", detail: "Guruvayur — ₹2,500/night" },
+      { name: "Krishna Inn", detail: "Budget — ₹1,000/night" }
+    ],
+    stays: [
+      { name: "Guruvayur Guest House", detail: "Near temple complex" }
+    ]
+  },
+  {
+    id: 103,
+    name: "Ambalappuzha Sree Krishna Swamy Temple",
+    state: "Kerala",
+    emoji: "🙏",
+    category: "devotional",
+    rideTypes: ["solo", "car"],
+    description: "13th-century Hindu temple famous for its Palpayasam (milk pudding) offering to Lord Krishna.",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Ambalappuzha_Temple.JPG/400px-Ambalappuzha_Temple.JPG",
+    destinationCoords: [9.3833, 76.3500],
+    spots: [
+      { name: "Main Sanctum", detail: "Lord Krishna (Unni Kannan) shrine", coords: [9.3833, 76.3500] },
+      { name: "Palpayasam Counter", detail: "Famous temple prasadam", coords: [9.3835, 76.3505] }
+    ],
+    spotTimings: { "Main Sanctum": "4:00 AM–12:00 PM, 5:00–8:00 PM" },
+    hotels: [
+      { name: "Ramada Alleppey", detail: "Lakeside — ₹4,000/night" },
+      { name: "Budget Lodge", detail: "Ambalappuzha — ₹700/night" }
+    ],
+    stays: [
+      { name: "Backwater Homestay", detail: "Canal-side stay" }
+    ]
+  },
+  {
+    id: 104,
+    name: "Sree Thirumandhamkunnu Bhagavathi Temple",
+    state: "Kerala",
+    emoji: "🙏",
+    category: "devotional",
+    rideTypes: ["solo", "car"],
+    description: "Well-known ancient Hindu temple in Angadipuram, Malappuram — dedicated to Goddess Bhagavathi.",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Kadampuzha_temple.jpg/400px-Kadampuzha_temple.jpg",
+    destinationCoords: [10.9667, 76.2167],
+    spots: [
+      { name: "Main Shrine", detail: "Goddess Bhagavathi sanctum", coords: [10.9667, 76.2167] },
+      { name: "Pooram Festival", detail: "Grand annual temple festival", coords: [10.9670, 76.2170] }
+    ],
+    spotTimings: { "Main Shrine": "4:30 AM–12:00 PM, 5:00–8:00 PM" },
+    hotels: [
+      { name: "Hotel Nesto", detail: "Malappuram — ₹2,000/night" },
+      { name: "Angadipuram Lodge", detail: "Budget — ₹700/night" }
+    ],
+    stays: [
+      { name: "Rural Homestay", detail: "Malappuram countryside" }
+    ]
+  },
+  {
+    id: 105,
+    name: "Lokanarkavu Temple",
+    state: "Kerala",
+    emoji: "🙏",
+    category: "devotional",
+    rideTypes: ["solo", "car"],
+    description: "Ancient temple in Vatakara with stunning wood carvings and preserved murals.",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Attukal_temple.jpg/400px-Attukal_temple.jpg",
+    destinationCoords: [11.5950, 75.5600],
+    spots: [
+      { name: "Main Shrine", detail: "Durga, Shiva, and Vishnu shrines", coords: [11.5950, 75.5600] },
+      { name: "Ancient Murals", detail: "Stunningly preserved wood carvings", coords: [11.5952, 75.5605] }
+    ],
+    spotTimings: { "Main Shrine": "5:00 AM–12:00 PM, 5:00–8:00 PM" },
+    hotels: [
+      { name: "Hotel Alakapuri", detail: "Kozhikode — ₹2,500/night" },
+      { name: "Vatakara Lodge", detail: "Budget — ₹800/night" }
+    ],
+    stays: [
+      { name: "Malabar Homestay", detail: "Traditional Malabar home" }
+    ]
+  },
+  {
+    id: 106,
+    name: "Thiruvanchikulam Mahadeva Temple",
+    state: "Kerala",
+    emoji: "🙏",
+    category: "devotional",
+    rideTypes: ["solo", "car"],
+    description: "Ancient Paadal Petra Sthalam temple in Kodungallur with many deities — one of the oldest Shiva temples.",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Kodungallur_Temple.jpg/400px-Kodungallur_Temple.jpg",
+    destinationCoords: [10.2300, 76.2000],
+    spots: [
+      { name: "Main Sanctum", detail: "Lord Shiva shrine — Paadal Petra Sthalam", coords: [10.2300, 76.2000] },
+      { name: "Multiple Deity Shrines", detail: "Various sub-shrines within complex", coords: [10.2305, 76.2005] }
+    ],
+    spotTimings: { "Main Sanctum": "4:30 AM–11:30 AM, 5:00–7:30 PM" },
+    hotels: [
+      { name: "Hotel Presidency", detail: "Thrissur — ₹2,500/night" },
+      { name: "Kodungallur Lodge", detail: "Budget — ₹800/night" }
+    ],
+    stays: [
+      { name: "Heritage Stay", detail: "Historic Kodungallur" }
+    ]
+  },
+  {
+    id: 107,
+    name: "Kaviyoor Mahadeva Temple",
+    state: "Kerala",
+    emoji: "🙏",
+    category: "devotional",
+    rideTypes: ["solo", "car"],
+    description: "Ancient rock-cut cave temple near Thiruvalla — one of the oldest temples in Kerala.",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Kaviyoor_temple.jpg/400px-Kaviyoor_temple.jpg",
+    destinationCoords: [9.4000, 76.5833],
+    spots: [
+      { name: "Main Temple", detail: "Lord Shiva shrine", coords: [9.4000, 76.5833] },
+      { name: "Rock-Cut Cave", detail: "Ancient cave temple with carvings", coords: [9.4005, 76.5838] }
+    ],
+    spotTimings: { "Main Temple": "5:00 AM–12:00 PM, 5:00–7:30 PM" },
+    hotels: [
+      { name: "Hotel Nandanam", detail: "Thiruvalla — ₹1,800/night" },
+      { name: "Kaviyoor Lodge", detail: "Budget — ₹600/night" }
+    ],
+    stays: [
+      { name: "Thiruvalla Homestay", detail: "Quiet riverside stay" }
+    ]
+  },
+  {
+    id: 108,
+    name: "Sree Maha Ganapathi Temple, Kottarakkara",
+    state: "Kerala",
+    emoji: "🙏",
+    category: "devotional",
+    rideTypes: ["solo", "car"],
+    description: "One of the most important Ganapathi temples in Kerala — a key halting point for Sabarimala pilgrims.",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Sabarimala_5.jpg/600px-Sabarimala_5.jpg",
+    destinationCoords: [9.0083, 76.7750],
+    spots: [
+      { name: "Main Sanctum", detail: "Lord Ganesha (Maha Ganapathi) shrine", coords: [9.0083, 76.7750] },
+      { name: "Shiva Shrine", detail: "Originally Kizhakkekara Siva Kshethram", coords: [9.0085, 76.7753] },
+      { name: "Ayyappa & Murugan Shrines", detail: "Sub-shrines within the complex", coords: [9.0080, 76.7748] }
+    ],
+    spotTimings: { "Main Sanctum": "4:00 AM–12:00 PM, 5:00–8:30 PM" },
+    hotels: [
+      { name: "Hotel Sudarsan", detail: "Kottarakkara — ₹1,500/night" },
+      { name: "Pilgrim Lodge", detail: "Budget — ₹600/night" }
+    ],
+    stays: [
+      { name: "Kottarakkara Homestay", detail: "Quiet town near Kollam" }
+    ]
+  },
+  {
+    id: 109,
+    name: "Ettumanoor Shri Mahadeva Temple",
+    state: "Kerala",
+    emoji: "🙏",
+    category: "devotional",
+    rideTypes: ["solo", "car"],
+    description: "Ancient Shiva temple in Ettumanoor, Kottayam — famous for its murals and the Ezhara Ponnana festival.",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Ettumanoor_Mahadeva_Temple.jpg/400px-Ettumanoor_Mahadeva_Temple.jpg",
+    destinationCoords: [9.6700, 76.5600],
+    spots: [
+      { name: "Main Sanctum", detail: "Lord Shiva shrine with ancient murals", coords: [9.6700, 76.5600] },
+      { name: "Ezhara Ponnana", detail: "Seven-and-a-half golden elephants festival", coords: [9.6703, 76.5603] }
+    ],
+    spotTimings: { "Main Sanctum": "3:30 AM–12:00 PM, 5:00–8:30 PM" },
+    hotels: [
+      { name: "Hotel Windsor Castle", detail: "Kottayam — ₹2,500/night" },
+      { name: "Budget Inn", detail: "Ettumanoor — ₹800/night" }
+    ],
+    stays: [
+      { name: "Kottayam Homestay", detail: "Rubber plantation stay" }
+    ]
+  },
+  {
+    id: 110,
+    name: "Sree Vadakkumnathan Temple",
+    state: "Kerala",
+    emoji: "🙏",
+    category: "devotional",
+    rideTypes: ["solo", "car"],
+    description: "Iconic ancient Shiva temple in the heart of Thrissur — the venue of the famous Thrissur Pooram festival.",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Vadakkumnathan_Temple.jpg/400px-Vadakkumnathan_Temple.jpg",
+    destinationCoords: [10.5276, 76.2144],
+    spots: [
+      { name: "Main Sanctum", detail: "Lord Shiva (Vadakkumnathan) shrine", coords: [10.5276, 76.2144] },
+      { name: "Thrissur Pooram Ground", detail: "Thekkinkadu Maidan — Pooram festival venue", coords: [10.5280, 76.2150] },
+      { name: "Koothambalam", detail: "Ancient temple theatre", coords: [10.5274, 76.2140] }
+    ],
+    spotTimings: { "Main Sanctum": "4:00 AM–11:00 AM, 5:00–8:00 PM" },
+    hotels: [
+      { name: "Hotel Luciya Palace", detail: "Thrissur — ₹3,000/night" },
+      { name: "Joys Palace", detail: "Mid-range — ₹2,000/night" }
+    ],
+    stays: [
+      { name: "Thrissur Heritage Home", detail: "Traditional Kerala nalukettu" }
+    ]
+  },
+  {
+    id: 111,
+    name: "Eravikulam & Chokramudi Trek",
+    state: "Kerala",
+    emoji: "🥾",
+    category: "trekking",
+    rideTypes: ["car", "bike"],
+    description: "Eravikulam National Park with Nilgiri Tahr and Chokramudi Peak offering sweeping summit views near Munnar.",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Eravikulam_National_Park.jpg/400px-Eravikulam_National_Park.jpg",
+    destinationCoords: [10.1833, 77.0667],
+    spots: [
+      { name: "Eravikulam National Park", detail: "Home to endangered Nilgiri Tahr — peak point worth trekking", coords: [10.1833, 77.0667] },
+      { name: "Chokramudi Peak", detail: "Hikes to summit with sweeping views of Bison Valley", coords: [10.0500, 77.0833] },
+      { name: "Chokramudi Trekking Point", detail: "Starting point on Munnar-Kumily Highway", coords: [10.0480, 77.0850] }
+    ],
+    spotTimings: { "Eravikulam National Park": "7:00 AM – 4:00 PM (Closed Feb–Mar)", "Chokramudi Peak": "5:30 AM – 5:00 PM" },
+    hotels: [
+      { name: "Windermere Estate", detail: "Munnar luxury — ₹10,000/night" },
+      { name: "Zostel Munnar", detail: "Budget — ₹600/night" }
+    ],
+    stays: [
+      { name: "Tea Plantation Homestay", detail: "Among the tea gardens" }
+    ]
+  },
+  {
+    id: 112,
+    name: "Illikkal Kallu & Ilaveezhapoonchira",
+    state: "Kerala",
+    emoji: "🥾",
+    category: "trekking",
+    rideTypes: ["car", "bike"],
+    description: "Panoramic rock formations and serene meadows — two stunning trekking spots in Kottayam district.",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Ilaveezhapoonchira.jpg/400px-Ilaveezhapoonchira.jpg",
+    destinationCoords: [9.8167, 76.8333],
+    spots: [
+      { name: "Illikkal Kallu", detail: "Panoramic views, 1 km trek — open 8:30 AM–5:30 PM", coords: [9.8167, 76.8333] },
+      { name: "Ilaveezhapoonchira", detail: "Serene breezy meadows with excellent trekking path", coords: [9.8333, 76.8000] },
+      { name: "Thattupara View Point", detail: "High area accessible by vehicle or trekking", coords: [9.8200, 76.8200] }
+    ],
+    spotTimings: { "Illikkal Kallu": "8:00 AM – 5:30 PM", "Ilaveezhapoonchira": "Open all day" },
+    hotels: [
+      { name: "Hotel Windsor Castle", detail: "Kottayam — ₹2,500/night" },
+      { name: "Budget Lodge", detail: "Erattupetta — ₹800/night" }
+    ],
+    stays: [
+      { name: "Rubber Plantation Homestay", detail: "Kottayam countryside" }
+    ]
+  },
+  {
+    id: 113,
+    name: "Vagamon & Thangalpara Trek",
+    state: "Kerala",
+    emoji: "🥾",
+    category: "trekking",
+    rideTypes: ["car", "bike"],
+    description: "Pine forests, meadows, and Thangalpara viewpoint — 20-30 min trek gives the best view of Vagamon.",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Vagamon.jpg/400px-Vagamon.jpg",
+    destinationCoords: [9.6861, 76.9056],
+    spots: [
+      { name: "Thangalpara", detail: "20-30 min trek gives the best view of Vagamon", coords: [9.6900, 76.9100] },
+      { name: "Vagamon Pine Forest", detail: "Scenic pine tree valley for walks", coords: [9.6861, 76.9056] },
+      { name: "Vagamon Meadows", detail: "Rolling green hills and paragliding", coords: [9.6850, 76.9000] }
+    ],
+    spotTimings: { "Thangalpara": "8:00 AM – 5:00 PM", "Vagamon Pine Forest": "Open all day" },
+    hotels: [
+      { name: "Vagamon Heights", detail: "Hilltop resort — ₹3,500/night" },
+      { name: "Budget Cottage", detail: "Vagamon — ₹1,000/night" }
+    ],
+    stays: [
+      { name: "Meadow View Homestay", detail: "Surrounded by green hills" }
+    ]
+  },
+  {
+    id: 114,
+    name: "Rhodo Valley & Meesapulimala",
+    state: "Kerala",
+    emoji: "🥾",
+    category: "trekking",
+    rideTypes: ["car", "bike"],
+    description: "Peaceful, rarely crowded trails through Rhodo Valley to Meesapulimala — the second highest peak in South India.",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Meesapulimala.jpg/400px-Meesapulimala.jpg",
+    destinationCoords: [10.1000, 77.1500],
+    spots: [
+      { name: "Rhodo Valley", detail: "Peaceful trail, rarely crowded — perfect for trekking", coords: [10.0900, 77.1200] },
+      { name: "Meesapulimala Peak", detail: "Second highest peak in South India (2,640m)", coords: [10.1000, 77.1500] },
+      { name: "Mattuppetti Trail", detail: "Scenic trail connecting to Meesapulimala", coords: [10.0800, 77.1100] }
+    ],
+    spotTimings: { "Rhodo Valley": "Open all day", "Meesapulimala Peak": "5:00 AM – 4:00 PM (Permit required)" },
+    hotels: [
+      { name: "Windermere Estate", detail: "Munnar luxury — ₹10,000/night" },
+      { name: "Zostel Munnar", detail: "Budget — ₹600/night" }
+    ],
+    stays: [
+      { name: "Mountain Camp", detail: "Camping near the trail" }
+    ]
+  },
+  {
+    id: 115,
+    name: "Periyar National Park",
+    state: "Kerala",
+    emoji: "🥾",
+    category: "trekking",
+    rideTypes: ["car", "bike"],
+    description: "Scenic game reserve and ecotourism destination in Thekkady with jungle treks and boat rides.",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Periyar_National_Park.jpg/400px-Periyar_National_Park.jpg",
+    destinationCoords: [9.4667, 77.1667],
+    spots: [
+      { name: "Periyar Lake Boat Ride", detail: "Spot elephants and bison from the lake", coords: [9.4667, 77.1667] },
+      { name: "Jungle Trek", detail: "Guided treks through tiger reserve", coords: [9.4700, 77.1700] },
+      { name: "Bamboo Rafting", detail: "Rafting through the forest waterways", coords: [9.4650, 77.1650] }
+    ],
+    spotTimings: { "Periyar Lake Boat Ride": "7:00 AM – 4:00 PM", "Jungle Trek": "7:00 AM – 3:00 PM" },
+    hotels: [
+      { name: "Spice Village", detail: "CGH Earth — ₹12,000/night" },
+      { name: "Hotel Periyar", detail: "KTDC — ₹2,000/night" }
+    ],
+    stays: [
+      { name: "Kumily Spice Homestay", detail: "Surrounded by spice gardens" }
+    ]
+  },
+  {
+    id: 116,
+    name: "Neyyar & Shoolam Falls Trek",
+    state: "Kerala",
+    emoji: "🥾",
+    category: "trekking",
+    rideTypes: ["car", "bike"],
+    description: "Trekking and boating amidst lush greenery at Neyyar Wildlife Sanctuary and nearby Shoolam Waterfalls.",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Neyyar_dam.jpg/400px-Neyyar_dam.jpg",
+    destinationCoords: [8.5500, 77.0833],
+    spots: [
+      { name: "Neyyar Wildlife Sanctuary", detail: "Trekking and boating amidst lush greenery", coords: [8.5500, 77.0833] },
+      { name: "Shoolam Waterfalls", detail: "10 min trek from parking — beautiful falls", coords: [8.5600, 77.0900] },
+      { name: "Neyyar Dam", detail: "Scenic dam with crocodile farm", coords: [8.5450, 77.0800] }
+    ],
+    spotTimings: { "Neyyar Wildlife Sanctuary": "9:00 AM – 5:00 PM", "Shoolam Waterfalls": "Open all day" },
+    hotels: [
+      { name: "Sivananda Ashram", detail: "Yoga retreat — ₹1,500/night" },
+      { name: "Forest Rest House", detail: "Basic — ₹800/night" }
+    ],
+    stays: [
+      { name: "Neyyar Homestay", detail: "Near the dam" }
+    ]
+  },
+  {
+    id: 117,
+    name: "Kattadikadavu & Urulikuzhi Falls",
+    state: "Kerala",
+    emoji: "🥾",
+    category: "trekking",
+    rideTypes: ["car", "bike"],
+    description: "Amazing trekking spots with mountain views and waterfalls surrounded by ample greenery.",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Periyar_Tiger_Reserve.jpg/400px-Periyar_Tiger_Reserve.jpg",
+    destinationCoords: [9.5000, 77.1000],
+    spots: [
+      { name: "Kattadikadavu View Point", detail: "Best trekking spot — amazing view on top", coords: [9.5000, 77.1000] },
+      { name: "Urulikuzhi Waterfalls", detail: "Beautiful place surrounded by mountains and greenery", coords: [9.4800, 77.0800] }
+    ],
+    spotTimings: { "Kattadikadavu View Point": "6:00 AM – 6:00 PM", "Urulikuzhi Waterfalls": "Open all day" },
+    hotels: [
+      { name: "Spice Village", detail: "Thekkady — ₹12,000/night" },
+      { name: "Budget Lodge", detail: "Kumily — ₹800/night" }
+    ],
+    stays: [
+      { name: "Spice Garden Homestay", detail: "Cardamom hills" }
+    ]
+  },
+  {
+    id: 118,
+    name: "Shendurney & Thenmala Trek",
+    state: "Kerala",
+    emoji: "🥾",
+    category: "trekking",
+    rideTypes: ["car", "bike"],
+    description: "Protected wildlife area with safari tours and treks at India's first planned ecotourism destination.",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Thenmala_Dam.jpg/400px-Thenmala_Dam.jpg",
+    destinationCoords: [8.9600, 77.0600],
+    spots: [
+      { name: "Shendurney Wildlife Sanctuary", detail: "Protected area with safari tours and treks", coords: [8.9600, 77.0600] },
+      { name: "Thenmala Ecotourism", detail: "India's first planned ecotourism destination", coords: [8.9500, 77.0700] },
+      { name: "Palaruvi Waterfalls", detail: "Milky waterfall nearby — 300 ft drop", coords: [8.9400, 77.0500] }
+    ],
+    spotTimings: { "Shendurney Wildlife Sanctuary": "8:00 AM – 5:00 PM", "Thenmala Ecotourism": "9:00 AM – 5:00 PM" },
+    hotels: [
+      { name: "KTDC Thenmala", detail: "Eco lodge — ₹2,000/night" },
+      { name: "Forest Rest House", detail: "Basic — ₹700/night" }
+    ],
+    stays: [
+      { name: "Thenmala Homestay", detail: "Near the dam" }
+    ]
+  },
+  {
+    id: 119,
+    name: "Chimmini & Silent Valley Trek",
+    state: "Kerala",
+    emoji: "🥾",
+    category: "trekking",
+    rideTypes: ["car", "bike"],
+    description: "Amazing trekking through Silent Valley's mesmerizing trails and Chimmini Wildlife Sanctuary's calm forests.",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Silent_Valley_National_Park.jpg/400px-Silent_Valley_National_Park.jpg",
+    destinationCoords: [11.0833, 76.4333],
+    spots: [
+      { name: "Silent Valley National Park", detail: "Mesmerizing trekking trails through pristine forest", coords: [11.0833, 76.4333] },
+      { name: "Chimmini Wildlife Sanctuary", detail: "Peace and calm weather — amazing trekking", coords: [10.4500, 76.2833] },
+      { name: "Sairandhri", detail: "Base camp inside Silent Valley", coords: [11.0900, 76.4400] }
+    ],
+    spotTimings: { "Silent Valley National Park": "8:00 AM – 4:00 PM", "Chimmini Wildlife Sanctuary": "8:00 AM – 5:00 PM" },
+    hotels: [
+      { name: "KTDC Mukkali", detail: "Near Silent Valley — ₹1,500/night" },
+      { name: "Forest Lodge", detail: "Basic — ₹600/night" }
+    ],
+    stays: [
+      { name: "Palakkad Homestay", detail: "Gateway to Silent Valley" }
+    ]
+  },
+  {
+    id: 120,
+    name: "Vayalada & Kurangani Hills",
+    state: "Kerala",
+    emoji: "🥾",
+    category: "trekking",
+    rideTypes: ["car", "bike"],
+    description: "Vayalada's 1 km scenic trek and Kurangani Hills with private waterfalls — great trekking in Kerala.",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Vayalada.jpg/400px-Vayalada.jpg",
+    destinationCoords: [11.4167, 75.9500],
+    spots: [
+      { name: "Vayalada View Point", detail: "1 km trek amid great scenery — worth the climb", coords: [11.4167, 75.9500] },
+      { name: "Kurangani Hills", detail: "Nice private waterfalls and trekking trails", coords: [10.0833, 77.2500] },
+      { name: "Kochareekkal Caves", detail: "Cavern and waterfall in a forest setting near Piravom", coords: [9.8700, 76.5000] }
+    ],
+    spotTimings: { "Vayalada View Point": "6:00 AM – 7:00 PM", "Kochareekkal Caves": "8:00 AM – 5:00 PM" },
+    hotels: [
+      { name: "Hotel Alakapuri", detail: "Kozhikode — ₹2,500/night" },
+      { name: "Trekker's Lodge", detail: "Budget — ₹700/night" }
+    ],
+    stays: [
+      { name: "Malabar Homestay", detail: "Traditional Malabar home" }
+    ]
+  },
+
+  // Kerala Hill Stations
+  {
+    id: 121,
+    name: "Munnar Echo Point & Kottappara",
+    state: "Kerala",
+    emoji: "⛰️",
+    category: "hill-station",
+    rideTypes: ["car", "bike"],
+    description: "Echo Point's misty lake reflections and Kottappara's sunrise with sea of clouds — iconic Munnar hill experiences.",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Echo_Point_Munnar-Kerala.jpg/400px-Echo_Point_Munnar-Kerala.jpg",
+    destinationCoords: [10.0667, 77.0600],
+    spots: [
+      { name: "Echo Point", detail: "Misty lake with natural echo phenomenon", coords: [10.0667, 77.0600] },
+      { name: "Kottappara Hilltop Viewpoint", detail: "Sunrise and sea of clouds — perfect viewpoint", coords: [10.0800, 77.0700] },
+      { name: "Kottapara Hilltop", detail: "Panoramic views of Munnar valley", coords: [10.0750, 77.0650] }
+    ],
+    spotTimings: { "Echo Point": "9:00 AM – 5:00 PM", "Kottappara Hilltop Viewpoint": "5:00 AM – 6:00 PM" },
+    hotels: [
+      { name: "Windermere Estate", detail: "Munnar luxury — ₹10,000/night" },
+      { name: "Zostel Munnar", detail: "Budget — ₹600/night" }
+    ],
+    stays: [
+      { name: "Tea Valley Homestay", detail: "Among Munnar tea gardens" }
+    ]
+  },
+  {
+    id: 122,
+    name: "Top Station & Uluppuni",
+    state: "Kerala",
+    emoji: "⛰️",
+    category: "hill-station",
+    rideTypes: ["car", "bike"],
+    description: "Top Station's full-angle panoramic hill views and Uluppuni's breathtaking surrounding vistas at the Kerala-Tamil Nadu border.",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Top_Station_Munnar.jpg/400px-Top_Station_Munnar.jpg",
+    destinationCoords: [10.1250, 77.2417],
+    spots: [
+      { name: "Top Station", detail: "Full angle view of surrounding hills — Kerala-TN border", coords: [10.1250, 77.2417] },
+      { name: "Uluppuni Top Station", detail: "Breathtaking surrounding views from the summit", coords: [10.1300, 77.2500] },
+      { name: "Kurangani View", detail: "Panoramic views of Western Ghats", coords: [10.1200, 77.2400] }
+    ],
+    spotTimings: { "Top Station": "6:00 AM – 6:00 PM", "Uluppuni Top Station": "6:00 AM – 7:00 PM" },
+    hotels: [
+      { name: "Mountain Club Resort", detail: "Munnar — ₹5,000/night" },
+      { name: "Budget Inn", detail: "Suryanelli — ₹1,000/night" }
+    ],
+    stays: [
+      { name: "Hilltop Homestay", detail: "Near Top Station" }
+    ]
+  },
+  {
+    id: 123,
+    name: "Pettimudi & Kottapara Hilltop",
+    state: "Kerala",
+    emoji: "⛰️",
+    category: "hill-station",
+    rideTypes: ["car", "bike"],
+    description: "Pettimudi's serene hilltop with tea estate views and Kottapara's panoramic viewpoint in Mullaringadu.",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Hill_View_%28Munnar_-_Kerala%29.jpg/400px-Hill_View_%28Munnar_-_Kerala%29.jpg",
+    destinationCoords: [10.0700, 77.0500],
+    spots: [
+      { name: "Pettimudi Hill Top", detail: "Serene hilltop with tea estate panorama", coords: [10.0700, 77.0500] },
+      { name: "Kottapara Hilltop", detail: "Panoramic viewpoint in Mullaringadu", coords: [10.0750, 77.0550] },
+      { name: "Tea Museum", detail: "History of Munnar tea plantations", coords: [10.0600, 77.0600] }
+    ],
+    spotTimings: { "Pettimudi Hill Top": "6:00 AM – 7:00 PM", "Kottapara Hilltop": "Open all day" },
+    hotels: [
+      { name: "Tea County", detail: "KTDC — ₹3,500/night" },
+      { name: "Green View", detail: "Budget — ₹800/night" }
+    ],
+    stays: [
+      { name: "Plantation Homestay", detail: "Amid tea gardens" }
+    ]
+  },
+  {
+    id: 124,
+    name: "Nelliyampathy & Meenampara",
+    state: "Kerala",
+    emoji: "⛰️",
+    category: "hill-station",
+    rideTypes: ["car", "bike"],
+    description: "Nelliyampathy's misty hills with orange groves and Meenampara's breathtaking views from the hilltop in Palakkad.",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Nelliyampathy_forests%2CMinnampara.jpg/400px-Nelliyampathy_forests%2CMinnampara.jpg",
+    destinationCoords: [10.5333, 76.6833],
+    spots: [
+      { name: "Meenampara Hill View Point 1", detail: "Breathtaking views from the top hill", coords: [10.5400, 76.6900] },
+      { name: "Nelliyampathy Hills", detail: "Misty hills with orange and tea plantations", coords: [10.5333, 76.6833] },
+      { name: "Seetharkundu Viewpoint", detail: "Panoramic valley views", coords: [10.5300, 76.6800] }
+    ],
+    spotTimings: { "Meenampara Hill View Point 1": "9:00 AM – 5:00 PM", "Nelliyampathy Hills": "Open all day" },
+    hotels: [
+      { name: "KTDC Nelliyampathy", detail: "Hill resort — ₹2,500/night" },
+      { name: "Orange Valley Homestay", detail: "Budget — ₹1,200/night" }
+    ],
+    stays: [
+      { name: "Plantation Bungalow", detail: "Colonial-era estate stay" }
+    ]
+  },
+  {
+    id: 125,
+    name: "Palakkayam Thattu & Lakkidi",
+    state: "Kerala",
+    emoji: "⛰️",
+    category: "hill-station",
+    rideTypes: ["car", "bike"],
+    description: "Palakkayam Thattu's amazing sunrise/sunset views and Lakkidi's awesome hill views in every season — Wayanad's gateway.",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Lakkidi_view_point.jpg/400px-Lakkidi_view_point.jpg",
+    destinationCoords: [11.5167, 75.9833],
+    spots: [
+      { name: "Palakkayam Thattu", detail: "Amazing sunrise/sunset views, cool climate, photo spots", coords: [11.5167, 75.9833] },
+      { name: "Lakkidi View Point", detail: "Awesome views of hills in rain, sun or winter", coords: [11.5200, 76.0200] },
+      { name: "Chain Tree", detail: "Historic landmark at Lakkidi pass", coords: [11.5180, 76.0180] }
+    ],
+    spotTimings: { "Palakkayam Thattu": "Open all day", "Lakkidi View Point": "Open all day" },
+    hotels: [
+      { name: "Vythiri Resort", detail: "Wayanad luxury — ₹8,000/night" },
+      { name: "Budget Stay", detail: "Kalpetta — ₹1,000/night" }
+    ],
+    stays: [
+      { name: "Wayanad Treehouse", detail: "Unique forest canopy stay" }
+    ]
+  },
+  {
+    id: 126,
+    name: "Panchalimedu & Kailasappara",
+    state: "Kerala",
+    emoji: "⛰️",
+    category: "hill-station",
+    rideTypes: ["car", "bike"],
+    description: "Panchalimedu's Pandava legend hilltop and Kailasappara — the most beautiful underrated relaxing point in Idukki.",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Sunrise_View_From_Panchalimedu%2C_Idukki.jpg/400px-Sunrise_View_From_Panchalimedu%2C_Idukki.jpg",
+    destinationCoords: [9.7500, 76.9500],
+    spots: [
+      { name: "Panchalimedu Hill Station", detail: "Pandava legend hilltop — nice views from the top", coords: [9.7500, 76.9500] },
+      { name: "Kailasappara Top Hill Station", detail: "Most beautiful underrated relaxing point in Idukki", coords: [9.7600, 76.9600] },
+      { name: "Panchalimedu Viewpoint", detail: "360-degree views of Idukki hills", coords: [9.7480, 76.9480] }
+    ],
+    spotTimings: { "Panchalimedu Hill Station": "6:00 AM – 6:00 PM", "Kailasappara Top Hill Station": "Open all day" },
+    hotels: [
+      { name: "Idukki Hilltop Resort", detail: "Mid-range — ₹3,000/night" },
+      { name: "Budget Lodge", detail: "Thodupuzha — ₹800/night" }
+    ],
+    stays: [
+      { name: "Spice Garden Homestay", detail: "Cardamom hills of Idukki" }
+    ]
+  },
+  {
+    id: 127,
+    name: "Vagamon Hills & Kolahalamedu",
+    state: "Kerala",
+    emoji: "⛰️",
+    category: "hill-station",
+    rideTypes: ["car", "bike"],
+    description: "One of the most breathtaking hill stations — Vagamon's rolling meadows and Kolahalamedu's misty peaks.",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Vagamon.jpg/400px-Vagamon.jpg",
+    destinationCoords: [9.6861, 76.9056],
+    spots: [
+      { name: "Vagamon Hills", detail: "One of the most breathtaking hill stations in Kerala", coords: [9.6861, 76.9056] },
+      { name: "Kolahalamedu", detail: "Misty peaks with panoramic views", coords: [9.6900, 76.9100] },
+      { name: "Vagamon Pine Forest", detail: "Scenic pine valley walks", coords: [9.6850, 76.9000] }
+    ],
+    spotTimings: { "Vagamon Hills": "Open all day", "Kolahalamedu": "Open all day" },
+    hotels: [
+      { name: "Vagamon Heights", detail: "Hilltop resort — ₹3,500/night" },
+      { name: "Budget Cottage", detail: "Vagamon — ₹1,000/night" }
+    ],
+    stays: [
+      { name: "Meadow View Homestay", detail: "Surrounded by green hills" }
+    ]
+  },
+  {
+    id: 128,
+    name: "Ilaveezhapoonchira Top Station",
+    state: "Kerala",
+    emoji: "⛰️",
+    category: "hill-station",
+    rideTypes: ["car", "bike"],
+    description: "360-degree sunrise and sunset views from the hilltop — a perfect spot for scenic viewpoints and peaceful vibes.",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Ilaveezhapoonchira.jpg/400px-Ilaveezhapoonchira.jpg",
+    destinationCoords: [9.8333, 76.8000],
+    spots: [
+      { name: "Ilaveezhapoonchira Top Station", detail: "360-degree sunrise and sunset views from the hilltop", coords: [9.8333, 76.8000] },
+      { name: "Illikkal Kallu", detail: "Perfect spot for scenic viewpoints and peaceful vibes", coords: [9.8167, 76.8333] },
+      { name: "Moonnilavu Viewpoint", detail: "Panoramic views of the valley", coords: [9.8250, 76.8150] }
+    ],
+    spotTimings: { "Ilaveezhapoonchira Top Station": "Open all day", "Illikkal Kallu": "8:00 AM – 5:30 PM" },
+    hotels: [
+      { name: "Hotel Windsor Castle", detail: "Kottayam — ₹2,500/night" },
+      { name: "Budget Lodge", detail: "Erattupetta — ₹800/night" }
+    ],
+    stays: [
+      { name: "Hilltop Homestay", detail: "Near Ilaveezhapoonchira" }
+    ]
+  },
+  {
+    id: 129,
+    name: "Meesapulimala & Devikulam",
+    state: "Kerala",
+    emoji: "⛰️",
+    category: "hill-station",
+    rideTypes: ["car", "bike"],
+    description: "Best mountain views from Meesapulimala summit and Devikulam's serene lake surrounded by tea plantations.",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Meesapulimala.jpg/400px-Meesapulimala.jpg",
+    destinationCoords: [10.1000, 77.1500],
+    spots: [
+      { name: "Meesapulimala Mountain Top", detail: "Best view from mountain — second highest peak in South India", coords: [10.1000, 77.1500] },
+      { name: "Devikulam Lake", detail: "Serene lake surrounded by tea plantations", coords: [10.0500, 77.1000] },
+      { name: "Sita Devi Lake", detail: "Mythological lake with crystal clear water", coords: [10.0550, 77.1050] }
+    ],
+    spotTimings: { "Meesapulimala Mountain Top": "4:30 AM – 4:00 PM (Permit required)", "Devikulam Lake": "9:00 AM – 5:00 PM" },
+    hotels: [
+      { name: "Windermere Estate", detail: "Munnar luxury — ₹10,000/night" },
+      { name: "Zostel Munnar", detail: "Budget — ₹600/night" }
+    ],
+    stays: [
+      { name: "Mountain Camp", detail: "Camping near the summit trail" }
+    ]
+  },
+  {
+    id: 130,
+    name: "Kochareekkal Caves & Piravom",
+    state: "Kerala",
+    emoji: "⛰️",
+    category: "hill-station",
+    rideTypes: ["car", "bike"],
+    description: "Cavern and waterfall in a forest setting near Piravom — recommended for exploring nearby waterfalls and hill stations.",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Kochareekkal_Caves%2C_Piravom_%280%29.jpg/400px-Kochareekkal_Caves%2C_Piravom_%280%29.jpg",
+    destinationCoords: [9.8700, 76.5000],
+    spots: [
+      { name: "Kochareekkal Caves", detail: "Cavern and waterfall in a forest setting", coords: [9.8700, 76.5000] },
+      { name: "Piravom Hills", detail: "Scenic hills near Ernakulam", coords: [9.8750, 76.5050] },
+      { name: "Nearby Waterfalls", detail: "Multiple waterfalls in the forest area", coords: [9.8680, 76.4980] }
+    ],
+    spotTimings: { "Kochareekkal Caves": "8:00 AM – 5:00 PM", "Piravom Hills": "Open all day" },
+    hotels: [
+      { name: "Hotel Periyar", detail: "Ernakulam — ₹2,000/night" },
+      { name: "Budget Stay", detail: "Piravom — ₹700/night" }
+    ],
+    stays: [
+      { name: "Village Homestay", detail: "Traditional Kerala home near Piravom" }
+    ]
+  },
+
+  // Kerala Beaches
+  {
+    id: 131,
+    name: "Alleppey Beach & Pier",
+    state: "Kerala",
+    emoji: "🏖️",
+    category: "beach",
+    rideTypes: ["car", "bike"],
+    description: "Big sandy beach with an old pier and nearby park in Alappuzha — the Venice of the East.",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Alleppey_beach.jpg/400px-Alleppey_beach.jpg",
+    destinationCoords: [9.4900, 76.3267],
+    spots: [
+      { name: "Alleppey Beach", detail: "Big beach with old pier and nearby park", coords: [9.4900, 76.3267] },
+      { name: "Alleppey Pier", detail: "Historic pier extending into the Arabian Sea", coords: [9.4910, 76.3250] },
+      { name: "Vijaya Beach Park", detail: "Beachside park with gardens", coords: [9.4880, 76.3280] }
+    ],
+    spotTimings: { "Alleppey Beach": "Open all day", "Vijaya Beach Park": "8:00 AM – 6:00 PM" },
+    hotels: [
+      { name: "Ramada Alleppey", detail: "Beachfront — ₹5,000/night" },
+      { name: "Budget Stay", detail: "Alappuzha town — ₹800/night" }
+    ],
+    stays: [
+      { name: "Houseboat Stay", detail: "Iconic Kerala backwater houseboat" }
+    ]
+  },
+  {
+    id: 132,
+    name: "Muzhappilangad Drive-In Beach",
+    state: "Kerala",
+    emoji: "🏖️",
+    category: "beach",
+    rideTypes: ["car", "bike"],
+    description: "India's longest drive-in beach — 4 km of sandy shore open to motor vehicles in Kannur.",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Fisherman_at_Muzhappilangad_Beach.jpg/400px-Fisherman_at_Muzhappilangad_Beach.jpg",
+    destinationCoords: [11.8167, 75.3833],
+    spots: [
+      { name: "Muzhappilangad Drive-In Beach", detail: "4 km long sandy beach open to motor vehicles", coords: [11.8167, 75.3833] },
+      { name: "Dharmadam Island", detail: "Small island visible from the beach", coords: [11.8200, 75.3800] }
+    ],
+    spotTimings: { "Muzhappilangad Drive-In Beach": "Open all day" },
+    hotels: [
+      { name: "Kannur Beach House", detail: "Beachfront — ₹3,000/night" },
+      { name: "Budget Lodge", detail: "Kannur — ₹700/night" }
+    ],
+    stays: [
+      { name: "Fisherman's Homestay", detail: "Traditional Kannur coastal home" }
+    ]
+  },
+  {
+    id: 133,
+    name: "Marari & Puthenthodu Beach",
+    state: "Kerala",
+    emoji: "🏖️",
+    category: "beach",
+    rideTypes: ["car", "bike"],
+    description: "Spacious sandy Marari Beach with waves and Puthenthodu's clean, calm beach away from city crowds.",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Marari_Beach.jpg/400px-Marari_Beach.jpg",
+    destinationCoords: [9.5833, 76.2833],
+    spots: [
+      { name: "Marari Beach", detail: "Spacious sandy beach with waves", coords: [9.5833, 76.2833] },
+      { name: "Puthenthodu Beach", detail: "Beautiful, clean, calm beach away from city crowds", coords: [9.5900, 76.2800] },
+      { name: "Puthenthode Beach", detail: "Nice beach with calm vibe and great views", coords: [9.5850, 76.2850] }
+    ],
+    spotTimings: { "Marari Beach": "Open all day", "Puthenthodu Beach": "Open all day" },
+    hotels: [
+      { name: "Marari Beach Resort", detail: "CGH Earth — ₹12,000/night" },
+      { name: "Beach Cottage", detail: "Budget — ₹1,000/night" }
+    ],
+    stays: [
+      { name: "Fishing Village Homestay", detail: "Traditional coastal Kerala home" }
+    ]
+  },
+  {
+    id: 134,
+    name: "Cherai & Kuzhuppilly Beach",
+    state: "Kerala",
+    emoji: "🏖️",
+    category: "beach",
+    rideTypes: ["car", "bike"],
+    description: "Cherai's dolphin-spotting shores and Kuzhuppilly's soft sand with calm waves — perfect for peaceful walks near Kochi.",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Cherai_Beach_Kerala.jpg/400px-Cherai_Beach_Kerala.jpg",
+    destinationCoords: [10.1333, 76.1667],
+    spots: [
+      { name: "Cherai Beach", detail: "Swimming, dolphins and shell collecting", coords: [10.1333, 76.1667] },
+      { name: "Kuzhuppilly Beach", detail: "Soft sand and calm waves — perfect for peaceful walk", coords: [10.1400, 76.1700] },
+      { name: "Njarackal Arattuvazhi Beach", detail: "Quiet beach near Kochi backwaters", coords: [10.0500, 76.2167] }
+    ],
+    spotTimings: { "Cherai Beach": "Open all day", "Kuzhuppilly Beach": "Open all day" },
+    hotels: [
+      { name: "Cherai Beach Resorts", detail: "Beachfront — ₹4,000/night" },
+      { name: "Budget Stay", detail: "Cherai — ₹800/night" }
+    ],
+    stays: [
+      { name: "Island Homestay", detail: "Vypeen Island coastal home" }
+    ]
+  },
+  {
+    id: 135,
+    name: "Bekal Fort Beach",
+    state: "Kerala",
+    emoji: "🏖️",
+    category: "beach",
+    rideTypes: ["car", "bike"],
+    description: "Stunning beach beside the historic Bekal Fort — where the Arabian Sea meets ancient laterite walls in Kasaragod.",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Bekal_Fort_%284530729846%29.jpg/400px-Bekal_Fort_%284530729846%29.jpg",
+    destinationCoords: [12.3917, 75.0333],
+    spots: [
+      { name: "Bekal Fort Beach", detail: "Beach beside the historic Bekal Fort", coords: [12.3917, 75.0333] },
+      { name: "Bekal Fort", detail: "Largest fort in Kerala — panoramic sea views", coords: [12.3930, 75.0320] },
+      { name: "Pallikere Beach", detail: "Secluded beach near Bekal", coords: [12.3900, 75.0350] }
+    ],
+    spotTimings: { "Bekal Fort Beach": "10:00 AM – 5:30 PM", "Bekal Fort": "8:00 AM – 5:30 PM" },
+    hotels: [
+      { name: "Taj Bekal Resort", detail: "Luxury — ₹15,000/night" },
+      { name: "Budget Lodge", detail: "Kasaragod — ₹800/night" }
+    ],
+    stays: [
+      { name: "Bekal Homestay", detail: "Near the fort" }
+    ]
+  },
+  {
+    id: 136,
+    name: "Edava Beach & Varkala",
+    state: "Kerala",
+    emoji: "🏖️",
+    category: "beach",
+    rideTypes: ["car", "bike"],
+    description: "Edava's relaxed atmosphere with beautiful sunsets and Varkala's dramatic cliff-top beach views.",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Varkala_Beach%2C_Varkala%2C_Kerala.jpg/400px-Varkala_Beach%2C_Varkala%2C_Kerala.jpg",
+    destinationCoords: [8.7333, 76.7167],
+    spots: [
+      { name: "Edava Beach", detail: "Relaxed atmosphere with beautiful sunsets", coords: [8.7500, 76.7100] },
+      { name: "Varkala Cliff Beach", detail: "Dramatic cliff-top beach with stunning views", coords: [8.7333, 76.7167] },
+      { name: "Papanasam Beach", detail: "Sacred beach believed to wash away sins", coords: [8.7350, 76.7150] }
+    ],
+    spotTimings: { "Edava Beach": "Open all day", "Varkala Cliff Beach": "Open all day" },
+    hotels: [
+      { name: "Varkala Marine Palace", detail: "Cliff-top — ₹4,000/night" },
+      { name: "Beach Hostel", detail: "Budget — ₹500/night" }
+    ],
+    stays: [
+      { name: "Cliff Homestay", detail: "Overlooking the Arabian Sea" }
+    ]
+  },
+  {
+    id: 137,
+    name: "Beypore & Kappil Beach",
+    state: "Kerala",
+    emoji: "🏖️",
+    category: "beach",
+    rideTypes: ["car", "bike"],
+    description: "Beypore's historic port beach in Kozhikode and Kappil's clean white sand with nice breeze.",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Beypore_Beach%2C_Kozhikode%2C_Kerala.jpg/400px-Beypore_Beach%2C_Kozhikode%2C_Kerala.jpg",
+    destinationCoords: [11.1667, 75.8000],
+    spots: [
+      { name: "Beypore Beach", detail: "Historic port beach with Uru (dhow) building yard", coords: [11.1667, 75.8000] },
+      { name: "Kappil Beach", detail: "Clean white sand with nice breeze", coords: [8.7200, 76.7300] },
+      { name: "Beypore Pulimuttu", detail: "Long stone pier extending into the sea", coords: [11.1650, 75.7980] }
+    ],
+    spotTimings: { "Beypore Beach": "Open all day", "Kappil Beach": "Open all day" },
+    hotels: [
+      { name: "Hotel Alakapuri", detail: "Kozhikode — ₹2,500/night" },
+      { name: "Beach Cottage", detail: "Budget — ₹800/night" }
+    ],
+    stays: [
+      { name: "Malabar Homestay", detail: "Traditional Kozhikode home" }
+    ]
+  },
+  {
+    id: 138,
+    name: "Elamkunnapuzha & Nattika Beach",
+    state: "Kerala",
+    emoji: "🏖️",
+    category: "beach",
+    rideTypes: ["car", "bike"],
+    description: "Blue Waves beach with scenic casuarina woods and Nattika's serene shoreline in Thrissur.",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Nattika_beach.JPG/400px-Nattika_beach.JPG",
+    destinationCoords: [10.3333, 76.1833],
+    spots: [
+      { name: "Elamkunnapuzha Blue Waves Beach", detail: "Scenic beach with casuarina tree woods", coords: [10.0400, 76.2100] },
+      { name: "Nattika Beach", detail: "Serene shoreline in Thrissur district", coords: [10.3333, 76.1833] },
+      { name: "Thambankadavu Beach", detail: "Best private beach experience — very clean", coords: [10.3400, 76.1800] }
+    ],
+    spotTimings: { "Elamkunnapuzha Blue Waves Beach": "Open all day", "Nattika Beach": "Open all day" },
+    hotels: [
+      { name: "Nattika Beach Ayurveda Resort", detail: "Luxury — ₹8,000/night" },
+      { name: "Budget Stay", detail: "Thrissur — ₹900/night" }
+    ],
+    stays: [
+      { name: "Coastal Homestay", detail: "Near Nattika beach" }
+    ]
+  },
+  {
+    id: 139,
+    name: "Vadanappally & Swapnatheeram",
+    state: "Kerala",
+    emoji: "🏖️",
+    category: "beach",
+    rideTypes: ["car", "bike"],
+    description: "Vadanappally's traditional fishing beach and Swapnatheeram's dreamy shoreline in Thrissur coast.",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Nattika_beach.JPG/400px-Nattika_beach.JPG",
+    destinationCoords: [10.3667, 76.1667],
+    spots: [
+      { name: "Vadanappally Beach", detail: "Traditional fishing beach with golden sand", coords: [10.3667, 76.1667] },
+      { name: "Swapnatheeram Beach", detail: "Dreamy shoreline — Swapnatheeram means dream shore", coords: [10.3700, 76.1650] },
+      { name: "Panchavadi Beach", detail: "Quiet beach with scenic views", coords: [10.3600, 76.1700] }
+    ],
+    spotTimings: { "Vadanappally Beach": "Open all day", "Swapnatheeram Beach": "Open all day" },
+    hotels: [
+      { name: "Beach Resort Thrissur", detail: "Mid-range — ₹3,000/night" },
+      { name: "Budget Lodge", detail: "Chavakkad — ₹700/night" }
+    ],
+    stays: [
+      { name: "Fisherman's Homestay", detail: "Traditional coastal home" }
+    ]
+  },
+  {
+    id: 140,
+    name: "Kodungallur Azhikode Beach",
+    state: "Kerala",
+    emoji: "🏖️",
+    category: "beach",
+    rideTypes: ["car", "bike"],
+    description: "Where the Periyar River meets the Arabian Sea — historic Kodungallur's scenic beach with backwater views.",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Kappil_beach_kerala.jpg/400px-Kappil_beach_kerala.jpg",
+    destinationCoords: [10.2333, 76.1667],
+    spots: [
+      { name: "Kodungallur Azhikode Beach", detail: "Where Periyar River meets the Arabian Sea", coords: [10.2333, 76.1667] },
+      { name: "Azhikode Munakkal Beach", detail: "Scenic beach with backwater confluence", coords: [10.2350, 76.1650] },
+      { name: "Kodungallur Kotta", detail: "Historic Portuguese fort ruins nearby", coords: [10.2260, 76.1940] }
+    ],
+    spotTimings: { "Kodungallur Azhikode Beach": "Open all day" },
+    hotels: [
+      { name: "Hotel Indraprastha", detail: "Kodungallur — ₹2,000/night" },
+      { name: "Budget Stay", detail: "Kodungallur — ₹600/night" }
+    ],
+    stays: [
+      { name: "Backwater Homestay", detail: "Near the river confluence" }
+    ]
+  },
 
   // =============================================
   // KARNATAKA
@@ -1633,6 +2889,7 @@ const destinations = [
       { name: "Om Beach", detail: "Om-shaped beach, iconic for photos" },
       { name: "Kudle Beach", detail: "Relaxed beach with shacks and sunsets" },
       { name: "Half Moon Beach", detail: "Secluded cove reached by trek" },
+      { name: "Paradise Beach", detail: "Secluded beach — best reached by trekking from Belekan" },
       { name: "Mahabaleshwar Temple", detail: "Ancient Shiva temple in town" }
     ],
     hotels: [
@@ -1667,6 +2924,769 @@ const destinations = [
     stays: [
       { name: "Forest Homestay", detail: "Local home near the national park" },
       { name: "Plantation Stay", detail: "Coffee and areca nut estate" }
+    ]
+  },
+
+  // --- Karnataka Devotional Spots ---
+
+  // Coastal & Coastal Range
+  {
+    id: 141,
+    name: "Udupi",
+    state: "Karnataka",
+    emoji: "🛕",
+    category: "devotional",
+    rideTypes: ["solo", "car"],
+    description: "Famous for the Sri Krishna Temple and the birthplace of Dvaita philosophy by Madhvacharya. The temple's unique west-facing idol is viewed through the Kanakana Kindi window.",
+    spots: [
+      { name: "Sri Krishna Temple", detail: "13th-century temple — idol viewed through Kanakana Kindi window" },
+      { name: "Anantheshwara Temple", detail: "Ancient Shiva temple adjacent to Krishna Temple" },
+      { name: "Malpe Beach", detail: "Popular beach 6 km from Udupi with St. Mary's Island boat rides" },
+      { name: "Kadiyali Maha Ganapathi Temple", detail: "Revered Ganesh temple near Udupi" }
+    ],
+    hotels: [
+      { name: "Hotel Kidiyoor", detail: "Near temple — ₹2,500/night" },
+      { name: "Udupi Residency", detail: "Mid-range — ₹1,500/night" },
+      { name: "Pilgrim Guest House", detail: "Budget — ₹600/night" }
+    ],
+    stays: [
+      { name: "Temple Town Homestay", detail: "Traditional home near the Krishna Temple" },
+      { name: "Malpe Beach Stay", detail: "Coastal stay near the beach" }
+    ]
+  },
+  {
+    id: 142,
+    name: "Murudeshwar",
+    state: "Karnataka",
+    emoji: "🔱",
+    category: "devotional",
+    rideTypes: ["solo", "bike", "car"],
+    description: "Home to the world's second-tallest Shiva statue (123 ft) perched on Kanduka Hill with stunning Arabian Sea views and a 20-storey Raja Gopura.",
+    spots: [
+      { name: "Murudeshwar Temple", detail: "123-ft Shiva statue on Kanduka Hill overlooking the sea" },
+      { name: "Raja Gopura", detail: "20-storey temple tower with elevator and panoramic views" },
+      { name: "Murudeshwar Beach", detail: "Scenic beach at the foot of the temple hill" },
+      { name: "Netrani Island", detail: "Coral island 19 km offshore — popular for scuba diving" }
+    ],
+    hotels: [
+      { name: "RNS Residency", detail: "Sea-facing — ₹3,000/night" },
+      { name: "Naveen Beach Resort", detail: "Mid-range — ₹1,800/night" },
+      { name: "Budget Lodge", detail: "Near temple — ₹700/night" }
+    ],
+    stays: [
+      { name: "Seaside Homestay", detail: "Coastal home with temple views" },
+      { name: "Fisherman Village Stay", detail: "Local coastal life experience" }
+    ]
+  },
+  {
+    id: 143,
+    name: "Gokarna (Devotional)",
+    state: "Karnataka",
+    emoji: "🙏",
+    category: "devotional",
+    rideTypes: ["solo", "bike", "car"],
+    description: "Houses the sacred Atmalinga at the Mahabaleshwar Temple — one of the top salvation sites in Hindu tradition. The name means 'cow's ear' in Sanskrit.",
+    spots: [
+      { name: "Mahabaleshwar Temple", detail: "Ancient Shiva temple housing the Atmalinga — top moksha site" },
+      { name: "Koti Tirtha", detail: "Sacred temple tank for ritual bathing" },
+      { name: "Maha Ganapathi Temple", detail: "Ganesh temple where Ganapathi tricked Ravana" },
+      { name: "Bhadrakali Temple", detail: "Powerful Devi temple in the temple town" }
+    ],
+    hotels: [
+      { name: "SwaSwara", detail: "Wellness luxury — ₹12,000/night" },
+      { name: "Hotel Gokarna International", detail: "Mid-range — ₹2,000/night" },
+      { name: "Zostel Gokarna", detail: "Budget hostel — ₹500/night" }
+    ],
+    stays: [
+      { name: "Temple Town Homestay", detail: "Traditional home near Mahabaleshwar Temple" },
+      { name: "Agraharam Stay", detail: "Heritage quarter experience" }
+    ]
+  },
+  {
+    id: 144,
+    name: "Kukke Subramanya",
+    state: "Karnataka",
+    emoji: "🐍",
+    category: "devotional",
+    rideTypes: ["solo", "car"],
+    description: "Nestled in the Western Ghats, this temple is famous for serpent worship (Naga deity). Devotees perform Sarpa Samskara and Ashlesha Bali rituals here.",
+    spots: [
+      { name: "Kukke Subramanya Temple", detail: "Renowned serpent deity temple — Sarpa Samskara rituals" },
+      { name: "Adi Subramanya Temple", detail: "Ancient cave temple upstream on the Kumaradhara river" },
+      { name: "Kumaradhara River", detail: "Sacred river for ritual bathing before temple visit" },
+      { name: "Kumara Parvatha Trek", detail: "Challenging trek starting from Subramanya — one of Karnataka's toughest" }
+    ],
+    hotels: [
+      { name: "Temple Guest House", detail: "Devasthana accommodation — ₹500/night" },
+      { name: "Hotel Nandini", detail: "Mid-range — ₹1,500/night" },
+      { name: "Local Lodge", detail: "Budget — ₹400/night" }
+    ],
+    stays: [
+      { name: "Western Ghats Homestay", detail: "Amid lush forests near the temple" },
+      { name: "Plantation Stay", detail: "Areca and coffee estate experience" }
+    ]
+  },
+  {
+    id: 145,
+    name: "Dharmasthala",
+    state: "Karnataka",
+    emoji: "🙏",
+    category: "devotional",
+    rideTypes: ["solo", "car"],
+    description: "Known for the Manjunatha Temple — a unique blend of Hinduism and Jainism where a Jain Heggade family administers a Hindu Shiva temple. Free Annadana feeds 10,000+ daily.",
+    spots: [
+      { name: "Manjunatha Temple", detail: "Shiva temple administered by Jain Heggade family — unique interfaith tradition" },
+      { name: "Bahubali Statue", detail: "39-ft monolithic Gommateshwara statue" },
+      { name: "Manjusha Museum", detail: "Museum with antique collections and vintage cars" },
+      { name: "Annadana Hall", detail: "Free meals served to 10,000+ devotees daily" }
+    ],
+    hotels: [
+      { name: "Dharmasthala Guest House", detail: "Temple trust accommodation — ₹300/night" },
+      { name: "Hotel Manjunatha", detail: "Mid-range — ₹1,200/night" },
+      { name: "Netravathi Residency", detail: "Budget — ₹800/night" }
+    ],
+    stays: [
+      { name: "Temple Town Homestay", detail: "Simple home near the temple complex" },
+      { name: "Riverside Stay", detail: "Near the Netravathi river" }
+    ]
+  },
+  {
+    id: 146,
+    name: "Kollur Mookambika",
+    state: "Karnataka",
+    emoji: "🙏",
+    category: "devotional",
+    rideTypes: ["solo", "car"],
+    description: "A renowned Shakti Peetha dedicated to Goddess Mookambika at the foothills of Kodachadri peak. One of the seven Mukti Sthalas of Karnataka.",
+    spots: [
+      { name: "Mookambika Temple", detail: "Powerful Shakti Peetha — one of seven Mukti Sthalas" },
+      { name: "Kodachadri Peak", detail: "Scenic trek to the peak behind the temple — stunning sunset views" },
+      { name: "Souparnika River", detail: "Sacred river for ritual bathing" },
+      { name: "Arishina Gundi Falls", detail: "Waterfall trek near Kodachadri" }
+    ],
+    hotels: [
+      { name: "Temple Trust Guest House", detail: "Devasthana stay — ₹400/night" },
+      { name: "Hotel Sai Prasad", detail: "Mid-range — ₹1,200/night" },
+      { name: "Local Lodge", detail: "Budget — ₹500/night" }
+    ],
+    stays: [
+      { name: "Forest Edge Homestay", detail: "Near Kodachadri foothills" },
+      { name: "Village Homestay", detail: "Rural Karnataka experience" }
+    ]
+  },
+
+  // Western Ghats & Historic Places
+  {
+    id: 147,
+    name: "Sringeri",
+    state: "Karnataka",
+    emoji: "📿",
+    category: "devotional",
+    rideTypes: ["solo", "car"],
+    description: "The first of four Advaita Pithas (monasteries) founded by Adi Shankaracharya in the 8th century. The Sharadamba Temple sits on the banks of the Tunga river.",
+    spots: [
+      { name: "Sharadamba Temple", detail: "First Advaita Pitha — Goddess Sharada on the Tunga river banks" },
+      { name: "Vidyashankara Temple", detail: "12-zodiac-pillar temple — sunlight falls on each pillar per month" },
+      { name: "Tunga River", detail: "Sacred river with fish feeding — fish are considered sacred here" },
+      { name: "Sringeri Mutt", detail: "Ancient monastery with rich philosophical heritage" }
+    ],
+    hotels: [
+      { name: "Mutt Guest House", detail: "Monastery accommodation — ₹300/night" },
+      { name: "Hotel Mayura", detail: "Mid-range — ₹1,200/night" },
+      { name: "Local Lodge", detail: "Budget — ₹500/night" }
+    ],
+    stays: [
+      { name: "Riverside Homestay", detail: "Peaceful stay on the Tunga river" },
+      { name: "Western Ghats Homestay", detail: "Amid coffee and spice plantations" }
+    ]
+  },
+  {
+    id: 148,
+    name: "Horanadu",
+    state: "Karnataka",
+    emoji: "🙏",
+    category: "devotional",
+    rideTypes: ["solo", "car"],
+    description: "Known for the Annapoorneshwari Temple dedicated to the Goddess of Food, located amidst lush Western Ghats landscapes. Free meals served to all visitors.",
+    spots: [
+      { name: "Annapoorneshwari Temple", detail: "Goddess of Food — free Annadana for all visitors" },
+      { name: "Bhadra River", detail: "Scenic river flowing near the temple" },
+      { name: "Kalasa Kalaseshwara Temple", detail: "Ancient Shiva temple 10 km away in Kalasa town" },
+      { name: "Kemmangundi", detail: "Hill station 40 km away with Hebbe Falls and Z-Point" }
+    ],
+    hotels: [
+      { name: "Temple Guest House", detail: "Free/donation-based accommodation" },
+      { name: "Hotel Mayura", detail: "Mid-range — ₹1,000/night" },
+      { name: "Local Lodge", detail: "Budget — ₹500/night" }
+    ],
+    stays: [
+      { name: "Plantation Homestay", detail: "Coffee estate stay near Horanadu" },
+      { name: "Forest Edge Stay", detail: "Amid the Western Ghats greenery" }
+    ]
+  },
+  {
+    id: 149,
+    name: "Hampi (Devotional)",
+    state: "Karnataka",
+    emoji: "🛕",
+    category: "devotional",
+    rideTypes: ["solo", "bike", "car"],
+    description: "UNESCO World Heritage Site — the Virupaksha Temple has been functioning since the 7th century within the ruins of the Vijayanagara Empire capital.",
+    spots: [
+      { name: "Virupaksha Temple", detail: "Functioning 7th-century Shiva temple — UNESCO Heritage" },
+      { name: "Vittala Temple Complex", detail: "Famous stone chariot and musical pillars" },
+      { name: "Hemakuta Hill Temples", detail: "Cluster of ancient Jain and Shiva temples" },
+      { name: "Lakshmi Narasimha Statue", detail: "Largest monolithic Narasimha statue — 6.7m tall" }
+    ],
+    hotels: [
+      { name: "Evolve Back Hampi", detail: "Luxury heritage — ₹18,000/night" },
+      { name: "Clarks Inn Hampi", detail: "Comfortable — ₹2,500/night" },
+      { name: "Goan Corner", detail: "Budget guesthouse — ₹400/night" }
+    ],
+    stays: [
+      { name: "Heritage Homestay", detail: "Traditional Kannada home near ruins" },
+      { name: "Riverside Hut", detail: "Basic hut on Hippie Island" }
+    ]
+  },
+  {
+    id: 150,
+    name: "Shravanabelagola",
+    state: "Karnataka",
+    emoji: "🧘",
+    category: "devotional",
+    rideTypes: ["solo", "car"],
+    description: "Famous for the 57-ft monolithic statue of Gommateshwara (Bahubali) — the tallest monolithic stone statue in the world, carved in 983 AD atop Vindhyagiri Hill.",
+    spots: [
+      { name: "Gommateshwara Statue", detail: "57-ft monolithic Bahubali — tallest monolithic statue in the world (983 AD)" },
+      { name: "Vindhyagiri Hill", detail: "614 steps to the summit — panoramic views of the plains" },
+      { name: "Chandragiri Hill", detail: "Cluster of Jain basadis and temples" },
+      { name: "Mahamastakabhisheka", detail: "Grand anointing ceremony held once every 12 years" }
+    ],
+    hotels: [
+      { name: "Hotel Raghu", detail: "Near the hill — ₹1,500/night" },
+      { name: "KSTDC Hotel Mayura", detail: "Government stay — ₹1,000/night" },
+      { name: "Pilgrim Dharamshala", detail: "Budget — ₹300/night" }
+    ],
+    stays: [
+      { name: "Heritage Homestay", detail: "Traditional home near Vindhyagiri" },
+      { name: "Village Stay", detail: "Rural Karnataka experience" }
+    ]
+  },
+
+  // Bangalore/Mysore Region
+  {
+    id: 151,
+    name: "Nanjangud",
+    state: "Karnataka",
+    emoji: "🛕",
+    category: "devotional",
+    rideTypes: ["solo", "car"],
+    description: "Known as Dakshina Kashi (South Kashi) — the Srikanteshwara Temple on the banks of river Kapila is one of the largest temples in Karnataka.",
+    spots: [
+      { name: "Srikanteshwara Temple", detail: "Dakshina Kashi — massive Shiva temple on the Kapila river" },
+      { name: "Kapila River Ghat", detail: "Sacred bathing ghat along the river" },
+      { name: "Nanjangud Rasabale", detail: "Famous for the unique Nanjangud banana variety" },
+      { name: "Mysore (nearby)", detail: "Royal city just 23 km away" }
+    ],
+    hotels: [
+      { name: "Mysore Hotels", detail: "Nearby city options — ₹2,000/night" },
+      { name: "Local Lodge", detail: "Basic stay near temple — ₹600/night" },
+      { name: "Pilgrim Guest House", detail: "Budget — ₹400/night" }
+    ],
+    stays: [
+      { name: "Riverside Homestay", detail: "Near the Kapila river" },
+      { name: "Village Stay", detail: "Rural Mysore district experience" }
+    ]
+  },
+  {
+    id: 152,
+    name: "Srirangapatna",
+    state: "Karnataka",
+    emoji: "🛕",
+    category: "devotional",
+    rideTypes: ["solo", "car"],
+    description: "Island town on the Kaveri river — home to the Sri Ranganathaswamy Temple and the historic capital of Tipu Sultan's kingdom.",
+    spots: [
+      { name: "Sri Ranganathaswamy Temple", detail: "Ancient Vishnu temple on the Kaveri river island" },
+      { name: "Tipu Sultan's Summer Palace", detail: "Daria Daulat Bagh — ornate Indo-Islamic palace" },
+      { name: "Gumbaz", detail: "Mausoleum of Tipu Sultan and Hyder Ali" },
+      { name: "Nimishamba Temple", detail: "Riverside Parvati temple — wishes granted in a nimisha (minute)" }
+    ],
+    hotels: [
+      { name: "Mysore Hotels", detail: "Nearby city options — ₹2,000/night" },
+      { name: "KSTDC Hotel Mayura", detail: "Government stay — ₹1,000/night" },
+      { name: "Local Lodge", detail: "Budget — ₹500/night" }
+    ],
+    stays: [
+      { name: "Island Homestay", detail: "Stay on the Kaveri river island" },
+      { name: "Heritage Stay", detail: "Near Tipu Sultan's palace" }
+    ]
+  },
+  {
+    id: 153,
+    name: "Kotilingeshwara",
+    state: "Karnataka",
+    emoji: "🔱",
+    category: "devotional",
+    rideTypes: ["solo", "car"],
+    description: "Known for hosting lakhs of Shiva lingas in the Kolar district — features a 108-ft Shiva linga and a 35-ft Nandi, with devotees sponsoring new lingas continuously.",
+    spots: [
+      { name: "Kotilingeshwara Temple", detail: "108-ft Shiva linga with lakhs of smaller lingas around it" },
+      { name: "Giant Nandi Statue", detail: "35-ft monolithic Nandi bull facing the main linga" },
+      { name: "Temple Garden", detail: "Vast grounds with rows of Shiva lingas" },
+      { name: "Kolar Gold Fields (nearby)", detail: "Historic gold mining town 30 km away" }
+    ],
+    hotels: [
+      { name: "Kolar Hotels", detail: "Nearby town options — ₹1,200/night" },
+      { name: "Local Lodge", detail: "Basic stay near temple — ₹500/night" },
+      { name: "Bangalore Hotels", detail: "90 km away — wide range of options" }
+    ],
+    stays: [
+      { name: "Village Homestay", detail: "Rural Kolar district experience" },
+      { name: "Farm Stay", detail: "Agricultural life near the temple" }
+    ]
+  },
+
+  // --- Karnataka Trekking Spots ---
+
+  // 🟢 Easy Treks
+  {
+    id: 154,
+    name: "Nandi Hills",
+    state: "Karnataka",
+    emoji: "🌄",
+    category: "trekking",
+    rideTypes: ["solo", "bike", "car"],
+    description: "🟢 Popular sunrise trek just 60 km from Bangalore — ancient Tipu Sultan fort, paragliding, and panoramic views from 1,478m.",
+    spots: [
+      { name: "Nandi Hills Sunrise Point", detail: "Iconic sunrise viewpoint — arrive by 5:30 AM" },
+      { name: "Tipu Sultan's Summer Palace", detail: "Tipu's Drop — a cliff used for executing prisoners" },
+      { name: "Amrita Sarovar", detail: "Ancient lake at the hilltop" },
+      { name: "Yoga Nandeeshwara Temple", detail: "9th-century Chola-era temple at the summit" }
+    ],
+    hotels: [
+      { name: "Hotel Mayura Pine Top", detail: "KSTDC hilltop stay — ₹2,000/night" },
+      { name: "Bangalore Hotels", detail: "60 km away — wide range" },
+      { name: "Nandi Cross Homestay", detail: "Budget near base — ₹800/night" }
+    ],
+    stays: [
+      { name: "Hilltop Camping", detail: "Camping with sunrise views" },
+      { name: "Vineyard Stay", detail: "Grover Zampa vineyard nearby" }
+    ]
+  },
+  {
+    id: 155,
+    name: "Skandagiri",
+    state: "Karnataka",
+    emoji: "🌙",
+    category: "trekking",
+    rideTypes: ["bike", "car"],
+    description: "🟢 Famous night trek near Bangalore — hike under the stars and watch sunrise above the clouds from the ruined Kalavara Durga fort at 1,350m.",
+    spots: [
+      { name: "Skandagiri Night Trek", detail: "Popular night trek — start at 2 AM for sunrise at summit" },
+      { name: "Kalavara Durga Ruins", detail: "Ancient fort ruins at the peak" },
+      { name: "Cloud Walk", detail: "Walk above the cloud line during monsoon and winter" },
+      { name: "Papagni Temple", detail: "Small temple at the base of the hill" }
+    ],
+    hotels: [
+      { name: "Chikballapur Hotels", detail: "Nearby town — ₹1,200/night" },
+      { name: "Nandi Hills Stays", detail: "10 km away — ₹1,500/night" },
+      { name: "Trek Organizer Camp", detail: "Guided trek with camping — ₹1,000/person" }
+    ],
+    stays: [
+      { name: "Summit Camping", detail: "Camp at the fort ruins" },
+      { name: "Base Village Homestay", detail: "Local home at Kalwara village" }
+    ]
+  },
+  {
+    id: 156,
+    name: "Savandurga",
+    state: "Karnataka",
+    emoji: "🧗",
+    category: "trekking",
+    rideTypes: ["bike", "car"],
+    description: "🟢 One of the largest monolith hills in Asia — a rocky scramble 50 km from Bangalore with Manchanabele Dam views and ancient fort ruins.",
+    spots: [
+      { name: "Savandurga Hill Trek", detail: "Rocky scramble up one of Asia's largest monoliths" },
+      { name: "Manchanabele Dam", detail: "Scenic reservoir at the base — kayaking available" },
+      { name: "Savandurga Fort Ruins", detail: "Remains of Kempe Gowda's 16th-century fort" },
+      { name: "Narasimha Swamy Temple", detail: "Cave temple at the base of the hill" }
+    ],
+    hotels: [
+      { name: "Ramanagara Hotels", detail: "Nearby town — ₹1,200/night" },
+      { name: "Bangalore Hotels", detail: "50 km away — wide range" },
+      { name: "Lakeside Camp", detail: "Camping near Manchanabele — ₹800/person" }
+    ],
+    stays: [
+      { name: "Dam View Homestay", detail: "Near Manchanabele reservoir" },
+      { name: "Rock Climbing Camp", detail: "Adventure camp at the base" }
+    ]
+  },
+
+  // 🟡 Moderate Treks
+  {
+    id: 157,
+    name: "Kodachadri",
+    state: "Karnataka",
+    emoji: "🌿",
+    category: "trekking",
+    rideTypes: ["bike", "car"],
+    description: "🟡 Stunning Western Ghats peak at 1,343m — dense shola forests, Hidlumane Falls, and a Mookambika temple at the summit with Arabian Sea views on clear days.",
+    spots: [
+      { name: "Kodachadri Peak", detail: "1,343m summit — Arabian Sea visible on clear days" },
+      { name: "Hidlumane Falls", detail: "Multi-tiered waterfall on the trek route" },
+      { name: "Sarvajna Peetha", detail: "Adi Shankaracharya's meditation spot at the summit" },
+      { name: "Nagodi Forest Trail", detail: "Dense forest trail through the Western Ghats" }
+    ],
+    hotels: [
+      { name: "Kollur Hotels", detail: "Nearby temple town — ₹1,000/night" },
+      { name: "Forest Department Guest House", detail: "Basic stay — ₹500/night" },
+      { name: "Trek Base Camp Nagodi", detail: "Camping — ₹600/person" }
+    ],
+    stays: [
+      { name: "Homestay Nagodi", detail: "Village home at the trek base" },
+      { name: "Summit Camping", detail: "Camp at the peak with sunset views" }
+    ]
+  },
+  {
+    id: 158,
+    name: "Tadiandamol",
+    state: "Karnataka",
+    emoji: "⛰️",
+    category: "trekking",
+    rideTypes: ["bike", "car"],
+    description: "🟡 Highest peak in Coorg at 1,748m — rolling grasslands, misty trails through shola forests, and panoramic views of the Western Ghats.",
+    spots: [
+      { name: "Tadiandamol Peak", detail: "1,748m — highest peak in Coorg with 360° views" },
+      { name: "Nalaknad Palace", detail: "Ruined palace of Kodagu kings at the trek base" },
+      { name: "Grassland Meadows", detail: "Rolling green meadows near the summit" },
+      { name: "Bisle Viewpoint (nearby)", detail: "Confluence of three mountain ranges — 40 km away" }
+    ],
+    hotels: [
+      { name: "Coorg Hotels", detail: "Madikeri options — ₹2,000/night" },
+      { name: "Kakkabe Homestay", detail: "Near trek base — ₹1,200/night" },
+      { name: "Trek Organizer Camp", detail: "Guided trek — ₹1,500/person" }
+    ],
+    stays: [
+      { name: "Coffee Estate Stay", detail: "Plantation stay near Kakkabe" },
+      { name: "Hilltop Camping", detail: "Camp at the grassland meadows" }
+    ]
+  },
+  {
+    id: 159,
+    name: "Mullayanagiri",
+    state: "Karnataka",
+    emoji: "🏔️",
+    category: "trekking",
+    rideTypes: ["bike", "car"],
+    description: "🟡 Highest peak in Karnataka at 1,930m — a scenic trek from Chikmagalur through coffee estates and shola grasslands to the Shiva temple at the summit.",
+    spots: [
+      { name: "Mullayanagiri Peak", detail: "1,930m — highest point in Karnataka with Shiva temple" },
+      { name: "Baba Budangiri", detail: "Sacred peak with a Sufi dargah and Hindu cave — 10 km away" },
+      { name: "Sarpadhari Trail", detail: "Serpentine trail through dense forest to the peak" },
+      { name: "Manikyadhara Falls", detail: "Waterfall on the Baba Budangiri route" }
+    ],
+    hotels: [
+      { name: "The Serai Chikmagalur", detail: "Luxury coffee estate — ₹12,000/night" },
+      { name: "Hotel Mayura", detail: "Mid-range — ₹1,500/night" },
+      { name: "Zostel Chikmagalur", detail: "Budget hostel — ₹500/night" }
+    ],
+    stays: [
+      { name: "Coffee Plantation Stay", detail: "Wake up to coffee estates" },
+      { name: "Hilltop Camping", detail: "Camp near the summit" }
+    ]
+  },
+  {
+    id: 160,
+    name: "Ettina Bhuja",
+    state: "Karnataka",
+    emoji: "🐂",
+    category: "trekking",
+    rideTypes: ["bike", "car"],
+    description: "🟡 The 'Ox's Shoulder' peak in Mudigere — a dramatic rocky pinnacle at 1,150m with stunning views of the Charmadi Ghats and surrounding valleys.",
+    spots: [
+      { name: "Ettina Bhuja Peak", detail: "Rocky pinnacle resembling an ox's shoulder — 1,150m" },
+      { name: "Byrapura Base", detail: "Trek starts from this small village" },
+      { name: "Grassland Plateau", detail: "Open meadows before the final rocky ascent" },
+      { name: "Charmadi Ghat Views", detail: "Panoramic views of the winding ghat road" }
+    ],
+    hotels: [
+      { name: "Mudigere Hotels", detail: "Nearby town — ₹1,200/night" },
+      { name: "Chikmagalur Hotels", detail: "30 km away — ₹1,500/night" },
+      { name: "Trek Camp", detail: "Guided trek with camping — ₹1,000/person" }
+    ],
+    stays: [
+      { name: "Village Homestay Byrapura", detail: "Local home at the trek base" },
+      { name: "Plantation Stay", detail: "Coffee estate near Mudigere" }
+    ]
+  },
+  {
+    id: 161,
+    name: "Bandaje Falls Trek",
+    state: "Karnataka",
+    emoji: "💧",
+    category: "trekking",
+    rideTypes: ["bike", "car"],
+    description: "🟡 Hidden waterfall trek near Charmadi — a scenic 6 km trail through dense forests to a stunning 200-ft waterfall surrounded by cliffs.",
+    spots: [
+      { name: "Bandaje Arbi Falls", detail: "200-ft waterfall hidden in a cliff amphitheatre" },
+      { name: "Ballalarayana Durga Fort", detail: "Ruined fort on the ridge above the falls" },
+      { name: "Forest Trail", detail: "6 km trail through dense Western Ghats forest" },
+      { name: "Durgadahalli Base", detail: "Trek starting point village" }
+    ],
+    hotels: [
+      { name: "Charmadi Hotels", detail: "Nearby ghat town — ₹1,000/night" },
+      { name: "Mudigere Hotels", detail: "20 km away — ₹1,200/night" },
+      { name: "Trek Camp", detail: "Guided trek — ₹800/person" }
+    ],
+    stays: [
+      { name: "Forest Edge Homestay", detail: "Near the trek base" },
+      { name: "Waterfall Camping", detail: "Camp near the falls (seasonal)" }
+    ]
+  },
+
+  // 🔴 Tough Treks
+  {
+    id: 162,
+    name: "Kumara Parvatha",
+    state: "Karnataka",
+    emoji: "🔥",
+    category: "trekking",
+    rideTypes: ["bike", "car"],
+    description: "🔴 One of the toughest treks in Karnataka — 14 km gruelling trail from Kukke Subramanya to the 1,712m peak through dense forests and steep rocky sections.",
+    spots: [
+      { name: "Kumara Parvatha Peak", detail: "1,712m summit — one of Karnataka's toughest treks" },
+      { name: "Shesha Parvatha", detail: "Intermediate peak with camping spot" },
+      { name: "Bhattara Mane", detail: "Forest rest stop with basic shelter" },
+      { name: "Pushpagiri Wildlife Sanctuary", detail: "Trek passes through this protected sanctuary" }
+    ],
+    hotels: [
+      { name: "Kukke Subramanya Hotels", detail: "Temple town base — ₹800/night" },
+      { name: "Forest Department Rest House", detail: "Basic — ₹400/night" },
+      { name: "Trek Organizer Package", detail: "Guided 2-day trek — ₹2,500/person" }
+    ],
+    stays: [
+      { name: "Shesha Parvatha Camping", detail: "Camp at the intermediate peak" },
+      { name: "Temple Town Homestay", detail: "Stay at Subramanya before the trek" }
+    ]
+  },
+
+  // --- Karnataka Hill Stations ---
+  {
+    id: 163,
+    name: "Chikmagalur",
+    state: "Karnataka",
+    emoji: "☕",
+    category: "hill-station",
+    rideTypes: ["solo", "bike", "car"],
+    description: "The Coffee Land of Karnataka — easy driving access to misty viewpoints, Hirekolale Lake, lush coffee estates, and the gateway to Mullayanagiri and Baba Budangiri.",
+    spots: [
+      { name: "Hirekolale Lake", detail: "Scenic lake surrounded by hills — perfect for evening walks" },
+      { name: "Coffee Estates", detail: "Sprawling plantations — India's coffee story began here" },
+      { name: "Baba Budangiri", detail: "Sacred peak with Sufi dargah and Hindu cave shrine" },
+      { name: "Hebbe Falls", detail: "Two-tiered waterfall accessible via jeep from Kemmanagundi" }
+    ],
+    hotels: [
+      { name: "The Serai Chikmagalur", detail: "Luxury coffee estate — ₹12,000/night" },
+      { name: "Hotel Mayura", detail: "Mid-range — ₹1,500/night" },
+      { name: "Zostel Chikmagalur", detail: "Budget hostel — ₹500/night" }
+    ],
+    stays: [
+      { name: "Coffee Plantation Homestay", detail: "Wake up to coffee blossoms" },
+      { name: "Hilltop Estate Bungalow", detail: "Colonial-era planter's bungalow" }
+    ]
+  },
+  {
+    id: 164,
+    name: "Kemmanagundi",
+    state: "Karnataka",
+    emoji: "🌿",
+    category: "hill-station",
+    rideTypes: ["car"],
+    description: "A serene, lush green hill station in the Baba Budan range — built as a summer retreat by the Mysore Maharaja, with Z-Point viewpoint and Hebbe Falls nearby.",
+    spots: [
+      { name: "Z-Point", detail: "Panoramic viewpoint overlooking the valley and Shola forests" },
+      { name: "Raj Bhavan", detail: "Former summer palace of the Mysore Maharaja" },
+      { name: "Hebbe Falls", detail: "Two-tiered 168m waterfall — jeep ride from Kemmanagundi" },
+      { name: "Rose Garden", detail: "Terraced garden with hundreds of rose varieties" }
+    ],
+    hotels: [
+      { name: "KSTDC Hotel Mayura", detail: "Government hilltop stay — ₹1,500/night" },
+      { name: "Chikmagalur Hotels", detail: "30 km away — ₹2,000/night" },
+      { name: "Local Guest House", detail: "Budget — ₹600/night" }
+    ],
+    stays: [
+      { name: "Hilltop Homestay", detail: "Quiet stay amid the Baba Budan range" },
+      { name: "Coffee Estate Stay", detail: "Plantation bungalow nearby" }
+    ]
+  },
+  {
+    id: 165,
+    name: "Agumbe",
+    state: "Karnataka",
+    emoji: "🌧️",
+    category: "hill-station",
+    rideTypes: ["bike", "car"],
+    description: "The Cherrapunji of the South — breathtaking sunset views from the famous viewpoint, rich rainforest scenery, and home to the King Cobra and the Agumbe Rainforest Research Station.",
+    spots: [
+      { name: "Agumbe Sunset Point", detail: "Famous viewpoint — one of the best sunsets in Karnataka" },
+      { name: "Onake Abbi Falls", detail: "Tall waterfall deep inside the rainforest" },
+      { name: "Agumbe Rainforest Research Station", detail: "King Cobra research centre by Romulus Whitaker" },
+      { name: "Barkana Falls", detail: "One of the highest waterfalls in Karnataka — 259m" }
+    ],
+    hotels: [
+      { name: "Doddamane Homestay", detail: "Heritage Malnad house — ₹1,500/night" },
+      { name: "Kasturba Nagar Guest House", detail: "Basic — ₹800/night" },
+      { name: "Sringeri Hotels", detail: "30 km away — ₹1,200/night" }
+    ],
+    stays: [
+      { name: "Rainforest Homestay", detail: "Amid the dense Western Ghats forest" },
+      { name: "Traditional Malnad Home", detail: "Heritage wooden house experience" }
+    ]
+  },
+  {
+    id: 166,
+    name: "Himavad Gopalaswamy Betta",
+    state: "Karnataka",
+    emoji: "⛰️",
+    category: "hill-station",
+    rideTypes: ["car"],
+    description: "A misty hill in Chamarajanagar district at 1,450m — features a Venugopalaswamy temple at the summit reachable by vehicle, surrounded by Bandipur forest and wildlife.",
+    spots: [
+      { name: "Venugopalaswamy Temple", detail: "Ancient hilltop temple often shrouded in mist" },
+      { name: "Misty Summit Viewpoint", detail: "Panoramic views of Bandipur forest below" },
+      { name: "Bandipur National Park", detail: "Tiger reserve at the base — safari available" },
+      { name: "Gundlupet Town", detail: "Gateway town with local markets" }
+    ],
+    hotels: [
+      { name: "Bandipur Safari Lodge", detail: "Jungle lodge — ₹5,000/night" },
+      { name: "Gundlupet Hotels", detail: "Nearby town — ₹1,000/night" },
+      { name: "Forest Department Guest House", detail: "Basic — ₹500/night" }
+    ],
+    stays: [
+      { name: "Jungle Edge Homestay", detail: "Near Bandipur forest" },
+      { name: "Farm Stay Gundlupet", detail: "Rural Chamarajanagar experience" }
+    ]
+  },
+  {
+    id: 167,
+    name: "Jogimatti Forest",
+    state: "Karnataka",
+    emoji: "🌲",
+    category: "hill-station",
+    rideTypes: ["car"],
+    description: "A tranquil, forested hill near Chitradurga — features a small zoo, nature trails, viewpoints, and a peaceful retreat away from the crowds.",
+    spots: [
+      { name: "Jogimatti Viewpoint", detail: "Panoramic views of Chitradurga and surrounding plains" },
+      { name: "Jogimatti Zoo", detail: "Small zoo with native wildlife species" },
+      { name: "Nature Trail", detail: "Forested walking trail through the hills" },
+      { name: "Chitradurga Fort (nearby)", detail: "Massive stone fortress — 'Stone Fortress' of Nayakas" }
+    ],
+    hotels: [
+      { name: "Chitradurga Hotels", detail: "Nearby city — ₹1,200/night" },
+      { name: "KSTDC Hotel Mayura", detail: "Government stay — ₹1,000/night" },
+      { name: "Local Lodge", detail: "Budget — ₹500/night" }
+    ],
+    stays: [
+      { name: "Forest Guest House", detail: "Quiet stay inside the forest area" },
+      { name: "Heritage Homestay", detail: "Near Chitradurga fort" }
+    ]
+  },
+  {
+    id: 168,
+    name: "Male Mahadeshwara Betta (MM Hills)",
+    state: "Karnataka",
+    emoji: "🛕",
+    category: "hill-station",
+    rideTypes: ["solo", "car"],
+    description: "A popular hilly pilgrimage site in Chamarajanagar — the Mahadeshwara temple sits atop the hill surrounded by dense forest, wildlife, and a peaceful, scenic environment.",
+    spots: [
+      { name: "Mahadeshwara Temple", detail: "Hilltop Shiva temple — major pilgrimage site" },
+      { name: "MM Hills Wildlife Sanctuary", detail: "Dense forest with elephants, leopards, and bison" },
+      { name: "Palar Dam", detail: "Scenic reservoir surrounded by forest" },
+      { name: "Hanumanthapura", detail: "Ancient Hanuman temple in the forest" }
+    ],
+    hotels: [
+      { name: "Temple Trust Guest House", detail: "Pilgrim accommodation — ₹400/night" },
+      { name: "Forest Rest House", detail: "Basic forest stay — ₹600/night" },
+      { name: "Kollegal Hotels", detail: "Nearby town — ₹1,000/night" }
+    ],
+    stays: [
+      { name: "Forest Edge Homestay", detail: "Near the wildlife sanctuary" },
+      { name: "Pilgrimage Homestay", detail: "Simple home near the temple" }
+    ]
+  },
+
+  {
+    id: 169,
+    name: "Karwar",
+    state: "Karnataka",
+    emoji: "🏖️",
+    category: "beach",
+    rideTypes: ["bike", "car"],
+    description: "Karnataka's northernmost coastal town — pristine beaches, water sports at Devbagh, and the serene Majali beach surrounded by lush green hills.",
+    spots: [
+      { name: "Devbagh Beach", detail: "Secluded island beach — water sports and dolphin spotting" },
+      { name: "Majali Beach", detail: "Clean, uncrowded beach with lush green surroundings" },
+      { name: "Karwar Beach", detail: "Main town beach with scenic views of the harbour" },
+      { name: "Sadashivgad Fort", detail: "Hilltop fort with panoramic views of the Kali river and sea" }
+    ],
+    hotels: [
+      { name: "Devbagh Beach Resort", detail: "Jungle Lodges — ₹6,000/night" },
+      { name: "Sterling Karwar", detail: "Comfortable stay — ₹3,500/night" },
+      { name: "Hotel Bhadra", detail: "Budget — ₹1,000/night" }
+    ],
+    stays: [
+      { name: "Seaside Homestay Karwar", detail: "Local home near the beach" },
+      { name: "Devbagh Island Stay", detail: "Eco-cottage on the island" }
+    ]
+  },
+  {
+    id: 170,
+    name: "Kasarkod Beach",
+    state: "Karnataka",
+    emoji: "🏖️",
+    category: "beach",
+    rideTypes: ["bike", "car"],
+    description: "India's first Blue Flag certified beach near Honnavar — pristine sands lined with casuarina trees along the Arabian Sea coast of Uttara Kannada.",
+    spots: [
+      { name: "Kasarkod Blue Flag Beach", detail: "Eco-certified pristine beach with clean sands" },
+      { name: "Casuarina Forest Walk", detail: "Shaded walk through coastal casuarina groves" },
+      { name: "Honnavar Town", detail: "Nearby coastal town with local seafood" },
+      { name: "Apsarakonda Falls (nearby)", detail: "Scenic waterfall cascading into the sea — 15 km away" }
+    ],
+    hotels: [
+      { name: "Honnavar Hotels", detail: "Nearby town — ₹1,200/night" },
+      { name: "Beach View Lodge", detail: "Basic stay near the beach — ₹800/night" },
+      { name: "KSTDC Guest House", detail: "Government stay — ₹1,000/night" }
+    ],
+    stays: [
+      { name: "Coastal Homestay Honnavar", detail: "Local home with seafood meals" },
+      { name: "Beach Cottage", detail: "Simple cottage near the shore" }
+    ]
+  },
+  {
+    id: 171,
+    name: "Maravanthe Beach",
+    state: "Karnataka",
+    emoji: "🏖️",
+    category: "beach",
+    rideTypes: ["solo", "bike", "car"],
+    description: "A unique scenic stretch where NH-66 runs between the Arabian Sea on one side and the Souparnika river on the other — one of India's most picturesque coastal drives.",
+    spots: [
+      { name: "Maravanthe Beach", detail: "Stunning beach alongside the highway — sea on one side, river on the other" },
+      { name: "Scenic Highway Drive", detail: "Panoramic drive on NH-66 flanked by sea and river" },
+      { name: "Trasi Beach", detail: "Quiet extension of Maravanthe with fewer crowds" },
+      { name: "Kollur Mookambika (nearby)", detail: "Famous temple — 30 km inland" }
+    ],
+    hotels: [
+      { name: "Hotel Kamat", detail: "Highway hotel — ₹1,500/night" },
+      { name: "Maravanthe Beach Resort", detail: "Beachside — ₹2,500/night" },
+      { name: "Budget Lodge Kundapura", detail: "Nearby town — ₹800/night" }
+    ],
+    stays: [
+      { name: "Seaside Homestay", detail: "Local home right on the coast" },
+      { name: "River View Cottage", detail: "Cottage overlooking the Souparnika river" }
     ]
   },
 
@@ -1815,6 +3835,222 @@ const destinations = [
     stays: [
       { name: "Ashram Stay", detail: "Spiritual community living" },
       { name: "Local Homestay", detail: "Simple home near the temple" }
+    ]
+  },
+  {
+    id: 172,
+    name: "Trimbakeshwar",
+    state: "Maharashtra",
+    emoji: "🙏",
+    category: "devotional",
+    rideTypes: ["solo", "car"],
+    description: "One of the 12 Jyotirlingas near Nashik — the ancient Shiva temple sits near the origin of the Godavari River, surrounded by the Brahmagiri hills.",
+    spots: [
+      { name: "Trimbakeshwar Shiva Temple", detail: "Sacred Jyotirlinga temple with unique three-faced lingam" },
+      { name: "Brahmagiri Hill", detail: "Origin of the Godavari River — short trek to the source" },
+      { name: "Kushavarta Kund", detail: "Sacred water tank used for rituals" },
+      { name: "Anjaneri Fort", detail: "Believed birthplace of Lord Hanuman — nearby trek" }
+    ],
+    hotels: [
+      { name: "Hotel Shiva Heritage", detail: "Near temple — ₹2,000/night" },
+      { name: "MTDC Resort Trimbak", detail: "Government stay — ₹1,500/night" },
+      { name: "Dharamshala", detail: "Pilgrim budget — ₹400/night" }
+    ],
+    stays: [
+      { name: "Trimbak Homestay", detail: "Local home near the temple town" },
+      { name: "Ashram Stay", detail: "Spiritual stay near the Godavari" }
+    ]
+  },
+  {
+    id: 173,
+    name: "Pandharpur",
+    state: "Maharashtra",
+    emoji: "🙏",
+    category: "devotional",
+    rideTypes: ["solo", "car"],
+    description: "Heart of the Warkari movement — the Vitthal-Rukmini temple on the banks of the Bhima river draws millions of devotees, especially during the Ashadhi and Kartiki Ekadashi pilgrimages.",
+    spots: [
+      { name: "Vitthal Rukmini Temple", detail: "Main shrine of Lord Vitthal — centre of Warkari tradition" },
+      { name: "Pundalik Temple", detail: "Dedicated to the devotee Pundalik on the riverbank" },
+      { name: "Bhima River Ghat", detail: "Sacred bathing ghats along the river" },
+      { name: "ISKCON Pandharpur", detail: "Modern Krishna temple with gardens" }
+    ],
+    hotels: [
+      { name: "Hotel Vitthal Darshan", detail: "Near temple — ₹1,500/night" },
+      { name: "Pandharpur Dharamshala", detail: "Pilgrim stay — ₹300/night" },
+      { name: "Lodge Bhakti", detail: "Budget — ₹600/night" }
+    ],
+    stays: [
+      { name: "Warkari Ashram", detail: "Community spiritual stay" },
+      { name: "Riverside Homestay", detail: "Simple home near the Bhima ghats" }
+    ]
+  },
+  {
+    id: 174,
+    name: "Bhimashankar",
+    state: "Maharashtra",
+    emoji: "🙏",
+    category: "devotional",
+    rideTypes: ["bike", "car"],
+    description: "A Jyotirlinga temple nestled in the Sahyadri hills — surrounded by the Bhimashankar Wildlife Sanctuary, home to the Indian giant squirrel and lush Western Ghats forest.",
+    spots: [
+      { name: "Bhimashankar Temple", detail: "Ancient Jyotirlinga — one of 12 sacred Shiva shrines" },
+      { name: "Bhimashankar Wildlife Sanctuary", detail: "Home to the Indian giant squirrel (Shekru)" },
+      { name: "Gupt Bhimashankar", detail: "Hidden cave temple in the forest" },
+      { name: "Hanuman Lake", detail: "Scenic lake near the temple" }
+    ],
+    hotels: [
+      { name: "MTDC Resort Bhimashankar", detail: "Government stay — ₹1,500/night" },
+      { name: "Temple Trust Rooms", detail: "Basic pilgrim stay — ₹500/night" },
+      { name: "Forest Rest House", detail: "In the sanctuary — ₹800/night" }
+    ],
+    stays: [
+      { name: "Village Homestay", detail: "Local home in the Sahyadri foothills" },
+      { name: "Nature Camp", detail: "Eco-stay near the wildlife sanctuary" }
+    ]
+  },
+  {
+    id: 175,
+    name: "Ashtavinayak Temples",
+    state: "Maharashtra",
+    emoji: "🙏",
+    category: "devotional",
+    rideTypes: ["car"],
+    description: "A sacred circuit of eight Ganesha temples around Pune — Morgaon, Siddhatek, Pali, Mahad, Theur, Lenyadri, Ozar, and Ranjangaon, each with a unique idol and legend.",
+    spots: [
+      { name: "Morgaon (Mayureshwar)", detail: "First temple of the circuit — peacock-riding Ganesha" },
+      { name: "Siddhatek (Siddhivinayak)", detail: "Self-manifested idol on the Bhima river" },
+      { name: "Lenyadri (Girijatmaj)", detail: "Cave temple in Buddhist-era rock-cut caves" },
+      { name: "Ozar (Vigneshwar)", detail: "Temple with a golden dome and fortified walls" }
+    ],
+    hotels: [
+      { name: "Pune Hotels", detail: "Base city for the circuit — ₹2,000/night" },
+      { name: "Temple Trust Dharamshalas", detail: "Available at each temple — ₹300/night" },
+      { name: "Highway Lodges", detail: "En route between temples — ₹800/night" }
+    ],
+    stays: [
+      { name: "Pune Homestay", detail: "Base in Pune for the circuit" },
+      { name: "Rural Homestay", detail: "Village stays near individual temples" }
+    ]
+  },
+  {
+    id: 176,
+    name: "Nashik-Panchavati",
+    state: "Maharashtra",
+    emoji: "🙏",
+    category: "devotional",
+    rideTypes: ["solo", "car"],
+    description: "A sacred city on the Godavari — Panchavati is where Lord Rama spent his exile. Key sites include Ramkund, Kalaram Temple, and the Kumbh Mela ghats.",
+    spots: [
+      { name: "Ramkund", detail: "Sacred bathing ghat on the Godavari — Kumbh Mela site" },
+      { name: "Kalaram Temple", detail: "Black stone Rama temple in Panchavati" },
+      { name: "Sita Gufaa", detail: "Cave where Sita is believed to have been abducted" },
+      { name: "Tapovan", detail: "Believed site of Lakshmana cutting Surpanakha's nose" }
+    ],
+    hotels: [
+      { name: "Express Inn Nashik", detail: "Premium — ₹4,000/night" },
+      { name: "Ginger Nashik", detail: "Mid-range — ₹2,500/night" },
+      { name: "Panchavati Dharamshala", detail: "Pilgrim budget — ₹400/night" }
+    ],
+    stays: [
+      { name: "Godavari View Homestay", detail: "Home near the river ghats" },
+      { name: "Vineyard Stay", detail: "Wine country experience near Nashik" }
+    ]
+  },
+  {
+    id: 177,
+    name: "Tuljapur Bhavani Temple",
+    state: "Maharashtra",
+    emoji: "🙏",
+    category: "devotional",
+    rideTypes: ["solo", "car"],
+    description: "One of the three-and-a-half Shakti Peethas of Maharashtra — the Tulja Bhavani temple is the kuladevi of the Bhonsle dynasty and was worshipped by Chhatrapati Shivaji Maharaj.",
+    spots: [
+      { name: "Tulja Bhavani Temple", detail: "Main Shakti Peeth — self-manifested idol of the goddess" },
+      { name: "Gomukh Tirtha", detail: "Sacred water spring near the temple" },
+      { name: "Dharashiv Caves (nearby)", detail: "Ancient Jain rock-cut caves — 30 km away" },
+      { name: "Mankeshwar Temple", detail: "Shiva temple near the main shrine" }
+    ],
+    hotels: [
+      { name: "Temple Trust Guest House", detail: "Near temple — ₹500/night" },
+      { name: "Hotel Bhavani", detail: "Mid-range — ₹1,200/night" },
+      { name: "Dharamshala", detail: "Pilgrim budget — ₹300/night" }
+    ],
+    stays: [
+      { name: "Tuljapur Homestay", detail: "Local home in the temple town" },
+      { name: "Farm Stay Osmanabad", detail: "Rural Marathwada experience" }
+    ]
+  },
+  {
+    id: 178,
+    name: "Jejuri Khandoba Temple",
+    state: "Maharashtra",
+    emoji: "🙏",
+    category: "devotional",
+    rideTypes: ["solo", "bike", "car"],
+    description: "A hilltop temple dedicated to Lord Khandoba (Malhari Martand) near Pune — famous for the vibrant turmeric (bhandara) celebrations where devotees shower the temple in yellow.",
+    spots: [
+      { name: "Khandoba Temple", detail: "Hilltop shrine — famous for turmeric showers" },
+      { name: "Temple Steps", detail: "300+ steps to the summit lined with shops" },
+      { name: "Karha River", detail: "River at the base of the temple hill" },
+      { name: "Bhandara Festival", detail: "Vibrant yellow turmeric celebration — Sundays and festivals" }
+    ],
+    hotels: [
+      { name: "Jejuri Lodge", detail: "Basic near temple — ₹800/night" },
+      { name: "Pune Hotels", detail: "50 km away — ₹2,000/night" },
+      { name: "Dharamshala", detail: "Pilgrim stay — ₹300/night" }
+    ],
+    stays: [
+      { name: "Village Homestay Jejuri", detail: "Local home near the temple" },
+      { name: "Farm Stay", detail: "Rural experience near Pune" }
+    ]
+  },
+  {
+    id: 179,
+    name: "Grishneshwar Temple",
+    state: "Maharashtra",
+    emoji: "🙏",
+    category: "devotional",
+    rideTypes: ["solo", "car"],
+    description: "The last of the 12 Jyotirlingas — this ancient Shiva temple near Ellora features exquisite red stone carvings and is one of Maharashtra's most sacred shrines.",
+    spots: [
+      { name: "Grishneshwar Temple", detail: "12th Jyotirlinga — intricate red stone architecture" },
+      { name: "Ellora Caves (adjacent)", detail: "UNESCO World Heritage rock-cut caves nearby" },
+      { name: "Sunheri Mahal", detail: "Historic palace in nearby Aurangabad" },
+      { name: "Khuldabad", detail: "Sacred town with Sufi shrines — 'Valley of Saints'" }
+    ],
+    hotels: [
+      { name: "Aurangabad Hotels", detail: "Nearby city — ₹2,500/night" },
+      { name: "MTDC Ellora", detail: "Government stay near caves — ₹1,500/night" },
+      { name: "Dharamshala", detail: "Pilgrim budget — ₹400/night" }
+    ],
+    stays: [
+      { name: "Heritage Homestay", detail: "Traditional Marathwada home" },
+      { name: "Cave View Stay", detail: "Near Ellora caves" }
+    ]
+  },
+  {
+    id: 180,
+    name: "Ganpatipule",
+    state: "Maharashtra",
+    emoji: "🙏",
+    category: "devotional",
+    rideTypes: ["bike", "car"],
+    description: "A coastal temple town in Ratnagiri — the Swayambhu Ganesh temple faces the Arabian Sea, with a pristine beach and the scenic Konkan coastline all around.",
+    spots: [
+      { name: "Ganpatipule Temple", detail: "Self-manifested Ganesha idol facing the sea" },
+      { name: "Ganpatipule Beach", detail: "Clean beach right next to the temple" },
+      { name: "Prachin Konkan Museum", detail: "Open-air museum of Konkan life and culture" },
+      { name: "Jaigad Fort (nearby)", detail: "Coastal fort with lighthouse — 25 km away" }
+    ],
+    hotels: [
+      { name: "MTDC Resort Ganpatipule", detail: "Beachside government resort — ₹3,000/night" },
+      { name: "Abhishek Beach Resort", detail: "Mid-range — ₹2,000/night" },
+      { name: "Temple Trust Rooms", detail: "Pilgrim stay — ₹500/night" }
+    ],
+    stays: [
+      { name: "Konkan Homestay", detail: "Traditional Konkani home with seafood meals" },
+      { name: "Beach Cottage", detail: "Simple cottage near the shore" }
     ]
   }
 ];
@@ -2279,6 +4515,65 @@ const destinationCoords = {
   "Wayanad": [11.6854, 76.1320],
   "Kovalam": [8.3988, 76.9782],
   "Sabarimala": [9.4361, 77.0811],
+  "Sree Padmanabhaswamy Temple": [8.4826, 76.9437],
+  "Attukal Bhagavathy Temple": [8.4780, 76.9520],
+  "Thrikkakkara Vamana Moorthy Temple": [10.0261, 76.3125],
+  "Sree Poornathrayeesa Temple": [9.9508, 76.3485],
+  "Mannarasala Sree Nagaraja Temple": [9.2833, 76.4667],
+  "Aranmula Parthasarathy Temple": [9.3167, 76.6833],
+  "Guruvayur Sree Krishna Temple": [10.5942, 76.0410],
+  "Sri Kadampuzha Bhagavathy Temple": [10.8833, 76.0667],
+  "Sree Vallabha Temple": [9.3833, 76.5750],
+  "Thirunelli Sree Maha Vishnu Temple": [11.9100, 75.9983],
+  "Vaikom Mahadeva Temple": [9.7500, 76.3917],
+  "Panniyoor Varaha Moorthy Temple": [10.7833, 76.2167],
+  "Kodungallur Sree Kurumba Bhagavathi Temple": [10.2260, 76.1940],
+  "Chengannur Mahadevar Temple": [9.3167, 76.6167],
+  "Sree Parthasarathi Temple, Guruvayur": [10.5900, 76.0450],
+  "Ambalappuzha Sree Krishna Swamy Temple": [9.3833, 76.3500],
+  "Sree Thirumandhamkunnu Bhagavathi Temple": [10.9667, 76.2167],
+  "Lokanarkavu Temple": [11.5950, 75.5600],
+  "Thiruvanchikulam Mahadeva Temple": [10.2300, 76.2000],
+  "Kaviyoor Mahadeva Temple": [9.4000, 76.5833],
+  "Sree Maha Ganapathi Temple, Kottarakkara": [9.0083, 76.7750],
+  "Ettumanoor Shri Mahadeva Temple": [9.6700, 76.5600],
+  "Sree Vadakkumnathan Temple": [10.5276, 76.2144],
+
+  // Kerala Trekking
+  "Eravikulam & Chokramudi Trek": [10.1833, 77.0667],
+  "Illikkal Kallu & Ilaveezhapoonchira": [9.8167, 76.8333],
+  "Vagamon & Thangalpara Trek": [9.6861, 76.9056],
+  "Rhodo Valley & Meesapulimala": [10.1000, 77.1500],
+  "Periyar National Park": [9.4667, 77.1667],
+  "Neyyar & Shoolam Falls Trek": [8.5500, 77.0833],
+  "Kattadikadavu & Urulikuzhi Falls": [9.5000, 77.1000],
+  "Shendurney & Thenmala Trek": [8.9600, 77.0600],
+  "Chimmini & Silent Valley Trek": [11.0833, 76.4333],
+  "Vayalada & Kurangani Hills": [11.4167, 75.9500],
+
+  // Kerala Hill Stations
+  "Munnar Echo Point & Kottappara": [10.0667, 77.0600],
+  "Top Station & Uluppuni": [10.1250, 77.2417],
+  "Pettimudi & Kottapara Hilltop": [10.0700, 77.0500],
+  "Nelliyampathy & Meenampara": [10.5333, 76.6833],
+  "Palakkayam Thattu & Lakkidi": [11.5167, 75.9833],
+  "Panchalimedu & Kailasappara": [9.7500, 76.9500],
+  "Vagamon Hills & Kolahalamedu": [9.6861, 76.9056],
+  "Ilaveezhapoonchira Top Station": [9.8333, 76.8000],
+  "Meesapulimala & Devikulam": [10.1000, 77.1500],
+  "Kochareekkal Caves & Piravom": [9.8700, 76.5000],
+
+  // Kerala Beaches
+  "Alleppey Beach & Pier": [9.4900, 76.3267],
+  "Muzhappilangad Drive-In Beach": [11.8167, 75.3833],
+  "Marari & Puthenthodu Beach": [9.5833, 76.2833],
+  "Cherai & Kuzhuppilly Beach": [10.1333, 76.1667],
+  "Bekal Fort Beach": [12.3917, 75.0333],
+  "Edava Beach & Varkala": [8.7333, 76.7167],
+  "Beypore & Kappil Beach": [11.1667, 75.8000],
+  "Elamkunnapuzha & Nattika Beach": [10.3333, 76.1833],
+  "Vadanappally & Swapnatheeram": [10.3667, 76.1667],
+  "Kodungallur Azhikode Beach": [10.2333, 76.1667],
 
   // Karnataka
   "Coorg": [12.3375, 75.8069],
@@ -2286,6 +4581,37 @@ const destinationCoords = {
   "Mysore": [12.2958, 76.6394],
   "Gokarna": [14.5479, 74.3188],
   "Kudremukh": [13.1753, 75.2544],
+  "Udupi": [13.3409, 74.7421],
+  "Murudeshwar": [14.0944, 74.4844],
+  "Gokarna (Devotional)": [14.5479, 74.3188],
+  "Kukke Subramanya": [12.6750, 75.6200],
+  "Dharmasthala": [12.9625, 75.3725],
+  "Kollur Mookambika": [13.8600, 74.8100],
+  "Sringeri": [13.4183, 75.2525],
+  "Horanadu": [13.3833, 75.4167],
+  "Hampi (Devotional)": [15.3350, 76.4600],
+  "Shravanabelagola": [12.8586, 76.4861],
+  "Nanjangud": [12.1167, 76.6833],
+  "Srirangapatna": [12.4181, 76.6947],
+  "Kotilingeshwara": [13.0833, 78.1333],
+  "Nandi Hills": [13.3702, 77.6835],
+  "Skandagiri": [13.3617, 77.6892],
+  "Savandurga": [12.9192, 77.2917],
+  "Kodachadri": [13.8583, 74.8694],
+  "Tadiandamol": [12.2500, 75.7333],
+  "Mullayanagiri": [13.3917, 75.7167],
+  "Ettina Bhuja": [13.1667, 75.5833],
+  "Bandaje Falls Trek": [13.1000, 75.5500],
+  "Kumara Parvatha": [12.6500, 75.6000],
+  "Chikmagalur": [13.3161, 75.7720],
+  "Kemmanagundi": [13.5333, 75.7500],
+  "Agumbe": [13.5028, 75.0931],
+  "Himavad Gopalaswamy Betta": [11.9667, 76.6833],
+  "Jogimatti Forest": [14.2333, 76.3833],
+  "Male Mahadeshwara Betta (MM Hills)": [12.0000, 77.1167],
+  "Karwar": [14.8025, 74.1240],
+  "Kasarkod Beach": [14.2833, 74.4500],
+  "Maravanthe Beach": [13.7500, 74.5833],
 
   // Maharashtra
   "Lonavala": [18.7546, 73.4062],
@@ -2293,7 +4619,16 @@ const destinationCoords = {
   "Alibaug": [18.6414, 72.8722],
   "Ajanta & Ellora": [20.5519, 75.7033],
   "Harishchandragad": [19.3900, 73.7700],
-  "Shirdi": [19.7668, 74.4773]
+  "Shirdi": [19.7668, 74.4773],
+  "Trimbakeshwar": [19.9322, 73.5311],
+  "Pandharpur": [17.6783, 75.3267],
+  "Bhimashankar": [19.0719, 73.5353],
+  "Ashtavinayak Temples": [18.2700, 74.3200],
+  "Nashik-Panchavati": [20.0063, 73.7900],
+  "Tuljapur Bhavani Temple": [18.0100, 76.0700],
+  "Jejuri Khandoba Temple": [18.2750, 74.1600],
+  "Grishneshwar Temple": [20.0258, 75.1792],
+  "Ganpatipule": [17.1450, 73.2667]
 };
 
 // Spot coordinates for map markers [lat, lng]
@@ -2681,6 +5016,65 @@ const destinationImages = {
   "Wayanad": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Edakkal_Caves_-_Interior.jpg/600px-Edakkal_Caves_-_Interior.jpg",
   "Kovalam": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Kovalam_beach_trivandrum_kerala.jpg/600px-Kovalam_beach_trivandrum_kerala.jpg",
   "Sabarimala": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Sabarimala_5.jpg/600px-Sabarimala_5.jpg",
+  "Sree Padmanabhaswamy Temple": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Sree_Padmanabhaswamy_Temple.jpg/400px-Sree_Padmanabhaswamy_Temple.jpg",
+  "Attukal Bhagavathy Temple": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Attukal_temple.jpg/400px-Attukal_temple.jpg",
+  "Thrikkakkara Vamana Moorthy Temple": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Thrikkakara_Temple.jpg/400px-Thrikkakara_Temple.jpg",
+  "Sree Poornathrayeesa Temple": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Sree_Poornathrayeesa_Temple.jpg/400px-Sree_Poornathrayeesa_Temple.jpg",
+  "Mannarasala Sree Nagaraja Temple": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Mannarasala_Temple.jpg/400px-Mannarasala_Temple.jpg",
+  "Aranmula Parthasarathy Temple": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Aranmula_Parthasarathy_Temple.jpg/400px-Aranmula_Parthasarathy_Temple.jpg",
+  "Guruvayur Sree Krishna Temple": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Guruvayoor_Temple_1.jpg/400px-Guruvayoor_Temple_1.jpg",
+  "Sri Kadampuzha Bhagavathy Temple": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Kadampuzha_temple.jpg/400px-Kadampuzha_temple.jpg",
+  "Sree Vallabha Temple": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Sree_Vallabha_Temple_Thiruvalla.jpg/400px-Sree_Vallabha_Temple_Thiruvalla.jpg",
+  "Thirunelli Sree Maha Vishnu Temple": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Thirunelli_Temple.jpg/400px-Thirunelli_Temple.jpg",
+  "Vaikom Mahadeva Temple": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Vaikom_Mahadeva_Temple.jpg/400px-Vaikom_Mahadeva_Temple.jpg",
+  "Panniyoor Varaha Moorthy Temple": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Guruvayoor_Temple_1.jpg/400px-Guruvayoor_Temple_1.jpg",
+  "Kodungallur Sree Kurumba Bhagavathi Temple": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Kodungallur_Temple.jpg/400px-Kodungallur_Temple.jpg",
+  "Chengannur Mahadevar Temple": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Chengannur_Mahadeva_Temple.jpg/400px-Chengannur_Mahadeva_Temple.jpg",
+  "Sree Parthasarathi Temple, Guruvayur": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Guruvayoor_Temple_1.jpg/400px-Guruvayoor_Temple_1.jpg",
+  "Ambalappuzha Sree Krishna Swamy Temple": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Ambalappuzha_Temple.JPG/400px-Ambalappuzha_Temple.JPG",
+  "Sree Thirumandhamkunnu Bhagavathi Temple": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Kadampuzha_temple.jpg/400px-Kadampuzha_temple.jpg",
+  "Lokanarkavu Temple": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Attukal_temple.jpg/400px-Attukal_temple.jpg",
+  "Thiruvanchikulam Mahadeva Temple": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Kodungallur_Temple.jpg/400px-Kodungallur_Temple.jpg",
+  "Kaviyoor Mahadeva Temple": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Kaviyoor_temple.jpg/400px-Kaviyoor_temple.jpg",
+  "Sree Maha Ganapathi Temple, Kottarakkara": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Sabarimala_5.jpg/600px-Sabarimala_5.jpg",
+  "Ettumanoor Shri Mahadeva Temple": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Ettumanoor_Mahadeva_Temple.jpg/400px-Ettumanoor_Mahadeva_Temple.jpg",
+  "Sree Vadakkumnathan Temple": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Vadakkumnathan_Temple.jpg/400px-Vadakkumnathan_Temple.jpg",
+
+  // Kerala Trekking
+  "Eravikulam & Chokramudi Trek": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Eravikulam_National_Park.jpg/400px-Eravikulam_National_Park.jpg",
+  "Illikkal Kallu & Ilaveezhapoonchira": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Ilaveezhapoonchira.jpg/400px-Ilaveezhapoonchira.jpg",
+  "Vagamon & Thangalpara Trek": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Vagamon.jpg/400px-Vagamon.jpg",
+  "Rhodo Valley & Meesapulimala": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Meesapulimala.jpg/400px-Meesapulimala.jpg",
+  "Periyar National Park": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Periyar_National_Park.jpg/400px-Periyar_National_Park.jpg",
+  "Neyyar & Shoolam Falls Trek": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Neyyar_dam.jpg/400px-Neyyar_dam.jpg",
+  "Kattadikadavu & Urulikuzhi Falls": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Periyar_Tiger_Reserve.jpg/400px-Periyar_Tiger_Reserve.jpg",
+  "Shendurney & Thenmala Trek": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Thenmala_Dam.jpg/400px-Thenmala_Dam.jpg",
+  "Chimmini & Silent Valley Trek": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Silent_Valley_National_Park.jpg/400px-Silent_Valley_National_Park.jpg",
+  "Vayalada & Kurangani Hills": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Vayalada.jpg/400px-Vayalada.jpg",
+
+  // Kerala Hill Stations
+  "Munnar Echo Point & Kottappara": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Echo_Point_Munnar-Kerala.jpg/400px-Echo_Point_Munnar-Kerala.jpg",
+  "Top Station & Uluppuni": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Top_Station_Munnar.jpg/400px-Top_Station_Munnar.jpg",
+  "Pettimudi & Kottapara Hilltop": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Hill_View_%28Munnar_-_Kerala%29.jpg/400px-Hill_View_%28Munnar_-_Kerala%29.jpg",
+  "Nelliyampathy & Meenampara": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Nelliyampathy_forests%2CMinnampara.jpg/400px-Nelliyampathy_forests%2CMinnampara.jpg",
+  "Palakkayam Thattu & Lakkidi": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Lakkidi_view_point.jpg/400px-Lakkidi_view_point.jpg",
+  "Panchalimedu & Kailasappara": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Sunrise_View_From_Panchalimedu%2C_Idukki.jpg/400px-Sunrise_View_From_Panchalimedu%2C_Idukki.jpg",
+  "Vagamon Hills & Kolahalamedu": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Vagamon.jpg/400px-Vagamon.jpg",
+  "Ilaveezhapoonchira Top Station": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Ilaveezhapoonchira.jpg/400px-Ilaveezhapoonchira.jpg",
+  "Meesapulimala & Devikulam": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Meesapulimala.jpg/400px-Meesapulimala.jpg",
+  "Kochareekkal Caves & Piravom": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Kochareekkal_Caves%2C_Piravom_%280%29.jpg/400px-Kochareekkal_Caves%2C_Piravom_%280%29.jpg",
+
+  // Kerala Beaches
+  "Alleppey Beach & Pier": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Alleppey_beach.jpg/400px-Alleppey_beach.jpg",
+  "Muzhappilangad Drive-In Beach": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Fisherman_at_Muzhappilangad_Beach.jpg/400px-Fisherman_at_Muzhappilangad_Beach.jpg",
+  "Marari & Puthenthodu Beach": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Marari_Beach.jpg/400px-Marari_Beach.jpg",
+  "Cherai & Kuzhuppilly Beach": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Cherai_Beach_Kerala.jpg/400px-Cherai_Beach_Kerala.jpg",
+  "Bekal Fort Beach": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Bekal_Fort_%284530729846%29.jpg/400px-Bekal_Fort_%284530729846%29.jpg",
+  "Edava Beach & Varkala": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Varkala_Beach%2C_Varkala%2C_Kerala.jpg/400px-Varkala_Beach%2C_Varkala%2C_Kerala.jpg",
+  "Beypore & Kappil Beach": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Beypore_Beach%2C_Kozhikode%2C_Kerala.jpg/400px-Beypore_Beach%2C_Kozhikode%2C_Kerala.jpg",
+  "Elamkunnapuzha & Nattika Beach": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Nattika_beach.JPG/400px-Nattika_beach.JPG",
+  "Vadanappally & Swapnatheeram": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Nattika_beach.JPG/400px-Nattika_beach.JPG",
+  "Kodungallur Azhikode Beach": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Kappil_beach_kerala.jpg/400px-Kappil_beach_kerala.jpg",
 
   // Karnataka
   "Coorg": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Abbey_Falls_2022_2.jpg/600px-Abbey_Falls_2022_2.jpg",
@@ -2688,6 +5082,37 @@ const destinationImages = {
   "Mysore": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Mysore_Palace_Morning.jpg/600px-Mysore_Palace_Morning.jpg",
   "Gokarna": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Gokarna_picture_near_Om_Beach.jpg/600px-Gokarna_picture_near_Om_Beach.jpg",
   "Kudremukh": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Kudremukh_national_park.jpg/600px-Kudremukh_national_park.jpg",
+  "Udupi": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Krishna_Mutt%2CUdupi.JPG/600px-Krishna_Mutt%2CUdupi.JPG",
+  "Murudeshwar": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Murudeshwar_Shiva_Statue.jpg/600px-Murudeshwar_Shiva_Statue.jpg",
+  "Gokarna (Devotional)": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Gokarna_picture_near_Om_Beach.jpg/600px-Gokarna_picture_near_Om_Beach.jpg",
+  "Kukke Subramanya": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Kukke_Subhramanya.JPG/600px-Kukke_Subhramanya.JPG",
+  "Dharmasthala": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Dharmasthala_Temple.jpg/600px-Dharmasthala_Temple.jpg",
+  "Kollur Mookambika": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Sri_Mookambika_Temple%2C_Kollur.jpg/600px-Sri_Mookambika_Temple%2C_Kollur.jpg",
+  "Sringeri": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Sringeri_Sharada_Peeta_%284479042861%29.jpg/600px-Sringeri_Sharada_Peeta_%284479042861%29.jpg",
+  "Horanadu": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Horanadu_Temple.jpg/600px-Horanadu_Temple.jpg",
+  "Hampi (Devotional)": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Hampi_-_Hemakuta_Hill%2C_Virupaksha_Temple.jpg/600px-Hampi_-_Hemakuta_Hill%2C_Virupaksha_Temple.jpg",
+  "Shravanabelagola": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Gomateswara%2C_Shravanabelagola.jpg/600px-Gomateswara%2C_Shravanabelagola.jpg",
+  "Nanjangud": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Nanjangud_Temple.2.jpg/600px-Nanjangud_Temple.2.jpg",
+  "Srirangapatna": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Ranganathaswamy_Temple%2C_Srirangapatna.jpg/600px-Ranganathaswamy_Temple%2C_Srirangapatna.jpg",
+  "Kotilingeshwara": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Kotilingeshwara.JPG/600px-Kotilingeshwara.JPG",
+  "Nandi Hills": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Nandi_Hills.jpg/600px-Nandi_Hills.jpg",
+  "Skandagiri": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Skandagiri.jpg/600px-Skandagiri.jpg",
+  "Savandurga": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Savandurga_hill.jpg/600px-Savandurga_hill.jpg",
+  "Kodachadri": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Kodachadri_Peak.jpg/600px-Kodachadri_Peak.jpg",
+  "Tadiandamol": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Tadiandamol.jpg/600px-Tadiandamol.jpg",
+  "Mullayanagiri": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Mullayanagiri_Peak.jpg/600px-Mullayanagiri_Peak.jpg",
+  "Ettina Bhuja": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Ettina_Bhuja.jpg/600px-Ettina_Bhuja.jpg",
+  "Bandaje Falls Trek": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Bandaje_falls.jpg/600px-Bandaje_falls.jpg",
+  "Kumara Parvatha": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Kumaraparvatha.jpg/600px-Kumaraparvatha.jpg",
+  "Chikmagalur": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Chikkamagaluru.jpg/600px-Chikkamagaluru.jpg",
+  "Kemmanagundi": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Kemmangundi.jpg/600px-Kemmangundi.jpg",
+  "Agumbe": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Agumbe.jpg/600px-Agumbe.jpg",
+  "Himavad Gopalaswamy Betta": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Himavad_Gopalaswamy_Betta.jpg/600px-Himavad_Gopalaswamy_Betta.jpg",
+  "Jogimatti Forest": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Jogimatti.jpg/600px-Jogimatti.jpg",
+  "Male Mahadeshwara Betta (MM Hills)": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Male_Mahadeshwara_Temple.jpg/600px-Male_Mahadeshwara_Temple.jpg",
+  "Karwar": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Karwar%2C_Karnataka.jpg/600px-Karwar%2C_Karnataka.jpg",
+  "Kasarkod Beach": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Kasrkod-beach-park-Honnavar.jpg/600px-Kasrkod-beach-park-Honnavar.jpg",
+  "Maravanthe Beach": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Maravanthe_Beach.jpg/600px-Maravanthe_Beach.jpg",
 
   // Maharashtra
   "Lonavala": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Lonavala_Hills_seen_from_train.jpg/600px-Lonavala_Hills_seen_from_train.jpg",
@@ -2695,7 +5120,16 @@ const destinationImages = {
   "Alibaug": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Alibaug_Fort_South_CauseWay.JPG/600px-Alibaug_Fort_South_CauseWay.JPG",
   "Ajanta & Ellora": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Buddhist_Monks_inside_premises_of_Ajanta_Caves%2C_Maharashtra%2C_India_28.jpg/600px-Buddhist_Monks_inside_premises_of_Ajanta_Caves%2C_Maharashtra%2C_India_28.jpg",
   "Harishchandragad": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Harishchandragad_Konkan_Kada.jpg/600px-Harishchandragad_Konkan_Kada.jpg",
-  "Shirdi": "https://upload.wikimedia.org/wikipedia/commons/d/df/Shirdi_Sai_Baba_3.jpg"
+  "Shirdi": "https://upload.wikimedia.org/wikipedia/commons/d/df/Shirdi_Sai_Baba_3.jpg",
+  "Trimbakeshwar": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Trimbakeshwar_Shiva_Temple_2005.jpg/600px-Trimbakeshwar_Shiva_Temple_2005.jpg",
+  "Pandharpur": "https://upload.wikimedia.org/wikipedia/commons/2/2e/Pandharpur_Vithoba_temple.jpg",
+  "Bhimashankar": "https://upload.wikimedia.org/wikipedia/commons/d/d7/Bhimashankar.jpg",
+  "Ashtavinayak Temples": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Morgaon.jpg/600px-Morgaon.jpg",
+  "Nashik-Panchavati": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Panchavati-Ramkund.jpg/600px-Panchavati-Ramkund.jpg",
+  "Tuljapur Bhavani Temple": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Raje_Shahaji_Mahadwar_of_Tulja_Bhavani_Temple.jpg/600px-Raje_Shahaji_Mahadwar_of_Tulja_Bhavani_Temple.jpg",
+  "Jejuri Khandoba Temple": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Khandoba_temple_Pune.jpg/600px-Khandoba_temple_Pune.jpg",
+  "Grishneshwar Temple": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Grishneshwar_temple_in_Aurangabad_district.jpg/600px-Grishneshwar_temple_in_Aurangabad_district.jpg",
+  "Ganpatipule": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/A_Beach_at_GanapatiPule.jpg/600px-A_Beach_at_GanapatiPule.jpg"
 };
 
 // Verified spot images for key temples and landmarks
@@ -2956,7 +5390,61 @@ const foodSpecialties = {
   "Mahabaleshwar": ["Strawberry Cream", "Corn on Cob", "Mapro Sandwich"],
   "Alibaug": ["Bombil Fry", "Sol Kadhi", "Modak"],
   "Ajanta & Ellora": ["Naan Qalia", "Sheer Khurma", "Aurangabad Biryani"],
-  "Shirdi": ["Prasadam Laddu", "Puran Poli", "Sabudana Vada"]
+  "Shirdi": ["Prasadam Laddu", "Puran Poli", "Sabudana Vada"],
+  "Sree Padmanabhaswamy Temple": ["Appam & Stew", "Puttu & Kadala", "Kerala Sadya"],
+  "Attukal Bhagavathy Temple": ["Pongala Prasadam", "Puttu & Kadala", "Avial"],
+  "Thrikkakkara Vamana Moorthy Temple": ["Kerala Sadya", "Erissery", "Olan"],
+  "Sree Poornathrayeesa Temple": ["Appam & Stew", "Karimeen Fry", "Payasam"],
+  "Mannarasala Sree Nagaraja Temple": ["Noorum Palum Prasadam", "Avial", "Thoran"],
+  "Aranmula Parthasarathy Temple": ["Aranmula Payasam", "Kerala Sadya", "Banana Chips"],
+  "Guruvayur Sree Krishna Temple": ["Guruvayur Appam", "Unniyappam", "Temple Payasam"],
+  "Sri Kadampuzha Bhagavathy Temple": ["Malabar Biryani", "Pathiri", "Sulaimani Tea"],
+  "Sree Vallabha Temple": ["Palada Pradhaman", "Avial", "Thoran"],
+  "Thirunelli Sree Maha Vishnu Temple": ["Wayanad Honey", "Bamboo Rice", "Puttu"],
+  "Vaikom Mahadeva Temple": ["Karimeen Pollichathu", "Appam & Stew", "Toddy"],
+  "Kodungallur Sree Kurumba Bhagavathi Temple": ["Thrissur Pooram Snacks", "Puttu", "Kadala Curry"],
+  "Chengannur Mahadevar Temple": ["Palada Pradhaman", "Avial", "Sambar"],
+  "Ambalappuzha Sree Krishna Swamy Temple": ["Ambalappuzha Palpayasam", "Appam", "Stew"],
+  "Kaviyoor Mahadeva Temple": ["Palada Pradhaman", "Puttu & Kadala", "Avial"],
+  "Sree Maha Ganapathi Temple, Kottarakkara": ["Modak Prasadam", "Appam & Stew", "Kerala Sadya"],
+  "Ettumanoor Shri Mahadeva Temple": ["Palada Pradhaman", "Puttu & Kadala", "Kottayam Fish Curry"],
+  "Sree Vadakkumnathan Temple": ["Thrissur Pooram Snacks", "Puttu & Kadala", "Kerala Sadya"],
+
+  // Kerala Trekking
+  "Eravikulam & Chokramudi Trek": ["Munnar Tea & Snacks", "Puttu & Kadala", "Kerala Parotta & Beef"],
+  "Illikkal Kallu & Ilaveezhapoonchira": ["Kottayam Fish Curry", "Appam & Stew", "Tapioca & Fish"],
+  "Vagamon & Thangalpara Trek": ["Idukki Bamboo Chicken", "Puttu & Kadala", "Kerala Porotta"],
+  "Rhodo Valley & Meesapulimala": ["Munnar Tea & Snacks", "Cardamom Tea", "Kerala Sadya"],
+  "Periyar National Park": ["Thekkady Spice Tea", "Kerala Fish Curry", "Appam & Stew"],
+  "Neyyar & Shoolam Falls Trek": ["Trivandrum Banana Chips", "Puttu & Kadala", "Kerala Sadya"],
+  "Kattadikadavu & Urulikuzhi Falls": ["Cardamom Coffee", "Kerala Parotta & Beef", "Tapioca & Fish"],
+  "Shendurney & Thenmala Trek": ["Kollam Cashew Curry", "Appam & Stew", "Kerala Fish Curry"],
+  "Chimmini & Silent Valley Trek": ["Palakkad Dosa", "Puttu & Kadala", "Kerala Sadya"],
+  "Vayalada & Kurangani Hills": ["Kozhikode Biryani", "Malabar Parotta", "Banana Chips"],
+
+  // Kerala Hill Stations
+  "Munnar Echo Point & Kottappara": ["Munnar Tea & Snacks", "Puttu & Kadala", "Kerala Parotta"],
+  "Top Station & Uluppuni": ["Cardamom Tea", "Munnar Neyyappam", "Kerala Sadya"],
+  "Pettimudi & Kottapara Hilltop": ["Munnar Tea & Snacks", "Puttu & Kadala", "Appam & Stew"],
+  "Nelliyampathy & Meenampara": ["Palakkad Dosa", "Nelliyampathy Orange Juice", "Kerala Sadya"],
+  "Palakkayam Thattu & Lakkidi": ["Wayanad Bamboo Rice", "Puttu & Kadala", "Kerala Porotta"],
+  "Panchalimedu & Kailasappara": ["Idukki Bamboo Chicken", "Cardamom Coffee", "Tapioca & Fish"],
+  "Vagamon Hills & Kolahalamedu": ["Vagamon Cheese", "Puttu & Kadala", "Kerala Parotta"],
+  "Ilaveezhapoonchira Top Station": ["Kottayam Fish Curry", "Appam & Stew", "Tapioca & Fish"],
+  "Meesapulimala & Devikulam": ["Munnar Tea & Snacks", "Cardamom Tea", "Kerala Sadya"],
+  "Kochareekkal Caves & Piravom": ["Ernakulam Biryani", "Appam & Stew", "Kerala Fish Curry"],
+
+  // Kerala Beaches
+  "Alleppey Beach & Pier": ["Alleppey Fish Curry", "Karimeen Pollichathu", "Appam & Stew"],
+  "Muzhappilangad Drive-In Beach": ["Kannur Biryani", "Thalassery Dum Biryani", "Kerala Parotta"],
+  "Marari & Puthenthodu Beach": ["Karimeen Fry", "Alleppey Fish Curry", "Appam & Stew"],
+  "Cherai & Kuzhuppilly Beach": ["Kochi Biryani", "Kerala Fish Curry", "Puttu & Kadala"],
+  "Bekal Fort Beach": ["Kasaragod Fish Curry", "Neer Dosa", "Chicken Ghee Roast"],
+  "Edava Beach & Varkala": ["Varkala Fish Curry", "Prawn Moilee", "Appam & Stew"],
+  "Beypore & Kappil Beach": ["Kozhikode Biryani", "Malabar Parotta", "Sulaimani Tea"],
+  "Elamkunnapuzha & Nattika Beach": ["Thrissur Pooram Snacks", "Puttu & Kadala", "Kerala Sadya"],
+  "Vadanappally & Swapnatheeram": ["Thrissur Fish Curry", "Puttu & Kadala", "Kerala Parotta"],
+  "Kodungallur Azhikode Beach": ["Kodungallur Fish Fry", "Appam & Stew", "Kerala Sadya"]
 };
 
 // Major Toll Plazas across India — [lat, lng, name, highway, rates: {car, lcv, bus, mav}]
