@@ -65,16 +65,16 @@ document.querySelectorAll('.ride-card').forEach(card => {
 });
 
 function buildStateButtons() {
-  const container = document.querySelector('.state-filter');
+  const sel = document.getElementById('state-select');
   states.forEach(state => {
-    const btn = document.createElement('button');
-    btn.className = 'state-btn';
-    btn.dataset.state = state;
-    btn.textContent = state;
-    container.appendChild(btn);
+    const opt = document.createElement('option');
+    opt.value = state;
+    opt.textContent = state;
+    sel.appendChild(opt);
   });
-  container.querySelectorAll('.state-btn').forEach(btn => {
-    btn.addEventListener('click', () => { currentState = btn.dataset.state; updateFilters(); renderAll(); });
+  sel.addEventListener('change', () => {
+    currentState = sel.value;
+    renderAll();
   });
 }
 
@@ -111,9 +111,7 @@ document.getElementById('search-input').addEventListener('input', (e) => {
 function updateFilters() {
   document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
   document.querySelector(`.filter-btn[data-filter="${currentRide}"]`).classList.add('active');
-  document.querySelectorAll('.state-btn').forEach(b => b.classList.remove('active'));
-  const sb = document.querySelector(`.state-btn[data-state="${currentState}"]`);
-  if (sb) sb.classList.add('active');
+  document.getElementById('state-select').value = currentState;
   document.querySelectorAll('.cat-btn').forEach(b => b.classList.remove('active'));
   const cb = document.querySelector(`.cat-btn[data-category="${currentCategory}"]`);
   if (cb) cb.classList.add('active');

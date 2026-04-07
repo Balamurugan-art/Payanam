@@ -6,7 +6,7 @@
   <title>Payanam - Explore India</title>
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Tamil:wght@400;700;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Noto+Sans+Tamil:wght@400;700;900&display=swap" rel="stylesheet">
 </head>
 <body>
   <header>
@@ -18,8 +18,8 @@
       <ul class="nav-links" id="nav-links">
         <li><a href="#home" class="active" data-section="home">Home</a></li>
         <li><a href="#explore" data-section="explore">Explore</a></li>
-        <li><a href="#favorites" data-section="favorites">❤️ Saved</a></li>
-        <li><a href="#tools" data-section="tools">🛠️ Tools</a></li>
+        <li><a href="#favorites" data-section="favorites">Saved</a></li>
+        <li><a href="#tools" data-section="tools">Tools</a></li>
         <li><a href="#about" data-section="about">About</a></li>
       </ul>
       <div class="auth-section">
@@ -51,22 +51,113 @@
   <main>
     <!-- Home Section -->
     <section id="home" class="section active">
+      <div class="compass-fg" aria-hidden="true">
+        <svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <filter id="cshadow" x="-20%" y="-20%" width="140%" height="140%">
+              <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#000" flood-opacity="0.3"/>
+            </filter>
+          </defs>
+          <g filter="url(#cshadow)" opacity="0.18">
+            <!-- Outer ring with tick marks -->
+            <circle cx="250" cy="250" r="230" fill="none" stroke="#1a1a2e" stroke-width="3"/>
+            <circle cx="250" cy="250" r="215" fill="none" stroke="#1a1a2e" stroke-width="1.5"/>
+            <!-- Degree ticks (32 points) -->
+            <g stroke="#1a1a2e" stroke-width="2">
+              <line x1="250" y1="20" x2="250" y2="42"/>
+              <line x1="250" y1="458" x2="250" y2="480"/>
+              <line x1="20" y1="250" x2="42" y2="250"/>
+              <line x1="458" y1="250" x2="480" y2="250"/>
+            </g>
+            <g stroke="#1a1a2e" stroke-width="1.5">
+              <line x1="412" y1="88" x2="398" y2="102"/>
+              <line x1="88" y1="412" x2="102" y2="398"/>
+              <line x1="412" y1="412" x2="398" y2="398"/>
+              <line x1="88" y1="88" x2="102" y2="102"/>
+            </g>
+            <!-- Inner tick ring -->
+            <g stroke="#1a1a2e" stroke-width="1" opacity="0.6">
+              <line x1="338" y1="46" x2="330" y2="62"/>
+              <line x1="162" y1="46" x2="170" y2="62"/>
+              <line x1="46" y1="162" x2="62" y2="170"/>
+              <line x1="46" y1="338" x2="62" y2="330"/>
+              <line x1="454" y1="162" x2="438" y2="170"/>
+              <line x1="454" y1="338" x2="438" y2="330"/>
+              <line x1="338" y1="454" x2="330" y2="438"/>
+              <line x1="162" y1="454" x2="170" y2="438"/>
+            </g>
+            <!-- 8-point compass rose star -->
+            <!-- N -->
+            <polygon points="250,60 262,210 238,210" fill="#1a1a2e"/>
+            <!-- S -->
+            <polygon points="250,440 262,290 238,290" fill="#1a1a2e"/>
+            <!-- E -->
+            <polygon points="440,250 290,238 290,262" fill="#1a1a2e"/>
+            <!-- W -->
+            <polygon points="60,250 210,238 210,262" fill="#1a1a2e"/>
+            <!-- NE -->
+            <polygon points="384,116 275,235 260,220" fill="#1a1a2e" opacity="0.7"/>
+            <!-- SW -->
+            <polygon points="116,384 225,275 240,280" fill="#1a1a2e" opacity="0.7"/>
+            <!-- NW -->
+            <polygon points="116,116 225,235 240,220" fill="#1a1a2e" opacity="0.7"/>
+            <!-- SE -->
+            <polygon points="384,384 275,275 260,280" fill="#1a1a2e" opacity="0.7"/>
+            <!-- Inner star (smaller points) -->
+            <polygon points="250,110 258,225 242,225" fill="#1a1a2e" opacity="0.5"/>
+            <polygon points="250,390 258,275 242,275" fill="#1a1a2e" opacity="0.5"/>
+            <polygon points="110,250 225,242 225,258" fill="#1a1a2e" opacity="0.5"/>
+            <polygon points="390,250 275,242 275,258" fill="#1a1a2e" opacity="0.5"/>
+            <!-- Center circle -->
+            <circle cx="250" cy="250" r="18" fill="none" stroke="#1a1a2e" stroke-width="3"/>
+            <circle cx="250" cy="250" r="6" fill="#1a1a2e"/>
+            <!-- Dots at intercardinals -->
+            <circle cx="250" cy="30" r="5" fill="#1a1a2e"/>
+            <circle cx="250" cy="470" r="5" fill="#1a1a2e"/>
+            <circle cx="30" cy="250" r="5" fill="#1a1a2e"/>
+            <circle cx="470" cy="250" r="5" fill="#1a1a2e"/>
+            <circle cx="405" cy="95" r="4" fill="#1a1a2e"/>
+            <circle cx="95" cy="405" r="4" fill="#1a1a2e"/>
+            <circle cx="405" cy="405" r="4" fill="#1a1a2e"/>
+            <circle cx="95" cy="95" r="4" fill="#1a1a2e"/>
+            <!-- Cardinal labels -->
+            <text x="250" y="15" text-anchor="middle" font-family="Inter,serif" font-size="28" font-weight="900" fill="#1a1a2e">N</text>
+            <text x="250" y="498" text-anchor="middle" font-family="Inter,serif" font-size="28" font-weight="900" fill="#1a1a2e">S</text>
+            <text x="498" y="258" text-anchor="end" font-family="Inter,serif" font-size="28" font-weight="900" fill="#1a1a2e">E</text>
+            <text x="2" y="258" text-anchor="start" font-family="Inter,serif" font-size="28" font-weight="900" fill="#1a1a2e">W</text>
+            <!-- Intercardinal labels -->
+            <text x="420" y="80" text-anchor="middle" font-family="Inter,serif" font-size="18" font-weight="700" fill="#1a1a2e" transform="rotate(45,420,75)">ne</text>
+            <text x="80" y="80" text-anchor="middle" font-family="Inter,serif" font-size="18" font-weight="700" fill="#1a1a2e" transform="rotate(-45,80,75)">nw</text>
+            <text x="420" y="430" text-anchor="middle" font-family="Inter,serif" font-size="18" font-weight="700" fill="#1a1a2e" transform="rotate(-45,420,425)">se</text>
+            <text x="80" y="430" text-anchor="middle" font-family="Inter,serif" font-size="18" font-weight="700" fill="#1a1a2e" transform="rotate(45,80,425)">sw</text>
+          </g>
+        </svg>
+      </div>
       <div class="hero">
         <h1>Plan Your Ride. <span>Explore India.</span></h1>
         <p>Choose your ride style and discover amazing destinations across India — spots, hotels, stays and more.</p>
         <div class="ride-options">
           <button class="ride-card" data-ride="solo" aria-label="Select solo ride">
-            <span class="ride-icon">🚶</span>
+            <div class="ride-img-wrap">
+              <img src="https://images.unsplash.com/photo-1501555088652-021faa106b9b?w=400&h=300&fit=crop" alt="Solo traveler with backpack" loading="lazy">
+              <div class="ride-img-overlay"></div>
+            </div>
             <h3>Solo Ride</h3>
             <p>Travel at your own pace</p>
           </button>
           <button class="ride-card" data-ride="bike" aria-label="Select bike ride">
-            <span class="ride-icon">🏍️</span>
+            <div class="ride-img-wrap">
+              <img src="https://images.unsplash.com/photo-1558981806-ec527fa84c39?w=400&h=300&fit=crop" alt="Motorcycle on open road" loading="lazy">
+              <div class="ride-img-overlay"></div>
+            </div>
             <h3>Bike Ride</h3>
             <p>Feel the wind on two wheels</p>
           </button>
           <button class="ride-card" data-ride="car" aria-label="Select car ride">
-            <span class="ride-icon">🚗</span>
+            <div class="ride-img-wrap">
+              <img src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=400&h=300&fit=crop" alt="Car driving on scenic road" loading="lazy">
+              <div class="ride-img-overlay"></div>
+            </div>
             <h3>Car Ride</h3>
             <p>Comfort meets adventure</p>
           </button>
@@ -83,8 +174,10 @@
         </div>
         <div class="filter-row">
           <div class="state-filter" role="group" aria-label="Filter by state">
-            <button class="state-btn active" data-state="all">All States</button>
-            <!-- Populated by JS -->
+            <select id="state-select" class="state-select" aria-label="Filter by state">
+              <option value="all">📍 All States</option>
+              <!-- Populated by JS -->
+            </select>
           </div>
           <div class="category-filter" role="group" aria-label="Filter by category">
             <button class="cat-btn active" data-category="all">🗺️ All Types</button>
@@ -670,8 +763,10 @@
     });
 
     // Auth gate — returns true if logged in, triggers sign-in popup if not
+    // Skip auth gate on file:// protocol (local testing)
     let _authPopupOpen = false;
     window.requireAuth = function() {
+      if (location.protocol === 'file:') return true;
       if (auth.currentUser) return true;
       if (_authPopupOpen) return false;
       _authPopupOpen = true;
