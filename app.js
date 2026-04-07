@@ -1134,6 +1134,194 @@ document.getElementById('weekend-find-btn').addEventListener('click', () => {
   container.style.display = 'block';
 });
 
+// ===== Split Expenses =====
+let splitMembers = [];
+let splitExpenses = [];
+
+document.getElementById('split-add-member').addEventListener('click', addSplitMember);
+document.getElementById('split-member-name').addEventListener('keydown', (e) => { if (e.key === 'Enter') addSplitMember(); });
+
+function addSplitMember() {
+  const input = document.getElementById('split-member-name');
+  const name = input.value.trim();
+  if (!name) return;
+  if (splitMembers.includes(name)) { alert('Member already added'); return; }
+  splitMembers.push(name);
+  input.value = '';
+  renderSplitMembers();
+  updateSplitUI();
+}
+
+function removeSplitMember(name) {
+  splitMembers = splitMembers.filter(m => m !== name);
+  splitExpenses = splitExpenses.filter(e => e.paidBy !== name);
+  renderSplitMembers();
+  updateSplitUI();
+  renderSplitExpenses();
+  calculateSplit();
+}
+
+function renderSplitMembers() {
+  const container = document.getElementById('split-member-tags');
+  container.innerHTML = splitMembers.map(m => `<span class="split-tag">${m} <button class="split-tag-remove" data-name="${m}">&times;</button></span>`).join('');
+  container.querySelectorAll('.split-tag-remove').forEach(btn => {
+    btn.addEventListener('click', () => removeSplitMember(btn.dataset.name));
+  });
+}
+
+function updateSplitUI() {
+  const show = splitMembers.length >= 2;
+  document.getElementById('split-expense-section').style.display = show ? 'block' : 'none';
+  const sel = document.getElementById('split-paid-by');
+  sel.innerHTML = '<option value="">Who paid?</option>' + splitMembers.map(m => `<option value="${m}">${m}</option>`).join('');
+}
+
+document.getElementById('split-add-expense').addEventListener('click', () => {
+  const desc = document.getElementById('split-desc').value.trim();
+  const amount = parseFloat(document.getElementById('split-amount').value);
+  const paidBy = document.getElementById('split-paid-by').value;
+  if (!desc) { alert('Enter a description'); return; }
+  if (!amount || amount <= 0) { alert('Enter a valid amount'); return; }
+  if (!paidBy) { alert('Select who paid'); return; }
+  splitExpenses.push({ desc, amount, paidBy });
+  document.getElementById('split-desc').value = '';
+  document.getElementById('split-amount').value = '';
+  document.getElementById('split-paid-by').value = '';
+  renderSplitExpenses();
+  calculateSplit();
+});
+
+function removeSplitExpense(idx) {
+  splitExpenses.splice(idx, 1);
+  renderSplitExpenses();
+  calculateSplit();
+}
+
+function renderSplitExpenses() {
+  const container = document.getElementById('split-expenses-list');
+  if (splitExpenses.length === 0) { container.innerHTML = ''; return; }
+  container.innerHTML = '<h4>📋 Expenses</h4>' + splitExpenses.map((e, i) => `
+    <div class="split-expense-item">
+      <div class="split-expense-info">
+        <strong>${e.desc}</strong>
+        <span>Paid by ${e.paidBy}</span>
+      </div>
+      <span class="split-expense-amt">₹${e.amount.toFixed(2)}</span>
+      <button class="split-expense-del" data-idx="${i}">&times;</button>
+    </div>
+  `).join('');
+  container.querySelectorAll('.split-expense-del').forEach(btn => {
+    btn.addEventListener('click', () => removeSplitExpense(Number(btn.dataset.idx)));
+  });
+}
+
+function calculateSplit() {
+  const summary = document.getElementById('split-summary');
+  const resetBtn = document.getElementById('split-reset');
+  if (splitExpenses.length === 0 || splitMembers.length < 2) {
+    summary.style.display = 'none';
+    resetBtn.style.display = 'none';
+    document.getElementById('split-share-wa').style.display = 'none';
+    return;
+  }
+  summary.style.display = 'block';
+  resetBtn.style.display = 'inline-block';
+  document.getElementById('split-share-wa').style.display = 'inline-block';
+
+  const total = splitExpenses.reduce((s, e) => s + e.amount, 0);
+  const perPerson = total / splitMembers.length;
+
+  // Calculate how much each person paid
+  const paid = {};
+  splitMembers.forEach(m => paid[m] = 0);
+  splitExpenses.forEach(e => paid[e.paidBy] += e.amount);
+
+  // Net balance: positive = overpaid (is owed), negative = underpaid (owes)
+  const balance = {};
+  splitMembers.forEach(m => balance[m] = paid[m] - perPerson);
+
+  // Totals grid
+  document.getElementById('split-totals-grid').innerHTML = `
+    <div class="fuel-stat"><span class="fuel-stat-icon">💰</span><span class="fuel-stat-label">Total Spent</span><span class="fuel-stat-value">₹${total.toFixed(2)}</span></div>
+    <div class="fuel-stat"><span class="fuel-stat-icon">👤</span><span class="fuel-stat-label">Per Person</span><span class="fuel-stat-value">₹${perPerson.toFixed(2)}</span></div>
+    <div class="fuel-stat"><span class="fuel-stat-icon">👥</span><span class="fuel-stat-label">Members</span><span class="fuel-stat-value">${splitMembers.length}</span></div>
+    <div class="fuel-stat"><span class="fuel-stat-icon">📋</span><span class="fuel-stat-label">Expenses</span><span class="fuel-stat-value">${splitExpenses.length}</span></div>
+  `;
+
+  // Settle debts using greedy algorithm
+  const debtors = []; // owe money
+  const creditors = []; // are owed money
+  splitMembers.forEach(m => {
+    const b = Math.round(balance[m] * 100) / 100;
+    if (b < -0.01) debtors.push({ name: m, amount: -b });
+    else if (b > 0.01) creditors.push({ name: m, amount: b });
+  });
+  debtors.sort((a, b) => b.amount - a.amount);
+  creditors.sort((a, b) => b.amount - a.amount);
+
+  const settlements = [];
+  let di = 0, ci = 0;
+  while (di < debtors.length && ci < creditors.length) {
+    const pay = Math.min(debtors[di].amount, creditors[ci].amount);
+    if (pay > 0.01) {
+      settlements.push({ from: debtors[di].name, to: creditors[ci].name, amount: pay });
+    }
+    debtors[di].amount -= pay;
+    creditors[ci].amount -= pay;
+    if (debtors[di].amount < 0.01) di++;
+    if (creditors[ci].amount < 0.01) ci++;
+  }
+
+  const listEl = document.getElementById('split-settlements-list');
+  if (settlements.length === 0) {
+    listEl.innerHTML = '<p class="split-settled">✅ All settled — no payments needed!</p>';
+  } else {
+    listEl.innerHTML = settlements.map(s => `
+      <div class="split-settle-item">
+        <span class="split-from">${s.from}</span>
+        <span class="split-arrow">→ pays ₹${s.amount.toFixed(2)} to →</span>
+        <span class="split-to">${s.to}</span>
+      </div>
+    `).join('');
+  }
+
+  // Store settlements for sharing
+  window._splitShareData = { total, perPerson, members: splitMembers, expenses: splitExpenses, settlements };
+}
+
+document.getElementById('split-reset').addEventListener('click', () => {
+  splitMembers = [];
+  splitExpenses = [];
+  renderSplitMembers();
+  updateSplitUI();
+  renderSplitExpenses();
+  document.getElementById('split-summary').style.display = 'none';
+  document.getElementById('split-reset').style.display = 'none';
+  document.getElementById('split-share-wa').style.display = 'none';
+  window._splitShareData = null;
+});
+
+document.getElementById('split-share-wa').addEventListener('click', () => {
+  const d = window._splitShareData;
+  if (!d) return;
+  let msg = `*TRIP EXPENSE SPLIT*\n`;
+  msg += `━━━━━━━━━━━━━━━━━━\n`;
+  msg += `Members: ${d.members.join(', ')}\n`;
+  msg += `Total Spent: Rs.${d.total.toFixed(2)}\n`;
+  msg += `Per Person: Rs.${d.perPerson.toFixed(2)}\n\n`;
+  msg += `*EXPENSES*\n`;
+  d.expenses.forEach((e, i) => { msg += `${i + 1}. ${e.desc} - Rs.${e.amount.toFixed(2)} (${e.paidBy} paid)\n`; });
+  msg += `\n*SETTLEMENTS*\n`;
+  if (d.settlements.length === 0) {
+    msg += `All settled - no payments needed!\n`;
+  } else {
+    d.settlements.forEach((s, i) => { msg += `${i + 1}. ${s.from} pays Rs.${s.amount.toFixed(2)} to ${s.to}\n`; });
+  }
+  msg += `━━━━━━━━━━━━━━━━━━\n`;
+  msg += `Plan your trip: https://payanam-explore.netlify.app/`;
+  window.open('https://wa.me/?text=' + encodeURIComponent(msg), '_blank');
+});
+
 // ===== Init =====
 buildStateButtons();
 buildCategoryButtons();

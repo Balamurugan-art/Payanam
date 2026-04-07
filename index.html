@@ -19,6 +19,17 @@
         <li><a href="#tools" data-section="tools">🛠️ Tools</a></li>
         <li><a href="#about" data-section="about">About</a></li>
       </ul>
+      <div class="auth-section">
+        <button id="google-login-btn" class="google-login-btn">
+          <img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg" alt="Google" width="18" height="18">
+          <span>Sign in</span>
+        </button>
+        <div id="user-profile" class="user-profile" style="display:none;">
+          <img id="user-avatar" class="user-avatar" alt="User" width="32" height="32">
+          <span id="user-name" class="user-name"></span>
+          <button id="logout-btn" class="logout-btn" title="Sign out">✕</button>
+        </div>
+      </div>
     </nav>
   </header>
 
@@ -217,6 +228,7 @@
           <button class="tool-tab" data-tool="budget">💰 Budget</button>
           <button class="tool-tab" data-tool="weekend">🚗 Weekend</button>
           <button class="tool-tab" data-tool="packing">🎒 Packing</button>
+          <button class="tool-tab" data-tool="split">💸 Split</button>
           <button class="tool-tab" data-tool="emergency">🚨 Emergency</button>
         </div>
 
@@ -515,6 +527,46 @@
           </div>
         </div>
 
+        <!-- Split Expenses -->
+        <div id="tool-split" class="tool-panel">
+          <div class="split-container">
+            <p class="tool-subtitle">Add members, log expenses, and see who owes whom</p>
+            <div class="split-form">
+              <div class="split-members-section">
+                <label>👥 Members</label>
+                <div class="split-member-input">
+                  <input type="text" id="split-member-name" placeholder="Enter name..." maxlength="30">
+                  <button id="split-add-member" class="split-add-btn">+ Add</button>
+                </div>
+                <div id="split-member-tags" class="split-member-tags"></div>
+              </div>
+              <div class="split-expense-section" id="split-expense-section" style="display:none;">
+                <label>💸 Add Expense</label>
+                <div class="split-expense-form">
+                  <input type="text" id="split-desc" placeholder="What for? (e.g. Fuel, Food)" maxlength="50">
+                  <input type="number" id="split-amount" placeholder="Amount ₹" min="1" step="0.01">
+                  <select id="split-paid-by" class="dist-select"></select>
+                  <button id="split-add-expense" class="split-add-btn">+ Add Expense</button>
+                </div>
+              </div>
+            </div>
+            <div id="split-expenses-list" class="split-expenses-list"></div>
+            <div id="split-summary" style="display:none;">
+              <div class="split-totals">
+                <div class="fuel-result-grid" id="split-totals-grid"></div>
+              </div>
+              <div class="split-settlements">
+                <h4>💸 Who Pays Whom</h4>
+                <div id="split-settlements-list"></div>
+              </div>
+            </div>
+            <div class="split-actions">
+              <button id="split-share-wa" class="split-wa-btn" style="display:none;">📲 Share on WhatsApp</button>
+              <button id="split-reset" class="pack-action-btn" style="display:none;">🔄 Reset All</button>
+            </div>
+          </div>
+        </div>
+
         <!-- Emergency Contacts -->
         <div id="tool-emergency" class="tool-panel">
           <div class="emergency-grid">
@@ -544,6 +596,48 @@
   <button id="back-to-top" class="back-to-top" aria-label="Back to top">↑</button>
 
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-auth-compat.js"></script>
+  <script>
+    const firebaseConfig = {
+      apiKey: "AIzaSyD7Y0JBY5EDmp4vbamdl2TKMupE-LP2bT4",
+      authDomain: "payanam-4a149.firebaseapp.com",
+      projectId: "payanam-4a149",
+      storageBucket: "payanam-4a149.firebasestorage.app",
+      messagingSenderId: "375954319748",
+      appId: "1:375954319748:web:1e06bf8c5239eaeaff55d1",
+      measurementId: "G-B6WNGJ2F8J"
+    };
+    firebase.initializeApp(firebaseConfig);
+    const auth = firebase.auth();
+    const googleProvider = new firebase.auth.GoogleAuthProvider();
+
+    function updateAuthUI(user) {
+      const loginBtn = document.getElementById('google-login-btn');
+      const profile = document.getElementById('user-profile');
+      if (user) {
+        loginBtn.style.display = 'none';
+        profile.style.display = 'flex';
+        document.getElementById('user-avatar').src = user.photoURL || 'https://ui-avatars.com/api/?name=' + encodeURIComponent(user.displayName || 'U') + '&background=ff6b35&color=fff&size=32';
+        document.getElementById('user-name').textContent = user.displayName ? user.displayName.split(' ')[0] : 'User';
+      } else {
+        loginBtn.style.display = 'flex';
+        profile.style.display = 'none';
+      }
+    }
+
+    auth.onAuthStateChanged(updateAuthUI);
+
+    document.getElementById('google-login-btn').addEventListener('click', () => {
+      auth.signInWithPopup(googleProvider).catch(err => {
+        if (err.code !== 'auth/popup-closed-by-user') alert('Login failed: ' + err.message);
+      });
+    });
+
+    document.getElementById('logout-btn').addEventListener('click', () => {
+      auth.signOut();
+    });
+  </script>
   <script src="data.js?v=7"></script>
   <script src="app.js"></script>
 </body>
