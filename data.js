@@ -5359,15 +5359,15 @@ const destinationImages = {
   "Jejuri Khandoba Temple": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Khandoba_temple_Pune.jpg/600px-Khandoba_temple_Pune.jpg",
   "Grishneshwar Temple": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Grishneshwar_temple_in_Aurangabad_district.jpg/600px-Grishneshwar_temple_in_Aurangabad_district.jpg",
   "Ganpatipule": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/A_Beach_at_GanapatiPule.jpg/600px-A_Beach_at_GanapatiPule.jpg",
-  "Kalsubai Peak": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Kalsubai_Peak.jpg/600px-Kalsubai_Peak.jpg",
-  "Harihar Fort": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Harihar_Fort_Steps.jpg/600px-Harihar_Fort_Steps.jpg",
-  "Rajmachi Fort": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Rajmachi_fort.jpg/600px-Rajmachi_fort.jpg",
-  "Sandhan Valley": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Sandhan_Valley.jpg/600px-Sandhan_Valley.jpg",
-  "Ratangad Fort": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Ratangad_Fort.jpg/600px-Ratangad_Fort.jpg",
-  "Alang-Madan-Kulang (AMK)": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Alang_Fort.jpg/600px-Alang_Fort.jpg",
-  "Kalavantin Durg & Prabalgad": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Kalavantin_Durg.jpg/600px-Kalavantin_Durg.jpg",
-  "Andharban Trek": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Tamhini_Ghat.jpg/600px-Tamhini_Ghat.jpg",
-  "Vasota Fort": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Vasota_Fort.jpg/600px-Vasota_Fort.jpg"
+  "Kalsubai Peak": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Kalasubai.jpg/600px-Kalasubai.jpg",
+  "Harihar Fort": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Harihar_Fort.jpg/600px-Harihar_Fort.jpg",
+  "Rajmachi Fort": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Rajmachi_top_view.jpg/600px-Rajmachi_top_view.jpg",
+  "Sandhan Valley": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Sandhan_Valley.jpg/600px-Sandhan_Valley.jpg",
+  "Ratangad Fort": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Lake_RatanGad.jpg/600px-Lake_RatanGad.jpg",
+  "Alang-Madan-Kulang (AMK)": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Alang_view_with_caves.jpg/600px-Alang_view_with_caves.jpg",
+  "Kalavantin Durg & Prabalgad": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Kalavantin_Fort.jpg/600px-Kalavantin_Fort.jpg",
+  "Andharban Trek": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/AndharBan.jpg/600px-AndharBan.jpg",
+  "Vasota Fort": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Kavlya_Fort.jpg/600px-Kavlya_Fort.jpg"
 };
 
 // Verified spot images for key temples and landmarks
