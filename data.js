@@ -5358,7 +5358,16 @@ const destinationImages = {
   "Tuljapur Bhavani Temple": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Raje_Shahaji_Mahadwar_of_Tulja_Bhavani_Temple.jpg/600px-Raje_Shahaji_Mahadwar_of_Tulja_Bhavani_Temple.jpg",
   "Jejuri Khandoba Temple": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Khandoba_temple_Pune.jpg/600px-Khandoba_temple_Pune.jpg",
   "Grishneshwar Temple": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Grishneshwar_temple_in_Aurangabad_district.jpg/600px-Grishneshwar_temple_in_Aurangabad_district.jpg",
-  "Ganpatipule": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/A_Beach_at_GanapatiPule.jpg/600px-A_Beach_at_GanapatiPule.jpg"
+  "Ganpatipule": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/A_Beach_at_GanapatiPule.jpg/600px-A_Beach_at_GanapatiPule.jpg",
+  "Kalsubai Peak": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Kalsubai_Peak.jpg/600px-Kalsubai_Peak.jpg",
+  "Harihar Fort": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Harihar_Fort_Steps.jpg/600px-Harihar_Fort_Steps.jpg",
+  "Rajmachi Fort": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Rajmachi_fort.jpg/600px-Rajmachi_fort.jpg",
+  "Sandhan Valley": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Sandhan_Valley.jpg/600px-Sandhan_Valley.jpg",
+  "Ratangad Fort": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Ratangad_Fort.jpg/600px-Ratangad_Fort.jpg",
+  "Alang-Madan-Kulang (AMK)": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Alang_Fort.jpg/600px-Alang_Fort.jpg",
+  "Kalavantin Durg & Prabalgad": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Kalavantin_Durg.jpg/600px-Kalavantin_Durg.jpg",
+  "Andharban Trek": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Tamhini_Ghat.jpg/600px-Tamhini_Ghat.jpg",
+  "Vasota Fort": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Vasota_Fort.jpg/600px-Vasota_Fort.jpg"
 };
 
 // Verified spot images for key temples and landmarks
