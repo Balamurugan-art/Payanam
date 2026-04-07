@@ -25,9 +25,21 @@
           <span>Sign in</span>
         </button>
         <div id="user-profile" class="user-profile" style="display:none;">
-          <img id="user-avatar" class="user-avatar" alt="User" width="32" height="32">
-          <span id="user-name" class="user-name"></span>
-          <button id="logout-btn" class="logout-btn" title="Sign out">✕</button>
+          <button id="user-profile-btn" class="user-profile-btn">
+            <img id="user-avatar" class="user-avatar" alt="User" width="32" height="32">
+            <span id="user-name" class="user-name"></span>
+            <span class="profile-arrow">▾</span>
+          </button>
+          <div id="user-dropdown" class="user-dropdown">
+            <div class="dropdown-header">
+              <img id="dropdown-avatar" class="dropdown-avatar" alt="User" width="48" height="48">
+              <div class="dropdown-info">
+                <span id="dropdown-name" class="dropdown-name"></span>
+                <span id="dropdown-email" class="dropdown-email"></span>
+              </div>
+            </div>
+            <button id="logout-btn" class="logout-btn-full">Sign Out</button>
+          </div>
         </div>
       </div>
     </nav>
@@ -616,13 +628,19 @@
       const loginBtn = document.getElementById('google-login-btn');
       const profile = document.getElementById('user-profile');
       if (user) {
+        const avatarUrl = user.photoURL || 'https://ui-avatars.com/api/?name=' + encodeURIComponent(user.displayName || 'U') + '&background=ff6b35&color=fff&size=48';
+        const firstName = user.displayName ? user.displayName.split(' ')[0] : 'User';
         loginBtn.style.display = 'none';
-        profile.style.display = 'flex';
-        document.getElementById('user-avatar').src = user.photoURL || 'https://ui-avatars.com/api/?name=' + encodeURIComponent(user.displayName || 'U') + '&background=ff6b35&color=fff&size=32';
-        document.getElementById('user-name').textContent = user.displayName ? user.displayName.split(' ')[0] : 'User';
+        profile.style.display = 'block';
+        document.getElementById('user-avatar').src = avatarUrl;
+        document.getElementById('user-name').textContent = firstName;
+        document.getElementById('dropdown-avatar').src = avatarUrl;
+        document.getElementById('dropdown-name').textContent = user.displayName || 'User';
+        document.getElementById('dropdown-email').textContent = user.email || '';
       } else {
         loginBtn.style.display = 'flex';
         profile.style.display = 'none';
+        document.getElementById('user-dropdown').classList.remove('open');
       }
     }
 
@@ -634,8 +652,18 @@
       });
     });
 
+    document.getElementById('user-profile-btn').addEventListener('click', (e) => {
+      e.stopPropagation();
+      document.getElementById('user-dropdown').classList.toggle('open');
+    });
+
+    document.addEventListener('click', () => {
+      document.getElementById('user-dropdown').classList.remove('open');
+    });
+
     document.getElementById('logout-btn').addEventListener('click', () => {
       auth.signOut();
+      document.getElementById('user-dropdown').classList.remove('open');
     });
   </script>
   <script src="data.js?v=7"></script>
