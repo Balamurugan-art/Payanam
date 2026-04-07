@@ -4052,6 +4052,226 @@ const destinations = [
       { name: "Konkan Homestay", detail: "Traditional Konkani home with seafood meals" },
       { name: "Beach Cottage", detail: "Simple cottage near the shore" }
     ]
+  },
+
+  // =============================================
+  // MAHARASHTRA — TREKKING
+  // =============================================
+  {
+    id: 181,
+    name: "Kalsubai Peak",
+    state: "Maharashtra",
+    emoji: "🏔️",
+    category: "trekking",
+    rideTypes: ["bike", "car"],
+    description: "🟡 Maharashtra's highest peak at 1,646m — panoramic views of the Sahyadris with iron ladders on the trail. Best in winter for clear skies.",
+    spots: [
+      { name: "Kalsubai Summit", detail: "Highest point in Maharashtra at 1,646m with a Kalsubai Devi temple" },
+      { name: "Iron Ladders Section", detail: "Thrilling vertical ladder climbs on the rocky trail" },
+      { name: "Bari Village Base", detail: "Starting point with local food stalls" },
+      { name: "Bhandardara Lake View", detail: "Stunning views of Arthur Lake from the summit" }
+    ],
+    hotels: [
+      { name: "Bhandardara Resort", detail: "Lakeside resort — ₹3,000/night" },
+      { name: "Bari Village Homestay", detail: "Base village stay — ₹600/night" },
+      { name: "MTDC Bhandardara", detail: "Government resort — ₹1,500/night" }
+    ],
+    stays: [
+      { name: "Summit Camping", detail: "Camp near the Kalsubai temple" },
+      { name: "Village Homestay Bari", detail: "Local tribal home at base" }
+    ]
+  },
+  {
+    id: 182,
+    name: "Harihar Fort",
+    state: "Maharashtra",
+    emoji: "🪨",
+    category: "trekking",
+    rideTypes: ["bike", "car"],
+    description: "🔴 Famous for its steep 80-degree rock-cut steps carved into the mountain face — a thrilling climb to a plateau with spectacular Sahyadri views.",
+    spots: [
+      { name: "Rock-Cut Steps", detail: "Near-vertical 80-degree stone steps — the highlight of the trek" },
+      { name: "Harihar Fort Plateau", detail: "Flat summit with ruins and panoramic valley views" },
+      { name: "Hanuman Temple", detail: "Small temple at the fort summit" },
+      { name: "Nirgudpada Village", detail: "Base village with the trailhead" }
+    ],
+    hotels: [
+      { name: "Trimbakeshwar Hotels", detail: "Nearby town options — ₹1,500/night" },
+      { name: "Nirgudpada Homestay", detail: "Base village stay — ₹500/night" },
+      { name: "Nashik Hotels", detail: "City options 40 km away — ₹2,000/night" }
+    ],
+    stays: [
+      { name: "Fort Top Camping", detail: "Camp on the plateau" },
+      { name: "Village Stay", detail: "Local home at Nirgudpada" }
+    ]
+  },
+  {
+    id: 183,
+    name: "Rajmachi Fort",
+    state: "Maharashtra",
+    emoji: "🏰",
+    category: "trekking",
+    rideTypes: ["bike", "car"],
+    description: "🟡 Twin forts of Shriwardhan and Manaranjan near Lonavala — hugely popular during monsoon with lush green valleys and firefly trails.",
+    spots: [
+      { name: "Shriwardhan Fort", detail: "Higher of the twin forts with panoramic views" },
+      { name: "Manaranjan Fort", detail: "Second fort with Shiva temple ruins" },
+      { name: "Udhewadi Village", detail: "Base village with local food and camping spots" },
+      { name: "Firefly Trail", detail: "Magical firefly sightings during pre-monsoon nights" }
+    ],
+    hotels: [
+      { name: "Lonavala Hotels", detail: "Nearby hill station options — ₹2,500/night" },
+      { name: "Udhewadi Homestay", detail: "Village stay with meals — ₹800/night" },
+      { name: "Camping at Rajmachi", detail: "Organized camps — ₹1,200/person" }
+    ],
+    stays: [
+      { name: "Udhewadi Village Camp", detail: "Tent camping with bonfire" },
+      { name: "Fort Camping", detail: "Camp between the twin forts" }
+    ]
+  },
+  {
+    id: 184,
+    name: "Sandhan Valley",
+    state: "Maharashtra",
+    emoji: "🏜️",
+    category: "trekking",
+    rideTypes: ["car"],
+    description: "🔴 Known as the 'Valley of Shadows' — a premier canyoneering trek with deep gorges, rappelling, and narrow passages. Best Nov-May.",
+    spots: [
+      { name: "Sandhan Canyon", detail: "Deep narrow gorge with 200ft walls — the Valley of Shadows" },
+      { name: "Rappelling Points", detail: "Multiple rappelling descents through the canyon" },
+      { name: "Water Pool Crossings", detail: "Waist-deep water pools inside the canyon" },
+      { name: "Samrad Village", detail: "Starting point for the canyon trek" }
+    ],
+    hotels: [
+      { name: "Samrad Village Stay", detail: "Basic accommodation — ₹500/night" },
+      { name: "Bhandardara Resort", detail: "Nearby lakeside resort — ₹3,000/night" },
+      { name: "Trek Organizer Package", detail: "Guided trek with gear — ₹2,000/person" }
+    ],
+    stays: [
+      { name: "Canyon Camping", detail: "Camp inside the valley under the stars" },
+      { name: "Samrad Homestay", detail: "Village home near trailhead" }
+    ]
+  },
+  {
+    id: 185,
+    name: "Ratangad Fort",
+    state: "Maharashtra",
+    emoji: "🪨",
+    category: "trekking",
+    rideTypes: ["bike", "car"],
+    description: "🟡 Known for its natural rock arch called 'Nedhe' (hole in the rock) and stunning views of Bhandardara lake and surrounding Sahyadri peaks.",
+    spots: [
+      { name: "Nedhe (Rock Arch)", detail: "Natural hole in the rock peak — iconic photo spot" },
+      { name: "Ratangad Summit", detail: "Fort top with 360-degree views of Sahyadris" },
+      { name: "Trimbak Darwaja", detail: "Ancient fort entrance gate" },
+      { name: "Bhandardara Lake View", detail: "Panoramic views of Arthur Lake from the fort" }
+    ],
+    hotels: [
+      { name: "Bhandardara Resort", detail: "Lakeside resort — ₹3,000/night" },
+      { name: "Ratanwadi Village Stay", detail: "Base village — ₹600/night" },
+      { name: "MTDC Bhandardara", detail: "Government resort — ₹1,500/night" }
+    ],
+    stays: [
+      { name: "Fort Top Camping", detail: "Camp near the summit" },
+      { name: "Amruteshwar Temple Stay", detail: "Near the ancient Hemadpanthi temple at base" }
+    ]
+  },
+  {
+    id: 186,
+    name: "Alang-Madan-Kulang (AMK)",
+    state: "Maharashtra",
+    emoji: "⛰️",
+    category: "trekking",
+    rideTypes: ["car"],
+    description: "🔴 One of the toughest trek circuits in Maharashtra — three connected forts requiring rock climbing, rappelling, and high endurance. For experts only.",
+    spots: [
+      { name: "Alang Fort", detail: "Steepest of the three with a challenging rock patch" },
+      { name: "Madan Fort", detail: "Middle fort connecting Alang and Kulang" },
+      { name: "Kulang Fort", detail: "Most remote fort with dense forest approach" },
+      { name: "Ambewadi Base Village", detail: "Starting point for the AMK circuit" }
+    ],
+    hotels: [
+      { name: "Ambewadi Village Stay", detail: "Basic village accommodation — ₹500/night" },
+      { name: "Igatpuri Hotels", detail: "Nearby town options — ₹1,500/night" },
+      { name: "Trek Organizer Package", detail: "Guided multi-day trek — ₹3,500/person" }
+    ],
+    stays: [
+      { name: "Fort Camping", detail: "Camp on any of the three fort summits" },
+      { name: "Base Village Homestay", detail: "Local tribal home" }
+    ]
+  },
+  {
+    id: 187,
+    name: "Kalavantin Durg & Prabalgad",
+    state: "Maharashtra",
+    emoji: "🗼",
+    category: "trekking",
+    rideTypes: ["bike", "car"],
+    description: "🔴 Famous for its dizzying, near-vertical rock-carved stairs leading to a pinnacle summit — located near Panvel with stunning views of Matheran.",
+    spots: [
+      { name: "Kalavantin Durg Steps", detail: "Steep rock-carved stairs to the pinnacle — vertigo-inducing" },
+      { name: "Prabalgad Fort", detail: "Adjacent fort with spacious plateau and ruins" },
+      { name: "Prabal Machi", detail: "Saddle between the two forts — popular camping spot" },
+      { name: "Matheran View", detail: "Panoramic views of Matheran hill station" }
+    ],
+    hotels: [
+      { name: "Panvel Hotels", detail: "Nearby city options — ₹1,500/night" },
+      { name: "Thakurwadi Village Stay", detail: "Base village — ₹500/night" },
+      { name: "Camping at Prabal Machi", detail: "Organized camps — ₹1,000/person" }
+    ],
+    stays: [
+      { name: "Prabal Machi Camping", detail: "Camp between the two forts" },
+      { name: "Village Homestay", detail: "Local home at Thakurwadi" }
+    ]
+  },
+  {
+    id: 188,
+    name: "Andharban Trek",
+    state: "Maharashtra",
+    emoji: "🌿",
+    category: "trekking",
+    rideTypes: ["car"],
+    description: "🟡 A popular jungle descent trek from the Sahyadri plateau to the Konkan — dense forests, waterfalls, and misty trails. Best during monsoon.",
+    spots: [
+      { name: "Andharban Forest Trail", detail: "Dense canopy jungle trail — 'Dark Forest' in Marathi" },
+      { name: "Waterfall Crossings", detail: "Multiple seasonal waterfalls along the descent" },
+      { name: "Kundalika Valley View", detail: "Panoramic views of the Kundalika river valley" },
+      { name: "Pimpri Dam Endpoint", detail: "Trek ends at the dam near Bhira village" }
+    ],
+    hotels: [
+      { name: "Tamhini Ghat Resorts", detail: "Nearby nature resorts — ₹2,500/night" },
+      { name: "Bhira Village Stay", detail: "Endpoint village — ₹600/night" },
+      { name: "Pune Hotels", detail: "City base 80 km away — ₹2,000/night" }
+    ],
+    stays: [
+      { name: "Forest Camping", detail: "Camp in the jungle clearings" },
+      { name: "Bhira Homestay", detail: "Village home near the dam" }
+    ]
+  },
+  {
+    id: 189,
+    name: "Vasota Fort",
+    state: "Maharashtra",
+    emoji: "🌲",
+    category: "trekking",
+    rideTypes: ["car"],
+    description: "🟡 Located inside the Koyna Wildlife Sanctuary — reached by boat across Shivsagar lake followed by a dense forest trek. Leopards and bison territory.",
+    spots: [
+      { name: "Shivsagar Lake Boat Ride", detail: "Scenic boat crossing to reach the trailhead" },
+      { name: "Vasota Fort Summit", detail: "Fort ruins with views of the lake and sanctuary" },
+      { name: "Koyna Wildlife Sanctuary", detail: "Dense forest with leopards, bison, and rare birds" },
+      { name: "Nageshwar Temple", detail: "Ancient temple inside the fort" }
+    ],
+    hotels: [
+      { name: "Bamnoli Village Stay", detail: "Boat departure point — ₹600/night" },
+      { name: "MTDC Tapola", detail: "Government resort nearby — ₹2,000/night" },
+      { name: "Mahabaleshwar Hotels", detail: "Hill station 50 km away — ₹3,000/night" }
+    ],
+    stays: [
+      { name: "Fort Camping", detail: "Camp at the summit inside the sanctuary" },
+      { name: "Lakeside Camping Bamnoli", detail: "Camp by Shivsagar lake" }
+    ]
   }
 ];
 
@@ -4619,6 +4839,15 @@ const destinationCoords = {
   "Alibaug": [18.6414, 72.8722],
   "Ajanta & Ellora": [20.5519, 75.7033],
   "Harishchandragad": [19.3900, 73.7700],
+  "Kalsubai Peak": [19.6017, 73.7100],
+  "Harihar Fort": [19.9833, 73.6833],
+  "Rajmachi Fort": [18.8333, 73.4000],
+  "Sandhan Valley": [19.5167, 73.7333],
+  "Ratangad Fort": [19.5500, 73.6833],
+  "Alang-Madan-Kulang (AMK)": [19.6833, 73.6500],
+  "Kalavantin Durg & Prabalgad": [18.8333, 73.1167],
+  "Andharban Trek": [18.4500, 73.4833],
+  "Vasota Fort": [17.7833, 73.7500],
   "Shirdi": [19.7668, 74.4773],
   "Trimbakeshwar": [19.9322, 73.5311],
   "Pandharpur": [17.6783, 75.3267],
