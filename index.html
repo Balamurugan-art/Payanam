@@ -12,7 +12,10 @@
   <header>
     <nav>
       <div class="logo"><span class="logo-icon">🧭</span> <span class="logo-text">Payanam</span></div>
-      <ul class="nav-links">
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="nav-links">
         <li><a href="#home" class="active" data-section="home">Home</a></li>
         <li><a href="#explore" data-section="explore">Explore</a></li>
         <li><a href="#favorites" data-section="favorites">❤️ Saved</a></li>
@@ -690,6 +693,19 @@
     window.isLoggedIn = function() {
       return !!auth.currentUser;
     };
+
+    // Hamburger menu toggle
+    document.getElementById('hamburger').addEventListener('click', () => {
+      document.getElementById('hamburger').classList.toggle('active');
+      document.getElementById('nav-links').classList.toggle('open');
+    });
+    // Close menu on nav link click
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', () => {
+        document.getElementById('hamburger').classList.remove('active');
+        document.getElementById('nav-links').classList.remove('open');
+      });
+    });
   </script>
   <script src="data.js?v=7"></script>
   <script src="app.js"></script>

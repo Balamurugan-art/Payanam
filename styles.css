@@ -2868,3 +2868,541 @@ footer .attribution a:hover { text-decoration: underline; }
     right: -1rem;
   }
 }
+
+/* ===== Hamburger Menu ===== */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.4rem;
+  z-index: 110;
+}
+
+.hamburger span {
+  display: block;
+  width: 24px;
+  height: 2.5px;
+  background: var(--white);
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* ===== Comprehensive Mobile Styles ===== */
+@media (max-width: 768px) {
+  /* Nav */
+  .hamburger {
+    display: flex;
+  }
+
+  nav {
+    flex-wrap: wrap;
+    padding: 0.8rem 1rem;
+    gap: 0;
+  }
+
+  .logo {
+    font-size: 1.3rem;
+    flex: 1;
+  }
+
+  .auth-section {
+    order: 0;
+    margin-right: 0.5rem;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    gap: 0.2rem;
+    padding-top: 0.8rem;
+    order: 3;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .nav-links a {
+    display: block;
+    padding: 0.7rem 1rem;
+    font-size: 1rem;
+    border-radius: 12px;
+  }
+
+  /* Hero */
+  .hero {
+    padding: 2rem 1rem 2rem;
+  }
+
+  .hero h1 {
+    font-size: 1.8rem;
+    line-height: 1.2;
+  }
+
+  .hero > p {
+    font-size: 0.95rem;
+    margin-bottom: 2rem;
+  }
+
+  .ride-options {
+    gap: 0.8rem;
+  }
+
+  .ride-card {
+    min-width: 0;
+    flex: 1;
+    padding: 1.2rem 0.8rem;
+  }
+
+  .ride-icon {
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .ride-card h3 {
+    font-size: 0.95rem;
+  }
+
+  .ride-card p {
+    font-size: 0.75rem;
+  }
+
+  /* Sections */
+  .section {
+    padding: 1rem;
+  }
+
+  /* Explore */
+  .explore-header h2 {
+    font-size: 1.6rem;
+  }
+
+  .search-box {
+    margin-bottom: 0.8rem;
+  }
+
+  #search-input {
+    padding: 0.65rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  .state-filter,
+  .category-filter,
+  .ride-filter {
+    gap: 0.3rem;
+  }
+
+  .state-btn,
+  .cat-btn,
+  .filter-btn {
+    padding: 0.35rem 0.8rem;
+    font-size: 0.78rem;
+  }
+
+  .destinations-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .dest-img {
+    height: 170px;
+  }
+
+  .dest-info {
+    padding: 1rem;
+  }
+
+  .dest-info h3 {
+    font-size: 1.05rem;
+  }
+
+  .tag {
+    font-size: 0.68rem;
+    padding: 0.15rem 0.5rem;
+  }
+
+  /* Banners */
+  .trek-info-banner,
+  .epass-banner {
+    font-size: 0.8rem;
+    padding: 0.8rem 1rem;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+
+  .trek-info-banner span,
+  .epass-banner span {
+    margin-right: 0;
+  }
+
+  /* Modal */
+  .modal {
+    padding: 1.2rem;
+    border-radius: 16px;
+    max-height: 90vh;
+  }
+
+  .modal-hero-img {
+    height: 180px;
+    border-radius: 10px;
+  }
+
+  .modal-content h2 {
+    font-size: 1.4rem;
+  }
+
+  .modal-title-row {
+    flex-direction: row;
+    gap: 0.5rem;
+  }
+
+  .spots-grid {
+    grid-template-columns: 1fr;
+    gap: 0.8rem;
+  }
+
+  .spot-card img {
+    height: 120px;
+  }
+
+  .modal-map {
+    height: 220px;
+  }
+
+  .nearby-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 0.6rem;
+  }
+
+  .nearby-card img {
+    height: 80px;
+  }
+
+  /* About */
+  .about-content {
+    padding: 1.5rem 0.5rem;
+  }
+
+  .about-content h2 {
+    font-size: 1.6rem;
+  }
+
+  .features {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .feature {
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  .resource-cards {
+    grid-template-columns: 1fr;
+  }
+
+  /* Favorites */
+  .favorites-page h2 {
+    font-size: 1.6rem;
+  }
+
+  /* Tools */
+  .tools-page h2 {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+  }
+
+  .tools-tabs {
+    gap: 0.35rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .tool-tab {
+    padding: 0.45rem 0.9rem;
+    font-size: 0.8rem;
+  }
+
+  /* Fuel Calculator */
+  .fuel-calculator {
+    padding: 1.5rem 0;
+  }
+
+  .fuel-form,
+  .dist-form,
+  .split-form {
+    padding: 1.2rem;
+    border-radius: 16px;
+  }
+
+  .fuel-row {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  .fuel-result-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 0.8rem;
+  }
+
+  .fuel-stat {
+    padding: 1rem;
+  }
+
+  .fuel-stat-value {
+    font-size: 1.2rem;
+  }
+
+  .fuel-btn {
+    font-size: 0.95rem;
+    padding: 0.8rem;
+  }
+
+  /* Distance & Toll */
+  .dist-row {
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+
+  .dist-map-container {
+    height: 220px;
+  }
+
+  .toll-vehicle-row {
+    gap: 0.4rem;
+  }
+
+  .toll-vtype {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.8rem;
+  }
+
+  .toll-item {
+    padding: 0.6rem 0.8rem;
+  }
+
+  /* Weather */
+  .weather-temp-big {
+    font-size: 2.8rem;
+  }
+
+  .weather-icon-big {
+    font-size: 3rem;
+  }
+
+  .weather-details-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .weather-detail:nth-child(3n) {
+    border-right: 1px solid rgba(0, 0, 0, 0.05);
+  }
+
+  .weather-detail:nth-child(2n) {
+    border-right: none;
+  }
+
+  .forecast-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.4rem;
+  }
+
+  .forecast-day {
+    padding: 0.6rem 0.2rem;
+  }
+
+  .fd-day {
+    font-size: 0.68rem;
+  }
+
+  .fd-icon {
+    font-size: 1.2rem;
+  }
+
+  /* Compare */
+  .compare-selectors {
+    flex-direction: column;
+  }
+
+  .compare-vs {
+    text-align: center;
+  }
+
+  .compare-spots {
+    grid-template-columns: 1fr;
+  }
+
+  .cr-label {
+    flex: 0 0 90px;
+    font-size: 0.68rem;
+  }
+
+  .cr-val {
+    font-size: 0.82rem;
+    padding: 0.6rem 0.4rem;
+  }
+
+  .compare-fuel-inputs {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .compare-vtypes {
+    flex-wrap: wrap;
+  }
+
+  /* Budget & Weekend */
+  .budget-row {
+    flex-direction: column;
+  }
+
+  .budget-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .budget-card img {
+    height: 120px;
+  }
+
+  /* Packing */
+  .packing-types {
+    gap: 0.35rem;
+  }
+
+  .packing-type,
+  .dur-type {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.8rem;
+  }
+
+  .pack-item {
+    padding: 0.55rem 0.8rem;
+  }
+
+  /* Split */
+  .split-expense-form {
+    flex-direction: column;
+  }
+
+  .split-settle-item {
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+
+  .split-actions {
+    flex-direction: column;
+  }
+
+  /* Emergency */
+  .emergency-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 0.8rem;
+  }
+
+  .emergency-card {
+    padding: 1rem;
+  }
+
+  .emergency-icon {
+    font-size: 2rem;
+  }
+
+  .emergency-num {
+    font-size: 1.1rem;
+  }
+
+  /* Auth dropdown */
+  .user-dropdown {
+    right: -0.5rem;
+    min-width: 230px;
+  }
+
+  .user-name {
+    display: none;
+  }
+
+  .profile-arrow {
+    display: none;
+  }
+
+  .google-login-btn span {
+    display: none;
+  }
+
+  .google-login-btn {
+    padding: 0.45rem;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    justify-content: center;
+  }
+
+  /* Footer */
+  footer {
+    padding: 1.5rem 1rem;
+    font-size: 0.82rem;
+  }
+
+  /* Back to top */
+  .back-to-top {
+    bottom: 1rem;
+    right: 1rem;
+    width: 40px;
+    height: 40px;
+    font-size: 1.1rem;
+  }
+}
+
+/* Extra small screens */
+@media (max-width: 400px) {
+  .hero h1 {
+    font-size: 1.5rem;
+  }
+
+  .ride-card {
+    padding: 1rem 0.6rem;
+  }
+
+  .ride-icon {
+    font-size: 1.8rem;
+  }
+
+  .ride-card h3 {
+    font-size: 0.85rem;
+  }
+
+  .ride-card p {
+    font-size: 0.7rem;
+  }
+
+  .emergency-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .forecast-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .nearby-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .fuel-result-grid {
+    grid-template-columns: 1fr;
+  }
+}
