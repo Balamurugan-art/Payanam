@@ -667,16 +667,22 @@
     });
 
     // Auth gate — returns true if logged in, triggers sign-in popup if not
+    let _authPopupOpen = false;
     window.requireAuth = function() {
       if (auth.currentUser) return true;
+      if (_authPopupOpen) return false;
+      _authPopupOpen = true;
       auth.signInWithPopup(googleProvider).then(() => {
-        // Retry the action after login by storing a pending callback
+        _authPopupOpen = false;
         if (window._pendingAuthAction) {
           window._pendingAuthAction();
           window._pendingAuthAction = null;
         }
       }).catch(err => {
-        if (err.code !== 'auth/popup-closed-by-user') alert('Sign in to continue: ' + err.message);
+        _authPopupOpen = false;
+        if (err.code !== 'auth/popup-closed-by-user' && err.code !== 'auth/cancelled-popup-request') {
+          alert('Sign in to continue: ' + err.message);
+        }
       });
       return false;
     };
