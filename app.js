@@ -7,6 +7,10 @@ document.querySelectorAll('.nav-links a').forEach(link => {
 });
 
 function showSection(id, skipReset) {
+  if (id === 'tools' && typeof requireAuth === 'function' && !requireAuth()) {
+    window._pendingAuthAction = () => showSection(id, skipReset);
+    return;
+  }
   document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
   document.querySelectorAll('.nav-links a').forEach(a => a.classList.remove('active'));
   document.getElementById(id).classList.add('active');
@@ -250,6 +254,10 @@ function renderFavorites() {
 let currentMap = null;
 
 function openModal(id) {
+  if (typeof requireAuth === 'function' && !requireAuth()) {
+    window._pendingAuthAction = () => openModal(id);
+    return;
+  }
   const dest = destinations.find(d => d.id === id);
   if (!dest) return;
   if (currentMap) { currentMap.remove(); currentMap = null; }

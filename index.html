@@ -665,6 +665,25 @@
       auth.signOut();
       document.getElementById('user-dropdown').classList.remove('open');
     });
+
+    // Auth gate — returns true if logged in, triggers sign-in popup if not
+    window.requireAuth = function() {
+      if (auth.currentUser) return true;
+      auth.signInWithPopup(googleProvider).then(() => {
+        // Retry the action after login by storing a pending callback
+        if (window._pendingAuthAction) {
+          window._pendingAuthAction();
+          window._pendingAuthAction = null;
+        }
+      }).catch(err => {
+        if (err.code !== 'auth/popup-closed-by-user') alert('Sign in to continue: ' + err.message);
+      });
+      return false;
+    };
+
+    window.isLoggedIn = function() {
+      return !!auth.currentUser;
+    };
   </script>
   <script src="data.js?v=7"></script>
   <script src="app.js"></script>
